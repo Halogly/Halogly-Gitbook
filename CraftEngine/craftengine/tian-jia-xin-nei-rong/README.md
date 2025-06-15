@@ -4,7 +4,7 @@ description: 本页面主要讲解如何管理自定义内容
 
 # ➕️ 添加新内容
 
-### 资源 <a href="#resources" id="resources"></a>
+# 资源 <a href="#resources" id="resources"></a>
 
 在插件的根目录（`plugins/CraftEngine/resources/`）中，所有包都储存在这里，这些包的名称是任意的。每个包由两个文件夹和一个 YAML 文件组成。两个文件夹分别管理配置信息和资源包，而 YAML 文件管理包的元数据。
 
@@ -52,7 +52,7 @@ blocks:
       type: leaves_block
 ```
 {% endhint %}
-### 配置 <a href="#configuration" id="configuration"></a>
+# 配置 <a href="#configuration" id="configuration"></a>
 
 ```
 plugins
@@ -98,7 +98,7 @@ items#1:
       slot: feet
 ```
 {% endhint %}
-### 资源包 <a href="#resoucepack" id="resoucepack"></a>
+# 资源包 <a href="#resoucepack" id="resoucepack"></a>
 
 ```
 plugins

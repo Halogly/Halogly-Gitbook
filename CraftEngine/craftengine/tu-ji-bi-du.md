@@ -1,4 +1,4 @@
-# 📍图集 \[必读]
+# 📍 图集 \[必读]
 
 {% hint style="success" %}
 如果你不想自己编写图集文件，可以启用插件的混淆选项（obfuscation），它会自动为你处理 atlas。非常简单！
@@ -63,13 +63,10 @@ resource-pack:
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252Fw6QIh0iqDdLtADU6IqqZ%252Fimage.png%3Falt%3Dmedia%26token%3D7235dd04-76a9-41b7-b17c-559f950bf2ce\&width=768\&dpr=4\&quality=100\&sign=951f3957\&sv=2)
 
 {% hint style="success" %}
-
 当你有多个包含纹理图集配置的文件时，可以查阅篇章[⚔️ 文件冲突](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/resource-pack/file-conflict)来合并纹理图集。默认插件已经为你配置了此选项。
-
 {% endhint %}
 
 {% hint style="danger" %}
-
 **纹理图集需求** 图集目录中的所有纹理必须符合 2 的幂次方尺寸（例如，16×16，32×16，64×128）以确保完整支持 Mipmap 功能。不符合要求的纹理会触发自动 Mipmap 级别降低。有关详细的 Mipmap 指南，请参阅[🗺️ Mipmap 纹理映射 \[必读\]](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/mipmap-must-read)
 
 **分离存储事项** 字体资源（例如，21×7 的等级图标）必须与模型纹理分开存储。主要原因如下：
@@ -79,5 +76,4 @@ resource-pack:
 3. **合规性**：违反了 Minecraft 纹理管理的最佳实践
 
 必须严格隔离图集管理的纹理与GUI/字体元素，以确保渲染质量。
-
 {% endhint %}

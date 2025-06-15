@@ -2,5 +2,5 @@
 
 ## CraftEngine
 
-* [📍图集 \[必读\]](README.md)
-* [Page](craftengine/page.md)
+* [Page](README.md)
+* [📍图集 \[必读\]](<README (1).md>)

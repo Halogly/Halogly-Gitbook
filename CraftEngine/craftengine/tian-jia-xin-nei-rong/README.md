@@ -1,14 +1,12 @@
 ---
-description: This page mainly explains how to manage custom contents
+description: 本页面主要讲解如何管理自定义内容
 ---
 
 # ➕️ 添加新内容
 
-### Resources <a href="#resources" id="resources"></a>
+### 资源 <a href="#resources" id="resources"></a>
 
-In the root directory of the plugin (`plugins/CraftEngine/resources/`), all packages are stored, and the names of these packages are arbitrary. Each package consists of two folders and one YAML file. The folders contain configurations and resource packs respectively, while the YAML file holds the metadata for the package.
-
-Copy
+在插件的根目录（`plugins/CraftEngine/resources/`）中，所有包都储存在这里，这些包的名称是任意的。每个包由两个文件夹和一个 YAML 文件组成。两个文件夹分别管理配置信息和资源包，而 YAML 文件管理包的元数据。
 
 ```
 plugins
@@ -24,45 +22,37 @@ plugins
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Fk0BUh80VNuR2bSJvfjhO%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=5412ebbb\&sv=2)
 
-### Pack Meta File <a href="#pack-meta-file" id="pack-meta-file"></a>
+# 包元数据文件 <a href="#pack-meta-file" id="pack-meta-file"></a>
 
-The Meta File is a YAML document that records some fundamental information. Among its entries, the most significant is the `namespace`.
+元数据文件是一个 YAML 格式的文档，记录包的基本信息。其中，最重要的是`namespace`命名空间。
 
-Copy
-
-```
+```yaml
 author: XiaoMoMi
 version: 0.0.1
-description: Default Assets for CraftEngine
+description: CraftEngine 的默认资源
 namespace: default
-enable: true # set `false` to disable this pack 
+enable: true # 设置为`false`禁用此包 
 ```
+{% hint style="info" %}
+命名空间的作用范围仅限于 YAML 层级结构中根节点下的二级节点，这里以“default:palm\_leaves”和“palm\_leaves”为例。只要在`pack.yml`中指定了命名空间，即使没有明确指定命名空间，也会使用默认的包命名空间。
 
-The effect of a namespace is confined to the second-level nodes under the root node in the YAML hierarchy, exemplified here by "default:palm\_leaves " and "palm\_leaves". Provided that a namespace is specified in `pack.yml`, if a namespace is not explicitly designated, the package namespace will be used by default.
-
-Copy
-
-```
+```yaml
 blocks:
   default:palm_leaves:
     behavior:
       type: leaves_block
 ```
 
-is equivalent to
+等同于
 
-Copy
-
-```
+```yaml
 blocks:
   palm_leaves:
     behavior:
       type: leaves_block
 ```
-
-### Configuration <a href="#configuration" id="configuration"></a>
-
-Copy
+{% endhint %}
+### 配置 <a href="#configuration" id="configuration"></a>
 
 ```
 plugins
@@ -72,13 +62,11 @@ plugins
             └ configuration
 ```
 
-The configuration files are stored in the following folder. The configuration file format supports both json and yml. Moreover, you can create as many subdirectories as you like under the configuration.
+配置文件储存在上述目录中。配置文件支持 json 和 yml 格式。此外，你可以在配置目录下创建任意数量的子目录。
+{% hint style="success" %}
+在 YAML 文件配置中，以下格式是不允许的：
 
-In YAML configuration, the following format is not allowed:
-
-Copy
-
-```
+```yaml
 items:
   default:topaz_helmet:
     template: default:topaz_armor
@@ -93,11 +81,9 @@ items:
       slot: feet
 ```
 
-Therefore, you need to add `# + any identifier` after the configuration section name, which allows you to configure multiple sections of the same type within a single YAML file.
+因此，你需要在配置节点名称后添加`# + 任意标识符`，这样就可以在单个 YAML 文件中配置同一类型的多个节点。
 
-Copy
-
-```
+```yaml
 items#0:
   default:topaz_helmet:
     template: default:topaz_armor
@@ -111,10 +97,8 @@ items#1:
       part: boots
       slot: feet
 ```
-
-### ResoucePack <a href="#resoucepack" id="resoucepack"></a>
-
-Copy
+{% endhint %}
+### 资源包 <a href="#resoucepack" id="resoucepack"></a>
 
 ```
 plugins
@@ -128,4 +112,4 @@ plugins
                └ pack.png
 ```
 
-Please ensure that the directory structure of your resource pack is as shown in the figure below, otherwise, it may lead to some merging issues. The overlay\_folder, pack.mcmeta, and pack.png files are not mandatory.
+请确保你的资源包目录结构符合上图所示，否则可能会导致一些合并问题。overlay\_folder、pack.mcmeta 和 pack.png 文件不是必须的。

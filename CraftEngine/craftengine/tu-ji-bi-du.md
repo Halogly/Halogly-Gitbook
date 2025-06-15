@@ -14,7 +14,7 @@ resource-pack:
 ```
 {% endhint %}
 
-## 介绍 <a href="#introduction" id="introduction"></a>
+# 介绍 <a href="#introduction" id="introduction"></a>
 
 从 Minecraft 1.19 版本起，资源包引入了“图集”的概念，它决定了纹理图像读取的路径。默认情况下，Minecraft 只能从`/textures/block`和`/textures/item`目录加载纹理，因为默认`图集`文件只支持这两个文件夹。
 
@@ -40,7 +40,7 @@ resource-pack:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FRQZMAM1TnobkCpWCAuPD%252Fimage.png%3Falt%3Dmedia%26token%3D2a25a84d-c323-440f-9c67-decd171774df\&width=768\&dpr=4\&quality=100\&sign=6df4975\&sv=2)
 
-### 创建图集 <a href="#create-atlas" id="create-atlas"></a>
+# 创建图集 <a href="#create-atlas" id="create-atlas"></a>
 
 要创建图集路径，你只需要将文件添加到资源包的以下路径：`resourcepack/assets/minecraft/atlases/blocks.json`。下面是一个简单的示例，将`custom`路径添加到图集中：
 

@@ -1,7 +1,7 @@
 # Table of contents
 
 * [CraftEngine](README.md)
-  * [📍图集 \[必读\]](<README (1).md>)
+  * [📍图集 \[必读\]](craftengine/tu-ji-bi-du.md)
   * [🗺️ Mipmap \[必读\]](craftengine/mipmap-bi-du.md)
   * [➕️ 添加新内容](craftengine/tian-jia-xin-nei-rong/README.md)
     * [📄 Templates \[MUST READ\]](craftengine/tian-jia-xin-nei-rong/templates-must-read/README.md)

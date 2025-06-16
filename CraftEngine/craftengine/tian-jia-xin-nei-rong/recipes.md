@@ -4,15 +4,13 @@ description: This page mainly explains how to add new recipes to your server.
 
 # 📖 Recipes
 
-### Tags <a href="#tags" id="tags"></a>
+# 标签 <a href="#tags" id="tags"></a>
 
-In CraftEngine, the plugin allows you to use tags, and you can also create custom tags. To use a tag, simply follow this format: `#namespace:tag` .
+CraftEngine 允许你使用标签，并且可以自定义标签。要使用标签，只需要符合这个格式：`#namespace:tag`。
 
-In the following example, I have added two vanilla tags to `palm_planks`, allowing them to participate in all recipes within data packs that utilize these two tags.
+在以下示例中，我为 `palm_planks` 添加了两个原版标签，使它们能够参与使用这两个标签的数据包中的所有配方。
 
-Copy
-
-```
+```yaml
 items:
   default:palm_planks:
     material: paper

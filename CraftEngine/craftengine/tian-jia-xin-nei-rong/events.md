@@ -1,13 +1,11 @@
 # 🪇 Events
 
-### Introduction <a href="#introduction" id="introduction"></a>
+# 介绍 <a href="#introduction" id="introduction"></a>
 
 The `events` section determines which item/furniture/block will execute predefined behaviors during specific events. Under the `events` section, you need to specify an event trigger, such as `"right_click"` for a right-click action. Below the event trigger, you must pass a list of actions with their corresponding types. For example, `command` executes a specific command.
 
-Copy
-
-```
-# format 1
+```yaml
+# 格式 1
 events:
   right_click:
     - type: command
@@ -18,7 +16,7 @@ events:
     - type: command
       command: say 2
       conditions: []
-# format 2
+# 格式 2
 events:
   - on: right_click
     functions:
@@ -32,18 +30,18 @@ events:
         conditions: []
 ```
 
-[⚖️ Conditions](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/conditions)
+[⚖️ 条件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/conditions)
 
-### 🧨 Event Triggers <a href="#event-triggers" id="event-triggers"></a>
+# 🧨 事件触发 <a href="#event-triggers" id="event-triggers"></a>
 
-#### items <a href="#items" id="items"></a>
+## 物品 <a href="#items" id="items"></a>
 
 * break
 * right\_click
 * left\_click
 * consume
 
-#### blocks <a href="#blocks" id="blocks"></a>
+## 方块 <a href="#blocks" id="blocks"></a>
 
 * break
 * place
@@ -51,7 +49,7 @@ events:
 * left\_click
 * step
 
-#### Furniture <a href="#furniture" id="furniture"></a>
+## 家具 <a href="#furniture" id="furniture"></a>
 
 * break
 * place
@@ -59,9 +57,7 @@ events:
 
 Please note that the corresponding events should be placed in the appropriate configuration area. For example, if you want to execute a command when interacting with a piece of furniture, the correct approach is to place the `events` under the `furniture` section, not under your item section.
 
-Copy
-
-```
+```yaml
 items:
   default:bench:
     events: # ❌️
@@ -75,105 +71,89 @@ items:
            - type: command
 ```
 
-### 🔧 Functions <a href="#functions" id="functions"></a>
+# 🔧 函数 <a href="#functions" id="functions"></a>
 
-#### cancel\_event <a href="#cancel_event" id="cancel_event"></a>
+## cancel\_event <a href="#cancel_event" id="cancel_event"></a>
 
-Cancels the original event.
+取消原先的事件。
 
-Copy
-
-```
+```yaml
 type: cancel_event
 ```
 
-#### run <a href="#run" id="run"></a>
+## 运行 run <a href="#run" id="run"></a>
 
-Runs a list of functions in order. It's useful for functions that share the same conditions.
+按顺序运行一系列函数。这对于具有相同条件的函数非常有用。
 
-Copy
-
-```
+```yaml
 type: run
-delay: 0 # optional; number; [default: 0]
-functions: # required; maplist
+delay: 0 # 可选; 数字; [默认: 0]
+functions: # 必需; 映射列表
   - type: command
   - type: message
 ```
 
-#### command <a href="#command" id="command"></a>
+## 命令 command <a href="#command" id="command"></a>
 
-Runs a command as a player or console.
+以玩家或控制台的身份执行命令。Runs a command as a player or console.
 
-Copy
-
-```
+```yaml
 type: command
-command: "say hello <arg:player.name>" # required; stringlist/string
-target: "self" # optional; enum[all,self]/player selector; [default: self]
-as-player: false # optional; [default: false]
+command: "say hello <arg:player.name>" # 必需; 字符串列表/字符串
+target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
+as-player: false # 可选; [默认: false]
 ```
 
-#### message <a href="#message" id="message"></a>
+## 消息 message <a href="#message" id="message"></a>
 
-Sends a message/system actionbar message
+发送消息/系统动作栏消息
 
-Copy
-
-```
+```yaml
 type: message
-message: "Hello <papi:player_name>" # required; string list/string
-target: "self" # optional; enum[all,self]/player selector
-overlay: false # optional; [default: false]; false = chat box / true = actionbar
+message: "你好 <papi:player_name>" # 必需; 字符串列表/字符串
+target: "self" # 可选; 枚举[all,self]/玩家选择器
+overlay: false # 可选; [默认: false]; false = 聊天栏 / true = 动作栏
 ```
 
-#### actionBar <a href="#actionbar" id="actionbar"></a>
+## 动作栏 actionBar <a href="#actionbar" id="actionbar"></a>
 
-Sends an actionbar
+发送动作栏消息
 
-Copy
-
-```
+```yaml
 type: actionbar
-actionbar: "This is an action bar"  # required; string
-target: "self" # optional; enum[all,self]/player selector; [default: self]
+actionbar: "这是一条动作栏文本"  # 必需; 字符串
+target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
 ```
 
-#### Title <a href="#title" id="title"></a>
+## 标题 Title <a href="#title" id="title"></a>
 
-Sends a title
+发送标题
 
-Copy
-
-```
+```yaml
 type: title
-title: "<red>Title</red>"  # required; string
-subtitle: "<Yellow>Subtitle</yellow>" # required; string
-fade-in: 20 # optional; number; [default: 10]
-stay: 10 # optional; number; [default: 20]
-fade-out: 10 # optional; number; [default: 5]
+title: "<red>标题</red>"  # 必需; 字符串
+subtitle: "<Yellow>副标题</yellow>" # 必需; 字符串
+fade-in: 20 # 可选; 数字; [默认: 10]
+stay: 10 # 可选; 数字; [默认: 20]
+fade-out: 10 # 可选; 数字; [默认: 5]
 ```
 
-#### open\_window <a href="#open_window" id="open_window"></a>
+## 打开界面 open\_window <a href="#open_window" id="open_window"></a>
 
-Opens a gui window
+打开GUI界面
 
-Copy
-
-```
+```yaml
 type: open_window #
-gui-type: anvil # required; enum[anvil, enchantment, grindstone, loom, smithing, crafting, cartography];
-title: "Super Anvil"  # optional; string
-target: "self" # optional; enum[all,self]/player selector; [default: self]
+gui-type: anvil # 必需; 枚举[anvil, enchantment, grindstone, loom, smithing, crafting, cartography];
+title: "超级铁砧"  # 可选; 字符串
+target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
 ```
 
-#### place\_block <a href="#place_block" id="place_block"></a>
+## 放置方块 place\_block <a href="#place_block" id="place_block"></a>
 
-Places a block
+放置一个方块
 
-Copy
-
-```
+```yaml
 type: place_block
 block-state: "default:chinese_lantern"
 x: <arg:block.block_x>
@@ -181,13 +161,11 @@ y: <arg:block.block_y>
 z: <arg:block.block_z>
 ```
 
-#### drop\_loot <a href="#drop_loot" id="drop_loot"></a>
+## 掉落物品 drop\_loot <a href="#drop_loot" id="drop_loot"></a>
 
-Drops loots based on the give loot table
+根据指定的掉落物列表掉落物品
 
-Copy
-
-```
+```yaml
 type: drop_loot
 x: <arg:block.block_x> + 0.5
 y: <arg:block.block_y> + 0.5
@@ -196,73 +174,61 @@ loot:
   pools: ...
 ```
 
-#### update\_interaction\_tick <a href="#update_interaction_tick" id="update_interaction_tick"></a>
+## 更新交互刻 update\_interaction\_tick <a href="#update_interaction_tick" id="update_interaction_tick"></a>
 
-Updates the tick when the last interaction ends
+在最后一次交互结束时更新刻
 
-Copy
-
-```
+```yaml
 type: update_interaction_tick
 ```
 
-#### set\_count <a href="#set_count" id="set_count"></a>
+## 设置计数 set\_count <a href="#set_count" id="set_count"></a>
 
-Sets the count of the current item in this event
+设置此事件中当前物品的计数
 
-Copy
-
-```
+```yaml
 type: set_count
-add: true # Default: false
+add: true # 默认: false
 count: -1
-target: "self" # optional; enum[all,self]/player selector
+target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-#### set\_food <a href="#set_food" id="set_food"></a>
+## 设置饥饿值 set\_food <a href="#set_food" id="set_food"></a>
 
-Sets the food level (0\~20) of the player
+设置玩家的饥饿值（0\~20）
 
-Copy
-
-```
+```yaml
 type: set_food
 add: true
 food: 4
-target: "self" # optional; enum[all,self]/player selector
+target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-#### set\_saturation <a href="#set_saturation" id="set_saturation"></a>
+## 设置饱和度 set\_saturation <a href="#set_saturation" id="set_saturation"></a>
 
-Sets the saturation(0\~10) of the player
+设置玩家的饱和度（0\~10）
 
-Copy
-
-```
+```yaml
 type: set_saturation
 add: true
 saturation: 2.5
-target: "self" # optional; enum[all,self]/player selector
+target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-#### swing\_hand <a href="#swing_hand" id="swing_hand"></a>
+#### 挥动手臂 swing\_hand <a href="#swing_hand" id="swing_hand"></a>
 
-Swings the hand involved in this event or the hand specified in config
+挥动涉及事件的手或配置中指定的手
 
-Copy
-
-```
+```yaml
 type: swing_hand
-hand: main_hand # Optional Argument
+hand: main_hand # 可选参数
 ```
 
-#### particle <a href="#particle" id="particle"></a>
+#### 粒子效果 particle <a href="#particle" id="particle"></a>
 
-Spawns a particle
+生成粒子
 
-Copy
-
-```
+```yaml
 type: particle
 particle: minecraft:end_rod
 x: "<arg:position.x>"
@@ -274,8 +240,9 @@ offset-y: 0.3
 offset-z: 0.3
 speed: 0
 
-# The following arguments are only effective
-# when the particles are of a certain type.
+# 以下参数仅在粒子属于某种类型时有效。
+# 参数详情参阅:
+# https://zh.minecraft.wiki/w/Java%E7%89%88%E7%B2%92%E5%AD%90/#%E7%B1%BB%E5%9E%8B
 
 # item
 item: default:chinese_lantern
@@ -311,78 +278,68 @@ target-z: 0
 duration: 10
 ```
 
-#### potion\_effect <a href="#potion_effect" id="potion_effect"></a>
+## 添加药水效果 potion\_effect <a href="#potion_effect" id="potion_effect"></a>
 
-Adds a potion effect
+添加药水效果
 
-Copy
-
-```
+```yaml
 type: potion_effect
 potion-effect: minecraft:blindness
-duration: 20  # Default: 20
-amplifier: 0   # Default: 0
-ambient: false # from beacon
+duration: 20  # 默认: 20
+amplifier: 0   # 默认: 0
+ambient: false # 来自信标
 particles: true
 ```
 
-#### remove\_potion\_effect <a href="#remove_potion_effect" id="remove_potion_effect"></a>
+## 移除药水效果 remove\_potion\_effect <a href="#remove_potion_effect" id="remove_potion_effect"></a>
 
-Removes a potion effect
+移除药水效果
 
-Copy
-
-```
+```yaml
 type: remove_potion_effect
-potion-effect: minecraft:blindness # Optional if 'all' is true
-all: false  # Default: false
+potion-effect: minecraft:blindness # 'all' 为 true 时可选
+all: false  # 默认: false
 ```
 
-#### leveler\_exp <a href="#leveler_exp" id="leveler_exp"></a>
+## 经验值 leveler\_exp <a href="#leveler_exp" id="leveler_exp"></a>
 
-Adds skill/job experience
+增加技能/工作经验值
 
 [👔 Supported Levelers](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/compatibility/supported-levelers)Copy
 
-```
+```yaml
 type: leveler_exp
-plugin: AuraSkills  # The leveler plugin
-leveler: fishing  # the job/skill id
-count: 10  # the amount of exp to give
+plugin: AuraSkills  # leveler 插件
+leveler: fishing  # 工作/技能的 ID
+count: 10  # 要给予的经验值
 ```
 
-#### set\_cooldown <a href="#set_cooldown" id="set_cooldown"></a>
+## 设置冷却时间 set\_cooldown <a href="#set_cooldown" id="set_cooldown"></a>
 
-Sets cooldown for player
+设置玩家的冷却时间
 
-Copy
-
-```
+```yaml
 type: set_cooldown
 time: 1m30s
 id: my_cooldown_id
-add: false  # Default: false  (Whether to accumulate cooldown time)
+add: false  # 默认: false（是否累积冷却时间）
 ```
 
-#### remove\_cooldown <a href="#remove_cooldown" id="remove_cooldown"></a>
+## 移除冷却时间 remove\_cooldown <a href="#remove_cooldown" id="remove_cooldown"></a>
 
-Removes cooldown for player
+移除玩家的冷却时间
 
-Copy
-
-```
+```yaml
 type: remove_cooldown
-id: my_cooldown_id  # Optional if 'all' is true
-all: false  # Default: false
+id: my_cooldown_id  # 'all' 为 true 时可选
+all: false  # 默认: false
 ```
 
-#### play\_sound <a href="#play_sound" id="play_sound"></a>
+## 播放声音 play\_sound <a href="#play_sound" id="play_sound"></a>
 
-Plays a sound
+播放声音
 
-Copy
-
-```
+```yaml
 type: play_sound
 sound: minecraft:xxxx.xxx
 x: <arg:position.x>
@@ -393,4 +350,4 @@ volume: 1
 source: master
 ```
 
-More functions are coming...
+更多功能即将推出...

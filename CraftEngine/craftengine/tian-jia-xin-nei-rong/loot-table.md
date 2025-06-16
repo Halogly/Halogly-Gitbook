@@ -1,10 +1,10 @@
 ---
-description: This page mainly explains how to configure loots
+description: 本页面主要讲解如何配置掉落物
 ---
 
 # 💎 Loot Table
 
-### Introduction <a href="#introduction" id="introduction"></a>
+# 介绍 <a href="#introduction" id="introduction"></a>
 
 Under `loots`, there must be a `pools` list, which represents the loot pools. Each loot pool consists of four parts:
 
@@ -12,9 +12,7 @@ Under `loots`, there must be a `pools` list, which represents the loot pools. Ea
 
 If you are well-acquainted with vanilla data packs, you will find this structure very familiar. The plugin employs this format and modifies it to facilitate a swift and smooth transition into the CraftEngine loot system.
 
-Copy
-
-```
+```yaml
 loot:
   functions: []
   pools:
@@ -27,15 +25,13 @@ loot:
       functions: []
 ```
 
-### ☘️ Entry <a href="#entry" id="entry"></a>
+# ☘️ Entry <a href="#entry" id="entry"></a>
 
 The 'entry' specifies the actual contents of the drop, but in certain scenarios, it can also represent a choice among possible drops.
 
 All `entry` sections are capable of using `functions` and `conditions`.
 
-Copy
-
-```
+```yaml
 type: item
 item: "minecraft:apple"
 functions: []
@@ -46,42 +42,34 @@ conditions: []
 
 Set the type of the dropped item, which can be a custom item.
 
-Copy
-
-```
+```yaml
 type: item
 item: "minecraft:apple"
 ```
 
-#### furniture\_item <a href="#furniture_item" id="furniture_item"></a>
+#### 家具物品 furniture\_item <a href="#furniture_item" id="furniture_item"></a>
 
 Sets the item to the original furniture item when placed, otherwise uses the fallback item.
 
-Copy
-
-```
+```yaml
 type: furniture_item
 item: "default:fallback_item"
 ```
 
-#### exp <a href="#exp" id="exp"></a>
+#### 经验值 exp <a href="#exp" id="exp"></a>
 
 Drop a certain amount of experience.
 
-Copy
-
-```
+```yaml
 type: exp
 count: 1
 ```
 
-#### alternatives <a href="#alternatives" id="alternatives"></a>
+#### 替代方案 alternatives <a href="#alternatives" id="alternatives"></a>
 
 Find the first `entry` from the given list that meets the `conditions`.
 
-Copy
-
-```
+```yaml
 type: alternatives
 children:
   - type: item
@@ -104,15 +92,13 @@ children:
           max: "{max_exp}"
 ```
 
-### 🔧 Function <a href="#function" id="function"></a>
+### 🔧 函数 <a href="#function" id="function"></a>
 
 The role of the `function` is to perform additional operations on the item after its type has been set, such as adjusting the quantity. It can also handle concurrent operations like dropping experience or other extras.
 
 All `function` sections support the use of `conditions`.
 
-Copy
-
-```
+```yaml
 type: set_count
 count: 10
 conditions: []
@@ -122,9 +108,7 @@ conditions: []
 
 Increase the quantity of the dropped items based on the given enchantments and formulas. Refer to [➕️ Formula](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/loot-table#formula) for more info.
 
-Copy
-
-```
+```yaml
 type: apply_bonus
 enchantment: minecraft:fortune
 formula:
@@ -135,9 +119,7 @@ formula:
 
 Set the count of the item.
 
-Copy
-
-```
+```yaml
 type: set_count
 count: 10
 add: true  # add or set
@@ -147,38 +129,32 @@ add: true  # add or set
 
 Determines whether the quantity of this item diminishes upon explosion. In vanilla Minecraft, explosions often result in fewer blocks being dropped than originally present, which is due to the implementation of this function.
 
-Copy
-
-```
+```yaml
 type: explosion_decay
 ```
 
-#### drop\_exp <a href="#drop_exp" id="drop_exp"></a>
+#### 经验掉落 drop\_exp <a href="#drop_exp" id="drop_exp"></a>
 
-Drop a certain amount of experience.
+掉落一定数量的经验。
 
-Copy
-
-```
+```yaml
 type: drop_exp
 count: 1
 ```
 
-### ⚖️ Condition <a href="#condition" id="condition"></a>
+### ⚖️ 条件 <a href="#condition" id="condition"></a>
 
 `condition` can provide prerequisites for both `entry` and `function`.
 
 [⚖️ Conditions](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/conditions)
 
-### ➕️ Formula <a href="#formula" id="formula"></a>
+### ➕️ 配方 <a href="#formula" id="formula"></a>
 
-#### ore\_drops <a href="#ore_drops" id="ore_drops"></a>
+#### 原版掉落 ore\_drops <a href="#ore_drops" id="ore_drops"></a>
 
-The same drop algorithm used in vanilla Minecraft.
+在原版 Minecraft 中使用的相同掉落算法。
 
-Copy
-
-```
+```yaml
 type: ore_drops
 ```
 
@@ -186,9 +162,7 @@ type: ore_drops
 
 The same binomial drop algorithm used in vanilla Minecraft. `extra` means a few extra attempts to drop the item, and `probability` represents the probability of success each time. The enchantment level will increase the number of attempts.
 
-Copy
-
-```
+```yaml
 type: binomial_with_bonus_count
 extra: 3
 probability: 0.5

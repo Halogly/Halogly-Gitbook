@@ -32,10 +32,10 @@ templates:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252F0JyPNp4niJkzAGHID1Kv%252Ftemplate.gif%3Falt%3Dmedia%26token%3Dcfecd8c1-d494-407f-a5db-ba2cce189f13\&width=768\&dpr=4\&quality=100\&sign=2ad8ae14\&sv=2)
 {% hint style="info" %}
-`namespace:template_id` 是你模板的唯一标识符。在引用或调用此模板到其他地方时，必须使用这个名称。
+`namespace:template_id` 是你模板的唯一标识符。在引用或调用此模板到其他地方时，必须使用这个标识符名称。
 {% endhint %}
 {% hint style="success" %}
-`namespace:template_id` 下的配置区域完全是可定制的，只需遵循 YAML 语法。你可以完全自由地根据你的需求来定义它。
+`namespace:template_id` 以下的配置区域是完全可定制的，遵循 YAML 语法即可。你完全可以自由地根据自身需求进行自定义。
 {% endhint %}
 
 # 多模板 <a href="#multiple-templates" id="multiple-templates"></a>

@@ -16,7 +16,7 @@ resource-pack:
 
 ## 介绍 <a href="#introduction" id="introduction"></a>
 
-从 Minecraft 1.19 版本起，资源包引入了“图集”的概念，它决定了纹理图像读取的路径。默认情况下，Minecraft 只能从`/textures/block`和`/textures/item`目录加载纹理，因为默认`图集`文件只支持这两个文件夹。
+从 Minecraft 1.19 版本起，资源包引入了“图集”的概念，它决定了纹理图像读取的路径。默认情况下，Minecraft 只能从 `/textures/block` 和 `/textures/item` 目录加载纹理，因为默认 `atlas` 图集文件只支持这两个文件夹。
 
 ```yaml
 {
@@ -36,13 +36,13 @@ resource-pack:
 }
 ```
 
-如果你把纹理路径从`/textures/block/custom`移动到了`/textures/custom`，Minecraft 会无法加载这些纹理，因为它们超出了图集定义的范围。超出范围的图集纹理将显示为紫黑相间的方块，如下图所示。
+如果你把纹理路径从 `/textures/block/custom` 移动到了 `/textures/custom`，Minecraft 会无法加载这些纹理，因为它们超出了图集定义的范围。超出范围的图集纹理将显示为紫黑相间的方块，如下图所示。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FRQZMAM1TnobkCpWCAuPD%252Fimage.png%3Falt%3Dmedia%26token%3D2a25a84d-c323-440f-9c67-decd171774df\&width=768\&dpr=4\&quality=100\&sign=6df4975\&sv=2)
 
 ## 创建图集 <a href="#create-atlas" id="create-atlas"></a>
 
-要创建图集路径，你只需要将文件添加到资源包的以下路径：`resourcepack/assets/minecraft/atlases/blocks.json`。下面是一个简单的示例，将`custom`路径添加到图集中：
+要创建图集路径，你只需要将文件添加到资源包的以下路径：`resourcepack/assets/minecraft/atlases/blocks.json`。下面是一个简单的示例，将 `custom` 路径添加到图集中：
 
 ```yaml
 {
@@ -63,7 +63,7 @@ resource-pack:
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252Fw6QIh0iqDdLtADU6IqqZ%252Fimage.png%3Falt%3Dmedia%26token%3D7235dd04-76a9-41b7-b17c-559f950bf2ce\&width=768\&dpr=4\&quality=100\&sign=951f3957\&sv=2)
 
 {% hint style="success" %}
-当你有多个包含纹理图集配置的文件时，可以查阅篇章[⚔️ 文件冲突](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/resource-pack/file-conflict)来合并纹理图集。默认插件已经为你配置了此选项。
+当你有多个包含纹理图集配置的文件时，可以查阅篇章[⚔️ 文件冲突](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/resource-pack/file-conflict)来合并纹理图集。默认插件已经为你配置了这个选项。
 {% endhint %}
 
 {% hint style="danger" %}

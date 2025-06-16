@@ -24,7 +24,7 @@ plugins
 
 ## 包元数据文件 <a href="#pack-meta-file" id="pack-meta-file"></a>
 
-元数据文件是一个 YAML 格式的文档，记录包的基本信息。其中，最重要的是`namespace`命名空间。
+元数据文件是一个 YAML 格式的文档，记录包的基本信息。其中，最重要的是 `namespace` 命名空间。
 
 ```yaml
 author: XiaoMoMi
@@ -35,7 +35,7 @@ enable: true # 设置为`false`禁用此包
 ```
 
 {% hint style="info" %}
-命名空间的作用范围仅限于 YAML 层级结构中根节点下的二级节点，这里以“default:palm\_leaves”和“palm\_leaves”为例。只要在`pack.yml`中指定了命名空间，即使没有明确指定命名空间，也会使用默认的包命名空间。
+命名空间的作用范围仅限于 YAML 层级结构中根节点下的二级节点，这里以“default:palm\_leaves”和“palm\_leaves”为例。只要在 `pack.yml` 中指定了命名空间，即使没有明确指定命名空间，也会使用默认的包命名空间。
 
 ```yaml
 blocks:
@@ -84,7 +84,7 @@ items:
       slot: feet
 ```
 
-因此，你需要在配置节点名称后添加`# + 任意标识符`，这样就可以在单个 YAML 文件中配置同一类型的多个节点。
+因此，你需要在配置节点名称后添加 `# + 任意标识符`，这样就可以在单个 YAML 文件中配置同一类型的多个节点。
 
 ```yaml
 items#0:
@@ -102,7 +102,7 @@ items#1:
 ```
 {% endhint %}
 
-\# 资源包
+# 资源包
 
 ```
 plugins

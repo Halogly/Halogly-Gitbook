@@ -4,9 +4,9 @@
 
 Mipmap 决定 Minecraft 中的抗锯齿级别。以下是 Mipmap 4级和0级的区别。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FodziDESugHu27t1CRnHd%252Fimage.png%3Falt%3Dmedia%26token%3D0c20f995-a097-4fc6-8c4a-1b25e77d7a43\&width=768\&dpr=4\&quality=100\&sign=75c17dc9\&sv=2)mipmap：4
+<figure><img src="https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FodziDESugHu27t1CRnHd%252Fimage.png%3Falt%3Dmedia%26token%3D0c20f995-a097-4fc6-8c4a-1b25e77d7a43&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=75c17dc9&#x26;sv=2" alt=""><figcaption><p>mipmap：4</p></figcaption></figure>
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FVj5ddbIqysE7Hchz5HMW%252Fimage.png%3Falt%3Dmedia%26token%3D7684ae4c-137c-4f95-9efd-c6d443209781\&width=768\&dpr=4\&quality=100\&sign=68a235b5\&sv=2)mipmap：0
+<figure><img src="https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FVj5ddbIqysE7Hchz5HMW%252Fimage.png%3Falt%3Dmedia%26token%3D7684ae4c-137c-4f95-9efd-c6d443209781&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=68a235b5&#x26;sv=2" alt=""><figcaption><p>mipmap：0</p></figcaption></figure>
 
 资源包在什么情况下会导致 Mipmap 级别降低呢？
 

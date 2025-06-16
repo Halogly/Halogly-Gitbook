@@ -14,7 +14,6 @@ description: 本页面主要讲解如何将新模板添加到你的服务器。
 
 # 它是如何运作的？ <a href="#how-it-works" id="how-it-works"></a>
 
-To configure a template, you need to use `templates` as the root key in your YAML file. The first thing under `templates` is your template's name. In the example below, the template is called **`namespace:my_first_template`**. Everything under that name is the actual template content.\
 要配置模板，你需要在 YAML 文件中使用 `templates` 作为根键。`templates` 下的第一项是你的模板名称。在下面的示例中，模板的名称是**`namespace:my_first_template`**。在该名称以下的所有内容才是模板内容。
 
 ```yaml

@@ -1,34 +1,31 @@
-# 🟢 Argument Types
+# 🟢 参数类型
 
-### Direct Assignment <a href="#direct-assignment" id="direct-assignment"></a>
+# 直接赋值 <a href="#direct-assignment" id="direct-assignment"></a>
 
-The simplest type of parameter is direct assignment, where you directly write the value after the parameter name.
+最简单的参数类型是直接赋值，即在参数名后面直接填写值。
 
-Copy
-
-```
+```yaml
 arguments:
   value_1: true
   value_2: 100
 
-# Use a map
+# 使用映射
 arguments:
   value_map:
     a: b
     c: d
 
-# Use a list
+# 使用列表
 arguments:
   value_list:
     - 123
     - 456
 ```
+{% hint style="danger" %}
+当直接赋值一个映射时，映射的参数不能包含 type ，否则会发生错误！在这种情况下，你应该按照下面的描述使用 Map 类型。
+❌️
 
-When directly assigning a map, the parameters of the map must not include `type`, otherwise an error will occur! In such cases, you should use the Map type as described below. ❌️
-
-Copy
-
-```
+```yaml
 arguments:
   value_map:
     type: c
@@ -38,9 +35,7 @@ arguments:
 
 ✔️
 
-Copy
-
-```
+```yaml
 arguments:
   value_map:
     type: map
@@ -49,19 +44,19 @@ arguments:
       a: b
       c: d
 ```
+{% endhint %}
+{% hint style="info" %}
+所有非直接赋值参数类型都需要指定参数类型 `type`。以下是一些可用的参数类型和示例
+{% endhint %}
 
-All non-direct assignment parameter types require specifying the parameter type `type`. Below are some available parameter types and examples
+# 自增整数 <a href="#self-increase-int" id="self-increase-int"></a>
 
-### Self Increase Int <a href="#self-increase-int" id="self-increase-int"></a>
+`self_increase_int` 是一个自增的数字 ID，每次使用参数时增加一次 1。
 
-`self_increase_int` is an auto-incrementing numeric ID that increases by 1 each time the parameter is used.
+> 配置
 
-> Config
-
-Copy
-
-```
-# Part of template
+```yaml
+# 模板部分
 variants:
   axis=x:
     appearance: axisX
@@ -73,7 +68,7 @@ variants:
     appearance: axisZ
     id: "{internal_id}"
 
-# Part of the block config
+# 方块配置部分
 arguments:
   internal_id:
     type: self_increase_int
@@ -81,11 +76,9 @@ arguments:
     to: 2
 ```
 
-> Result
+> 结果
 
-Copy
-
-```
+```yaml
 variants:
   axis=x:
     appearance: axisX
@@ -98,11 +91,9 @@ variants:
     id: 2
 ```
 
-### Expression <a href="#expression" id="expression"></a>
+# 表达式 <a href="#expression" id="expression"></a>
 
-Copy
-
-```
+```yaml
 arguments:
   saturation:
     type: expression
@@ -110,70 +101,60 @@ arguments:
     value-type: double # int/double/float/short/long/boolean
 ```
 
-### Map <a href="#map" id="map"></a>
+# 映射 <a href="#map" id="map"></a>
 
-Replace the placeholder with the specified map.
+用指定的映射替换占位符。
 
-Copy
-
-```
+```yaml
 arguments:
   enchantments:
     type: map
     map:
       minecraft:sharpness: 1
 ```
-
-In this case, the map cannot be applied correctly
+{% hint style="warning" %}
+在这种情况下，映射不能正确应用
 
 ❌️
 
-Copy
-
-```
+```yaml
 template:
   components:enchantments: "{enchantments}, 123"
 ```
 
 ✔️
 
-Copy
-
-```
+```yaml
 template:
   components:enchantments: "{enchantments}"
 ```
+{% endhint %}
 
-### List <a href="#list" id="list"></a>
+# 列表 <a href="#list" id="list"></a>
 
-Replace the placeholder with the specified list.
+用指定的列表替换占位符。
 
-Copy
-
-```
+```yaml
 arguments:
   lore:
     type: list
     list:
       - "Hello, Minecraft!"
 ```
-
-In this case, the list cannot be applied correctly
+{% hint style="warning" %}
+在这种情况下，列表不能正确应用
 
 ❌️
 
-Copy
-
-```
+```yaml
 template:
   lore: "{lore}, 1"
 ```
 
 ✔️
 
-Copy
-
-```
+```yaml
 template:
   lore: "{lore}"
 ```
+{% endhint %}

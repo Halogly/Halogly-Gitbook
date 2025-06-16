@@ -4,7 +4,7 @@
   * [📍图集 \[必读\]](craftengine/tu-ji-bi-du.md)
   * [🗺️ Mipmap \[必读\]](craftengine/mipmap-bi-du.md)
   * [➕️ 添加新内容](craftengine/tian-jia-xin-nei-rong/README.md)
-    * [📄 模板 \[必读\]](craftengine/tian-jia-xin-nei-rong/templates-must-read/README.md)
+    * [📄 模 \[必读\]](craftengine/tian-jia-xin-nei-rong/templates-must-read/README.md)
       * [🟢 参数类型](craftengine/tian-jia-xin-nei-rong/templates-must-read/argument-types.md)
     * [🏭️ 模型生成](craftengine/tian-jia-xin-nei-rong/model-generation.md)
     * [🪇 事件](craftengine/tian-jia-xin-nei-rong/events.md)

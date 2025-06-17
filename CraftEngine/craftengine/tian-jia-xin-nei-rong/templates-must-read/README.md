@@ -56,7 +56,7 @@ items:
 
 # 参数 <a href="#arguments" id="arguments"></a>
 
-你可以在模板中使用 `${xxx}` 定义参数，例如 `${nutrition}` 或 `${saturation}`。然后，在调用模板时，使用 **`"arguments"`** 部分来设置参数值。示例：
+你可以在模板中使用 `${xxx}` 定义参数，例如 `${nutrition}` 或 `${saturation}`。然后在调用模板时，在 **`arguments`** 部分设置参数值。示例：
 
 ```yaml
 templates:

@@ -6,18 +6,18 @@ description: 本页面主要讲解如何管理自定义内容。
 
 ## 资源 <a href="#resources" id="resources"></a>
 
-在插件的根目录（`plugins/CraftEngine/resources/`）中，所有包都储存在这里，这些包的名称是任意的。每个包由两个文件夹和一个 YAML 文件组成。两个文件夹分别管理配置信息和资源包，而 YAML 文件管理包的元数据。
+在插件的根目录（`plugins/CraftEngine/resources/`）中，所有包都储存在这里，这些包的名称是任意的。每个包由两个文件夹和一个 YAML 文件组成。`configuration` 管理配置信息，`resourcepack` 存放资源包相关的资源，而 YAML 文件管理包的元数据。
 
 ```
 plugins
   └ CraftEngine
-     └ resources
-         ├ pack_1
-         ├ pack_2
-         └ pack_3
-            ├ configuration
-            ├ resourcepack
-            └ pack.yml
+      └ resources
+          ├ pack_1
+          ├ pack_2
+          └ pack_3
+              ├ configuration
+              ├ resourcepack
+              └ pack.yml
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Fk0BUh80VNuR2bSJvfjhO%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=5412ebbb\&sv=2)

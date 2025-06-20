@@ -1,44 +1,44 @@
 ---
-description: This page mainly explains how to add new furniture to your server.
+description: 本页面主要讲解如何在服务器中添加新家具。
 ---
 
 # 🪑 Furniture
 
-Please note that reloading the plugin will not affect furniture that already placed! You will need to restart the server or reload the chunks to apply new configurations to existing furniture. The plugin utilizes caching to enhance the performance of the furniture. Forcibly reloading furniture that is already loaded on the server without caution could have a significant impact on the server's stability. In the future, the plugin may consider introducing related unsafe flags for forced reloading, but certainly not at this moment.
+请注意，重新加载插件不会影响已放置的家具！你需要重启服务器或重新加载区块才能将新配置应用到现有的家具。插件利用缓存来提高家具的性能。在没有深思熟虑的情况下强制重新加载服务器上已加载的家具可能会对服务器的稳定性产生重大影响。
 
-### Sections to Configure <a href="#sections-to-configure" id="sections-to-configure"></a>
+未来，插件可能会考虑加入关于强制重载的危险提示，当然，目前没有。
 
-A complete furniture configuration contains the following sections:
+# 配置 <a href="#sections-to-configure" id="sections-to-configure"></a>
 
-* behavior
+一个完整的家具配置包含以下部分：
 
-[🕹️ Furniture Behaviors](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-behaviors)
+* 行为
+
+[🕹️ 家具行为](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-behaviors)
 
 * settings
 
-[⚙️ Furniture Settings](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-settings)
+[⚙️ 家具设置](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-settings)
 
 * placement
 
-[📍 Furniture Placement](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-placement)
+[📍 家具放置](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-placement)
 
-* loot
+* 战利品
 
-[💎 Loot Table](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/loot-table)
+[💎 战利品表](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/loot-table)
 
-* events
+* 事件
 
-[🪇 Events](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/events)
+[🪇 事件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/events)
 
-### How to Bind Items <a href="#how-to-bind-items" id="how-to-bind-items"></a>
+# 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
 
-[🪑 Furniture Item](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-behaviors/furniture-item)
+[🪑 家具物品](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-behaviors/furniture-item)
 
-### Full Config Overview <a href="#full-config-overview" id="full-config-overview"></a>
+# 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
 
-Copy
-
-```
+```yaml
 furniture:
   default:bench:
     settings:

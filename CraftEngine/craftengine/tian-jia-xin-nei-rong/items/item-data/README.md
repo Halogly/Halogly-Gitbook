@@ -1,22 +1,18 @@
 ---
-description: >-
-  Set vanilla NBT/Components for items to utilize certain native Minecraft
-  functionalities.
+description: 为物品设置原版 NBT 标签或组件，以利用某些原版 Minecraft 功能。
 ---
 
 # 🔢 Item Data
 
-### What is Item Data? <a href="#what-is-item-data" id="what-is-item-data"></a>
+# 什么是物品数据？ <a href="#what-is-item-data" id="what-is-item-data"></a>
 
-Item Data refers to the NBT (Named Binary Tag) of an item in older versions, or the item Components in version 1.20.5 and above. Through this data, we can customize various aspects of an item such as its name, description, attributes, and other functionalities.
+物品数据是指旧版本中物品的 NBT（二进制命名标签），或 1.20.5 及以上版本中的物品组件。通过这些数据，我们可以自定义物品的各个方面，如名称、描述、属性和其他功能。
 
-### External Data <a href="#external-data" id="external-data"></a>
+# 外部数据 <a href="#external-data" id="external-data"></a>
 
-If you want a CraftEngine item to retain the data of an external plugin's item, follow this configuration:
+如果你希望 CraftEngine 物品保留外部插件物品的数据，请按照此配置：
 
-Copy
-
-```
+```yaml
 items:
   default:example_item:
     data:
@@ -27,80 +23,69 @@ items:
 
 [🐌 External Item Providers](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/compatibility/external-item-providers)
 
-### Hard-coded Data <a href="#hard-coded-data" id="hard-coded-data"></a>
+# 硬编码数据 <a href="#hard-coded-data" id="hard-coded-data"></a>
 
-Hardcoded data, in this context, means that the configuration formats are provided and maintained by plugin, which ensures compatibility across different versions. These formats are defined by the plugin, so they may differ from the standard NBT (Named Binary Tag) or Components formats used by the game itself. The advantage of this approach is that the plugin handles all the maintenance, including version compatibility, so users do not need to worry about changes or updates between game versions.
+在此上下文中，硬编码数据意味着配置格式由插件提供和维护，这确保了跨版本的兼容性。这些格式由插件定义，因此可能与游戏本身使用的标准 NBT（命名二进制标签）或组件格式有所不同。这种方法的优点是插件处理所有维护工作，包括版本兼容性，因此用户无需担心游戏版本之间的变化或更新。
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
-      item-name: "<!i><#FF8C00>Topaz Rod"
+      item-name: "<!i><#FF8C00>黄玉棒"
 ```
 
-#### item-name <a href="#item-name" id="item-name"></a>
+## item-name 物品名称 <a href="#item-name" id="item-name"></a>
 
 Determines the default name of this item, unlike the `custom-name`, this name can't be erased using an anvil, won't be italicized, and does not show in some labels, such as banner markers and item frames.
+设置物品的默认名称，与 `custom-name` 不同，此名称无法使用铁砧消除，不会斜体显示，也不会在某些标签中显示，例如织布机和物品展示框。
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
-      item-name: "<!i><#FF8C00>Topaz Rod" # we use <!i> here because 1.20.4 and below
-                                          # don't have item_name component
+      item-name: "<!i><#FF8C00>黄玉棒" 
+      # 这里使用 <!i> 是因为 1.20.4 及以下版本没有 item_name 组件
 ```
 
-#### custom-name <a href="#custom-name" id="custom-name"></a>
+## custom-name 自定义名称 <a href="#custom-name" id="custom-name"></a>
 
-Used to specify the item's custom name, like you can in an anvil.
+设置物品的自定义名称，就像在铁砧中修改的名称那样。
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
-      custom-name: "<!i><#FF8C00>Topaz Rod"
+      custom-name: "<!i><#FF8C00>黄玉棒"
 ```
 
-#### lore <a href="#lore" id="lore"></a>
+## lore 描述信息 <a href="#lore" id="lore"></a>
 
-Determines the displayed description of the item.
+设置物品提示框中的描述信息。
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
       lore: 
-        - "What a shiny rod!"
+        - "亮晶晶的棒子！"
 ```
 
-#### unbreakable <a href="#unbreakable" id="unbreakable"></a>
+## unbreakable 无法破坏 <a href="#unbreakable" id="unbreakable"></a>
 
-Determines whether the item is unbreakable
+设置物品是否不可破坏
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
       unbreakable: true
 ```
 
-#### enchantment <a href="#enchantment" id="enchantment"></a>
+## enchantment 魔咒 <a href="#enchantment" id="enchantment"></a>
 
-Determines the enchantments of the item
+设置物品的附魔属性
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
@@ -109,35 +94,29 @@ items:
         custom:enchant: 3
 ```
 
-#### dyed-color <a href="#dyed-color" id="dyed-color"></a>
+## dyed-color 所染颜色 <a href="#dyed-color" id="dyed-color"></a>
 
-Determines the color of the item
+设置物品的颜色
 
-Copy
-
-```
+```yaml
 items:
   default:sofa:
     data:
       dyed-color: 255,255,255
 ```
 
-#### custom-model-data <a href="#custom-model-data" id="custom-model-data"></a>
+## custom-model-data 自定义模型数据 <a href="#custom-model-data" id="custom-model-data"></a>
 
-Copy
-
-```
+```yaml
 items:
   default:sofa:
     data:
       custom-model-data: 100
 ```
 
-#### food (1.20.5+) <a href="#food-1.20.5" id="food-1.20.5"></a>
+## food 食物（1.20.5+）<a href="#food-1.20.5" id="food-1.20.5"></a>
 
-Copy
-
-```
+```yaml
 items:
   default:magic_apple:
     material: apple
@@ -148,11 +127,9 @@ items:
         can-always-eat: false
 ```
 
-#### jukebox-playable (1.21+) <a href="#jukebox-playable-1.21" id="jukebox-playable-1.21"></a>
+## jukebox-playable 插入唱片机所播放的音乐 (1.21+) <a href="#jukebox-playable-1.21" id="jukebox-playable-1.21"></a>
 
-Copy
-
-```
+```yaml
 items:
   default:music_stick:
     material: stick
@@ -160,24 +137,20 @@ items:
       jukebox-playable: default:credits_music
 ```
 
-#### item-model (1.21.2+) <a href="#item-model-1.21.2" id="item-model-1.21.2"></a>
+## item-model 物品模型 (1.21.2+) <a href="#item-model-1.21.2" id="item-model-1.21.2"></a>
 
-Copy
-
-```
+```yaml
 items:
   default:music_stick:
     data:
       item-model: default:music_stick
 ```
 
-#### tooltip-style (1.21.2+) <a href="#tooltip-style-1.21.2" id="tooltip-style-1.21.2"></a>
+## tooltip-style 物品提示框背景和边框样式 (1.21.2+) <a href="#tooltip-style-1.21.2" id="tooltip-style-1.21.2"></a>
 
-Determines the tooltip style of the item
+设置物品的提示框背景和边框样式
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
@@ -186,62 +159,57 @@ items:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FG5cqs5c033VOfKiw2TJu%252Fimage.png%3Falt%3Dmedia%26token%3D4c517089-ab55-4fc8-adfe-c26bb7176e91\&width=768\&dpr=4\&quality=100\&sign=81334337\&sv=2)
 
-To create a tooltip style, you must place the texture in the directory as follows.
+要创建提示框样式，你必须将纹理放置在以下目录中。
 
-[https://minecraft.wiki/w/Data\_component\_format/tooltip\_style](https://minecraft.wiki/w/Data_component_format/tooltip_style)
+[https://zh.minecraft.wiki/w/数据组件?variant=zh-cn#tooltip_style](https://zh.minecraft.wiki/w/数据组件?variant=zh-cn#tooltip_style)
 
-#### trim <a href="#trim" id="trim"></a>
+## trim 盔甲纹饰 <a href="#trim" id="trim"></a>
 
 apply a decorative alteration to a [tool](https://minecraft.wiki/w/Tool) or [armor](https://minecraft.wiki/w/Armor)
+更改[工具](https://zh.minecraft.wiki/w/工具)或[盔甲](https://zh.minecraft.wiki/w/盔甲)的装饰
 
-Copy
-
-```
+```yaml
 trim:
   pattern: eye # https://minecraft.wiki/w/Smithing#Trimming
   material: iron # https://minecraft.wiki/w/Smithing#Material
 ```
 
-#### equippable (1.21.2+) <a href="#equippable-1.21.2" id="equippable-1.21.2"></a>
+## equippable 可穿戴性（1.21.2+）<a href="#equippable-1.21.2" id="equippable-1.21.2"></a>
 
-If present, this item can be equipped in the specified slot.
+如果存在，此物品可以装备在指定槽位。
 
-Copy
-
-```
+```yaml
 equippable:
-  # The slot to put the item on
+  # 放置物品的槽位
   slot: head # HEAD / CHEST / LEGS / FEET / BODY / MAIN_HAND / OFF_HAND / SADDLE
   
-  # Optional Arguments
-  # The directory this refers to is assets/<namespace>/equipment/<id>.json
+  # 可选参数
+  # 这个目录指的是 assets/<命名空间>/equipment/<id>.json
   asset-id: minecraft:topaz
-  # The resource location of the overlay texture to use when equipped. The directory this refers to is assets/<namespace>/textures/<id>.
+  # 装备时覆盖纹理的资源位置。这个目录指的是 assets/<命名空间>/textures/<id>。
   camera-overlay: namespace:id
-  # Whether the item can be dispensed by using a dispenser.
+  # 物品是否可以被发射器发射出去并装备上。
   dispensable: true
-  # Whether this item is damaged when the wearing entity is damaged.
+  # 当穿戴者受伤时，物品是否也会受损。
   damage-on-hurt: true
-  # Whether the item can be equipped into the relevant slot by right-clicking.
+  # 物品是否可以通过右键点击装备到相应的槽位。
   swappable: true
   # >= 1.21.5
-  # Whether this item can be equipped onto a target mob by pressing use on it (as long as this item can be equipped on the target at all)
+  # 通过对目标怪物按使用键，物品是否可以装备到目标身上（只要这个物品可以装备到目标身上）
   equip-on-interact: true
 ```
 
-### Customizable Data <a href="#customizable-data" id="customizable-data"></a>
+# 可自定义数据 <a href="#customizable-data" id="customizable-data"></a>
 
-Customizable Data is not maintained by plugins, and its format can change with updates to Minecraft, particularly with the frequent recent changes to Components. If you want to avoid extensive configuration overhauls due to version updates, you might consider using templates to establish a standardized configuration file format. When a new version is released, you can simply update the template to accommodate any changes. If you are unfamiliar with how to use templates, please make sure to read the guide provided at [📄 Templates \[MUST READ\]](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/templates-must-read). This approach can help streamline the update process and reduce the effort required to keep your configurations compatible with the latest game versions.
+可自定义数据不由插件维护，其格式会随着 Minecraft 的更新而变化，尤其是近期数据组件频繁的更新。若想避免因版本更新导致配置大幅改动，可以考虑使用模板来建立标准化的配置文件格式。当发布新版本时，只需更新模板就能够适应任何更新。如果你不熟悉如何使用模板，请务必阅读[📄 模板 \[必读\]](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/templates-must-read)。这种方法有助于简化更新流程，减少配置与最新游戏版本保持兼容性的工作量。
 
-#### NBT (1.20-1.20.4) <a href="#nbt-1.20-1.20.4" id="nbt-1.20-1.20.4"></a>
+## NBT（1.20-1.20.4）<a href="#nbt-1.20-1.20.4" id="nbt-1.20-1.20.4"></a>
 
-Since NBT (Named Binary Tag) has become outdated, it will not be discussed in detail here.
+由于 NBT（二进制命名标签）已经过时，因此在此不会详细讨论。
 
-[https://minecraft.wiki/w/Item\_format/Before\_1.20.5](https://minecraft.wiki/w/Item_format/Before_1.20.5)
+[https://zh.minecraft.wiki/w/物品格式](https://zh.minecraft.wiki/w/物品格式)
 
-Copy
-
-```
+```yaml
 items:
   default:topaz_rod:
     data:
@@ -249,17 +217,15 @@ items:
         CustomModelData: 1000
 ```
 
-#### Components (1.20.5+) <a href="#components-1.20.5" id="components-1.20.5"></a>
+## 组件（1.20.5+）<a href="#components-1.20.5" id="components-1.20.5"></a>
 
-The format for custom Components strictly adheres to the [Minecraft Wiki](https://minecraft.wiki/w/Data_component_format) guidelines. Below, I will guide you through a few examples to help you become familiar with how to configure custom Components.
+自定义组件的格式严格遵循 [Minecraft Wiki](https://zh.minecraft.wiki/w/数据组件) 指南。下面，我会通过几个示例来指导你如何配置自定义组件。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FNrlWy1Cxy4vn2GK1ODdL%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=21ad2949\&sv=2)
 
-From the image, we can see that `max_damage` accepts an `I` (which stands for an integer type parameter). Therefore, in our configuration, we simply need to use a numerical value directly.
+从图中可以看出，`max_damage` 接受一个 `I`（代表一个整数类型参数）。因此，在我们的配置中，我们只需要直接使用一个整数即可。
 
-Copy
-
-```
+```yaml
 items:
   guide:test:
     data:
@@ -269,11 +235,9 @@ items:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F7cqvxKcjpE2LTlsbTj9K%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=cfd2fc97\&sv=2)
 
-From the image, we can see that `food` requires three parameters: `nutrition` of type `int`, `saturation` of type `float`, and `can_always_eat` of type `boolean`.
+从图中可以看出，`food` 需要三个参数：类型为 `int` 的 `nutrition`，类型为 `float` 的 `saturation`，以及类型为 `boolean` 的 `can_always_eat`。
 
-Copy
-
-```
+```yaml
 items:
   guide:test:
     data:
@@ -286,11 +250,9 @@ items:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FB6jF06WTXXXnonNs0kqo%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=37ba2404\&sv=2)
 
-Now, let's try working with a compound tag. The `{}` signifies that you need to open a new section in your YAML configuration.
+现在，让我们尝试处理一个复合标签。`{}` 表示你需要在你的 YAML 配置中打开一个新的部分。
 
-Copy
-
-```
+```yaml
 items:
   guide:test:
     data:
@@ -301,11 +263,9 @@ items:
           show_in_tooltip: false
 ```
 
-However, upon closer inspection of the wiki, you'll notice that this method becomes obsolete in version 1.21.5. When 1.21.5 is released, you will need to update your configuration file as follows:
+然而，仔细阅读 Wiki 后，你会发现此方法在 1.21.5 版本中已经过时。当 1.21.5 版本发布时，你需要按照以下方式更新你的配置文件：
 
-Copy
-
-```
+```yaml
 items:
   guide:test:
     data:
@@ -314,21 +274,17 @@ items:
           minecraft:sharpness: 1
 ```
 
-You can also configure the components in json format
+你也可以使用 json 格式配置组件
 
-Copy
-
-```
+```yaml
 minecraft:custom_data: "(json) {\"test\":1}"
 ```
 
-#### Remove Components (1.20.5+) <a href="#remove-components-1.20.5" id="remove-components-1.20.5"></a>
+## 移除组件（1.20.5+）<a href="#remove-components-1.20.5" id="remove-components-1.20.5"></a>
 
-Removes the component from the item
+从物品中移除组件
 
-Copy
-
-```
+```yaml
 items:
   test:item:
     data:

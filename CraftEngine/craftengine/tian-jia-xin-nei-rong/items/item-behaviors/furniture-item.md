@@ -1,10 +1,10 @@
 # 🪑 Furniture Item
 
-A furniture item is an item that is bound to a piece of furniture. You can configure its corresponding furniture ID here, or even the entire furniture configuration (but please note that doing so will result in the time taken to load the furniture being recorded under the item loading process). When you bind this behavior to an item, you can place it by right-clicking.
+家具物品是与一件家具绑定的物品。你可以在此处配置与其对应的家具 ID，甚至整个家具配置（但请注意，这样会导致加载家具的时间会被记录在物品的加载过程中）。当你将此行为绑定到物品时，可以通过右键点击来放置它。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FSYOQXH6ZY0VcGYGZLdgN%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=d039abea\&sv=2)Copy
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FSYOQXH6ZY0VcGYGZLdgN%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=d039abea\&sv=2)
 
-```
+```yaml
 items:
   default:bench:
     behavior:
@@ -12,19 +12,17 @@ items:
       furniture: default:bench
 ```
 
-This is the simplest way to configure a furniture-item, but it assumes that you have already configured a piece of furniture. If you are unsure how to configure a piece of furniture, please refer to [🪑 Furniture](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture).
+这是配置家具物品最简单的方法，但前提是你已经配置了一件家具。如果你不确定如何配置家具，请参考[🪑 家具](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture)。
 
-If you find it too cumbersome to configure them separately, you can choose to configure them together. Below is an example. The format under `furniture` follows the standard furniture configuration format.
+如果觉得单独配置太麻烦，可以选择一起配置。下面是一个示例。`furniture` 下的格式遵循标准的家具配置格式。
 
-Copy
-
-```
+```yaml
 items:
   default:bench:
     material: paper
     custom-model-data: 2000
     data:
-      display-name: "<!i>Bench"
+      display-name: "<!i>长椅"
     model:
       type: "minecraft:model"
       path: "minecraft:item/custom/bench"

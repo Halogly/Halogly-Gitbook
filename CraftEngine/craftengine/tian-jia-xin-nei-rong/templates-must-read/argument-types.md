@@ -139,7 +139,7 @@ arguments:
   lore:
     type: list
     list:
-      - "Hello, Minecraft!"
+      - "你好，Minecraft!"
 ```
 {% hint style="warning" %}
 在这种情况下，列表不能正确应用

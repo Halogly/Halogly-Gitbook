@@ -1,5 +1,5 @@
 ---
-description: This page mainly explains how to add new recipes to your server.
+description: 本页面主要讲解如何向服务器中添加新的合成配方。
 ---
 
 # 📖 Recipes
@@ -8,7 +8,7 @@ description: This page mainly explains how to add new recipes to your server.
 
 CraftEngine 允许你使用标签，并且可以自定义标签。要使用标签，只需要符合这个格式：`#namespace:tag`。
 
-在以下示例中，我为 `palm_planks` 添加了两个原版标签，使它们能够参与使用这两个标签的数据包中的所有配方。
+在下面的示例中，我为 `palm_planks` 添加了两个原版标签，这样它就可以参与这两个标签在数据包中的代表的合成配方了。
 
 ```yaml
 items:
@@ -21,7 +21,7 @@ items:
         - "minecraft:planks"
         - "minecraft:wooden_tool_materials"
     data:
-      item-name: "<!i>Palm Planks"
+      item-name: "<!i>棕榈木板"
     model:
       type: "minecraft:model"
       path: "minecraft:item/custom/palm_planks"
@@ -32,15 +32,15 @@ items:
       block: default:palm_planks
 ```
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FUohuvWjBBMBvvYIt8rG0%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=18f87368\&sv=2)#minecraft:planks
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FUohuvWjBBMBvvYIt8rG0%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=18f87368\&sv=2)
+#minecraft:planks
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Ff6mY7xsQNvHMDOn3vf1C%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=7db12ddc\&sv=2)#minecraft:wooden\_tool\_materials
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Ff6mY7xsQNvHMDOn3vf1C%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=7db12ddc\&sv=2)
+#minecraft:wooden\_tool\_materials
 
-### Group / Category <a href="#group-category" id="group-category"></a>
+# 分组/分类 <a href="#group-category" id="group-category"></a>
 
-Copy
-
-```
+```yaml
 recipes:
   default:palm_planks:
     type: shapeless
@@ -53,22 +53,21 @@ recipes:
       count: 4
 ```
 
-The `group` determines which group this recipe belongs to after it is unlocked on the client side. The `group` can be any name you choose freely. However, please avoid using illegal characters.
+`group` 决定这个合成配方在客户端解锁后属于哪个分组。`group` 的名称任由你自己决定。但注意不要使用非法字符。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FSoRMQK6BhH7By5iaVOcF%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=38c99bf0\&sv=2)
 
 The `category` determines which tab this recipe is located in within the recipe book. The `category` type is limited.
+`category` 决定这个合成配方在配方书中位于哪个标签页。`category` 类型是有限的。
 
-* For cooking-type recipes, the options are `food`, `blocks`, and `misc`.
-* For crafting-type recipes, the options are `building`, `redstone`, `equipment`, and `misc`.
+* 对于烹饪类型的配方，选项是 `food`、`blocks` 和 `misc`。
+* 对于制作类型的配方，选项是 `building`、`redstone`、`equipment` 和 `misc`。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FMvzwXvGqBXFtC5RXTIXg%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=637cf10e\&sv=2)
 
-### Shaped Crafting Recipe <a href="#shaped-crafting-recipe" id="shaped-crafting-recipe"></a>
+# 有序配方 <a href="#shaped-crafting-recipe" id="shaped-crafting-recipe"></a>
 
-Copy
-
-```
+```yaml
 recipes:
   default:topaz_shovel:
     type: shaped
@@ -84,9 +83,9 @@ recipes:
       count: 1
 ```
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FGr062ZfKJry53tqR4lLB%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=4aa78640\&sv=2)Copy
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FGr062ZfKJry53tqR4lLB%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=4aa78640\&sv=2)
 
-```
+```yaml
 recipes:
   default:chinese_lantern:
     type: shaped
@@ -105,11 +104,9 @@ recipes:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FuOlikOvTLLzJZZxki5Cl%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=671f42c3\&sv=2)
 
-### Shapeless Crafting Recipe <a href="#shapeless-crafting-recipe" id="shapeless-crafting-recipe"></a>
+# 无序配方 <a href="#shapeless-crafting-recipe" id="shapeless-crafting-recipe"></a>
 
-Copy
-
-```
+```yaml
 recipes:
   default:palm_planks:
     type: shapeless
@@ -117,7 +114,7 @@ recipes:
     group: planks
     ingredients:
       - "#default:palm_logs"
-      # list is also supported
+      # 支持列表
       - - test:ingredient1
         - test:ingredient2
     result:
@@ -127,13 +124,11 @@ recipes:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FQajicG9iHchp728pMRmm%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=e198fba\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FyfUiEjTjVRjO7AG5dQID%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=e99a4805\&sv=2)
 
-### Cooking Recipe <a href="#cooking-recipe" id="cooking-recipe"></a>
+# 烧炼配方 <a href="#cooking-recipe" id="cooking-recipe"></a>
 
-Cooking Recipe includes `smelting`, `blasting`, `smoking`, and `campfire_cooking`. Regardless of the type, the configuration format remains the same.
+烧炼配方包括 `smelting` 熔炉配方、`blasting` 高炉配方、`smoking` 烟熏炉配方和 `campfire_cooking` 营火配方。无论类型如何，配置格式保持不变。
 
-Copy
-
-```
+```yaml
 recipes:
   default:topaz_from_smelting_topaz_ore:
     type: smelting
@@ -159,13 +154,11 @@ recipes:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FSJHB7w9gPm0UDldpjwwM%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=47bddd6\&sv=2)
 
-### Stone Cutting Recipe <a href="#stone-cutting-recipe" id="stone-cutting-recipe"></a>
+# 切石机配方 <a href="#stone-cutting-recipe" id="stone-cutting-recipe"></a>
 
-Stone Cutting Recipe is a somewhat unique recipe type. I do not recommend using custom items as ingredients, as this is highly likely to cause significant client-side visual issues.
+切石机配方是一种比较独特的配方类型。不建议使用自定义物品作为原料，因为这很可能会导致客户端显示异常。
 
-Copy
-
-```
+```yaml
 recipes:
   default:stonecutting_example:
     type: stonecutting
@@ -176,22 +169,20 @@ recipes:
       count: 1
 ```
 
-### Smithing Transform Recipe <a href="#smithing-transform-recipe" id="smithing-transform-recipe"></a>
+# 锻造升级配方 <a href="#smithing-transform-recipe" id="smithing-transform-recipe"></a>
 
-Copy
-
-```
+```yaml
 default:topaz_bow:
   type: smithing_transform
-  # slot 1 (Optional)
+  # 槽位 1（可选）
   template-type: default:topaz
-  # slot 2 (Required)
+  # 槽位 2（必需）
   base: minecraft:bow
-  # slot 3 (Optional)
+  # 槽位 3（可选）
   addition: default:topaz
-  # merge two items' components like what vanilla does
-  merge-components: true # default: true
-  # see the guide below
+  # 合并两个物品的组件，就像原版那样
+  merge-components: true # 默认: true
+  # 请参阅下方的指南
   post-processors: []
   result:
     id: default:topaz_bow
@@ -200,17 +191,15 @@ default:topaz_bow:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FEvTD2AqtbFndtXO4icWX%252Fimage.png%3Falt%3Dmedia%26token%3D1f4a412f-0ccb-465d-adde-e257c2a7a73e\&width=768\&dpr=4\&quality=100\&sign=66e098ea\&sv=2)
 
-If you don't like the vanilla merging method, you can use a custom post-processor.
+如果你不喜欢原版的合并方式，你可以使用一个自定义的后端处理器。
 
-Copy
-
-```
+```yaml
 post-processors:
-  # Keep the specified components (1.20.5+)
+  # 保持指定的组件（1.20.5+）
   - type: keep_components
     components:
       - minecraft:enchantments
-  # Keep the specified nbt tags (1.20-1.20.4)
+  # 保持指定的 NBT 标签（1.20-1.20.4）
   - type: keep_tags
     tags:
       - display.Name

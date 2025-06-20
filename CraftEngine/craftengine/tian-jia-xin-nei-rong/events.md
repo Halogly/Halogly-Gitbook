@@ -2,7 +2,7 @@
 
 # 介绍 <a href="#introduction" id="introduction"></a>
 
-The `events` section determines which item/furniture/block will execute predefined behaviors during specific events. Under the `events` section, you need to specify an event trigger, such as `"right_click"` for a right-click action. Below the event trigger, you must pass a list of actions with their corresponding types. For example, `command` executes a specific command.
+`events` 部分决定在特定事件期间哪个物品/家具/方块将执行预定义行为。在 `events` 部分中，你需要指定一个事件触发器，例如 `"right_click"` 是右键点击操作。在事件触发器下方，必须传递一个包含相应类型的操作列表。例如，`command` 执行指定的命令。
 
 ```yaml
 # 格式 1
@@ -32,7 +32,7 @@ events:
 
 [⚖️ 条件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/conditions)
 
-# 🧨 事件触发 <a href="#event-triggers" id="event-triggers"></a>
+# 🧨 事件触发器 <a href="#event-triggers" id="event-triggers"></a>
 
 ## 物品 <a href="#items" id="items"></a>
 
@@ -55,7 +55,7 @@ events:
 * place
 * right\_click
 
-Please note that the corresponding events should be placed in the appropriate configuration area. For example, if you want to execute a command when interacting with a piece of furniture, the correct approach is to place the `events` under the `furniture` section, not under your item section.
+请注意，相应的事件应该放置在适当的配置区域。例如，如果你希望在交互某件家具时执行命令，正确的方法是将 `events` 放在 `furniture` 区域下，而不是放在你的物品区域下。
 
 ```yaml
 items:
@@ -73,7 +73,7 @@ items:
 
 # 🔧 函数 <a href="#functions" id="functions"></a>
 
-## cancel\_event <a href="#cancel_event" id="cancel_event"></a>
+## 取消事件 cancel\_event <a href="#cancel_event" id="cancel_event"></a>
 
 取消原先的事件。
 
@@ -83,7 +83,7 @@ type: cancel_event
 
 ## 运行 run <a href="#run" id="run"></a>
 
-按顺序运行一系列函数。这对于具有相同条件的函数非常有用。
+按顺序运行一系列函数。这对于具有相同条件的函数来说非常有用。
 
 ```yaml
 type: run
@@ -95,7 +95,7 @@ functions: # 必需; 映射列表
 
 ## 命令 command <a href="#command" id="command"></a>
 
-以玩家或控制台的身份执行命令。Runs a command as a player or console.
+以玩家或控制台的身份执行命令。
 
 ```yaml
 type: command
@@ -145,7 +145,7 @@ fade-out: 10 # 可选; 数字; [默认: 5]
 ```yaml
 type: open_window #
 gui-type: anvil # 必需; 枚举[anvil, enchantment, grindstone, loom, smithing, crafting, cartography];
-title: "超级铁砧"  # 可选; 字符串
+title: "超级无敌大铁砧"  # 可选; 字符串
 target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
 ```
 
@@ -182,9 +182,9 @@ loot:
 type: update_interaction_tick
 ```
 
-## 设置计数 set\_count <a href="#set_count" id="set_count"></a>
+## 设置数量 set\_count <a href="#set_count" id="set_count"></a>
 
-设置此事件中当前物品的计数
+设置此事件中当前物品的数量
 
 ```yaml
 type: set_count
@@ -215,16 +215,16 @@ saturation: 2.5
 target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-#### 挥动手臂 swing\_hand <a href="#swing_hand" id="swing_hand"></a>
+## 挥动手臂 swing\_hand <a href="#swing_hand" id="swing_hand"></a>
 
-挥动涉及事件的手或配置中指定的手
+挥动与此事件相关的手或配置中指定的手
 
 ```yaml
 type: swing_hand
 hand: main_hand # 可选参数
 ```
 
-#### 粒子效果 particle <a href="#particle" id="particle"></a>
+## 粒子 particle <a href="#particle" id="particle"></a>
 
 生成粒子
 
@@ -242,7 +242,7 @@ speed: 0
 
 # 以下参数仅在粒子属于某种类型时有效。
 # 参数详情参阅:
-# https://zh.minecraft.wiki/w/Java%E7%89%88%E7%B2%92%E5%AD%90/#%E7%B1%BB%E5%9E%8B
+# https://zh.minecraft.wiki/w/Java版粒子/#类型
 
 # item
 item: default:chinese_lantern
@@ -278,7 +278,7 @@ target-z: 0
 duration: 10
 ```
 
-## 添加药水效果 potion\_effect <a href="#potion_effect" id="potion_effect"></a>
+## 药水效果 potion\_effect <a href="#potion_effect" id="potion_effect"></a>
 
 添加药水效果
 
@@ -301,7 +301,7 @@ potion-effect: minecraft:blindness # 'all' 为 true 时可选
 all: false  # 默认: false
 ```
 
-## 经验值 leveler\_exp <a href="#leveler_exp" id="leveler_exp"></a>
+## leveler\_exp <a href="#leveler_exp" id="leveler_exp"></a>
 
 增加技能/工作经验值
 

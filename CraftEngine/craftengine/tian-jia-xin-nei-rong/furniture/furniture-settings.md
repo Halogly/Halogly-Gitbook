@@ -1,35 +1,29 @@
 # ⚙️ Furniture Settings
 
-### item <a href="#item" id="item"></a>
+# 物品 <a href="#item" id="item"></a>
 
-Determines the item that this furniture corresponds to. This is usually used to get furniture item in creative mode with middle click(1.21.4+).
+设置家具对应的物品。通常用于在创造模式下使用中键（1.21.4+）获取家具物品。
 
-Copy
-
-```
+```yaml
 item: default:test_furniture
 ```
 
-### sounds <a href="#sounds" id="sounds"></a>
+# 声音 <a href="#sounds" id="sounds"></a>
 
-Determines the sound of the furniture in various situations
+设置家具在不同情况下的声音
 
-* break When the player breaks this furniture
-* place When the player places this furniture
+* 当玩家破坏家具时
+* 当玩家放置家具时
 
-Copy
-
-```
+```yaml
 sounds:
   break: minecraft:block.bamboo_wood.break
   place: minecraft:block.bamboo_wood.place
 ```
+{% hint style="info" %}
+你可以这样配置，来精确控制音量和音调
 
-You can configure like this to precisely control the volume and pitch
-
-Copy
-
-```
+```yaml
 sounds:
   break:
     id: minecraft:block.deepslate.break
@@ -37,14 +31,13 @@ sounds:
     volume: 0.25
   place: minecraft:block.deepslate.step
 ```
+{% endhint %}
 
-### minimized <a href="#minimized" id="minimized"></a>
+# 减少数据内容 <a href="#minimized" id="minimized"></a>
 
-Determines whether this furniture should minimize the network packet sent to players without admin permissions.
+设置家具是否向没有管理员权限的玩家发送最小化的网络数据包。
 
-Copy
-
-```
+```yaml
 minimized: true
 ```
 

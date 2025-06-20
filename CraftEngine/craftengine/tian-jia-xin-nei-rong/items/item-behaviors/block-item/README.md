@@ -1,14 +1,12 @@
 # 🧱 Block Item
 
-A block item is an item that is bound to a block. You can configure its corresponding block ID here, or even the entire block configuration (but please note that doing so will result in the time taken to load the block being recorded under the item loading process). When you bind this behavior to an item, you can place it by right-clicking.
+方块物品是一个绑定到方块的物品。你可以在此处配置与其对应的方块 ID，甚至整个方块配置（但请注意，这样会导致加载方块的时间被记录在物品的加载过程中）。当你将此行为绑定到物品时，可以通过右键点击来放置它。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F0g6l5DAJuu3yiN1h9X0I%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=b35f2adb\&sv=2)
 
-Please note, where a block can be placed is determined by its [🕹️ Block Behaviors](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-behaviors). For example, the sapling in the image can only be placed on blocks with the `dirt` or `farmland` tags because its block behavior is that of a `sapling block`.
+请注意，方块放置的位置由其[🕹️ 方块行为](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-behaviors)决定。例如，图片中的小幼苗只能放置在带有 `dirt` 或 `farmland` 标签的方块上，因为它的方块行为是 `sapling block`。
 
-Copy
-
-```
+```yaml
 items:
   default:palm_sapling:
     material: paper
@@ -17,13 +15,13 @@ items:
       block: default:palm_sapling
 ```
 
-This is the simplest way to configure a block-item, but it assumes that you have already configured a block. If you are unsure how to configure a block, please refer to [🧱 Blocks](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks).
+这是配置方块物品最简单的方法，但前提是你已经配置了一个方块。如果你不确定如何配置方块，请参考[🧱 方块](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks)。
+
 
 If you find it too cumbersome to configure them separately, you can choose to configure them together. Below is an example. The format under `block` follows the standard block configuration format.
+如果觉得单独配置太麻烦，可以选择一起配置。下面是一个示例。`block` 下的格式遵循标准的方块配置格式。
 
-Copy
-
-```
+```yaml
 items:
   default:palm_sapling:
     material: paper

@@ -1,57 +1,48 @@
 ---
-description: >-
-  Unlike data, the contents within settings pertain to special mechanisms
-  processed by the plugin.
+description: 与物品数据不同，本页面的设置内容属于插件处理的范畴。
 ---
 
 # ⚙️ Item Settings
 
-### fuel-time <a href="#fuel-time" id="fuel-time"></a>
+# fuel-time 烧炼时间 <a href="#fuel-time" id="fuel-time"></a>
 
-Determines how many ticks can be burned
+设置要燃烧多少刻的时间
 
-Copy
-
-```
+```yaml
 fuel-time: 100
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FETo97tqrp6GsxMMc4zOX%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=624f167b\&sv=2)
 
-### tags <a href="#tags" id="tags"></a>
+# tags 标签 <a href="#tags" id="tags"></a>
 
-See [📖 Recipes](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/recipes)
+参阅[📖 合成配方](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/recipes)
 
-Copy
-
-```
+```yaml
 tags:
   - "default:palm_logs"
   - "minecraft:logs"
   - "minecraft:logs_that_burn"
 ```
 
-### equippable (1.21.2+) <a href="#equippable-1.21.2" id="equippable-1.21.2"></a>
+# equippable 可穿戴性（1.21.2+）<a href="#equippable-1.21.2" id="equippable-1.21.2"></a>
 
-Please note that the `equippable` in [🔢 Item Data](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-data) and the `equippable` in [⚙️ Item Settings](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-settings) are not the same. The `equippable` in `settings` automatically generates the relevant JSON files for the user and have a wide version support, whereas the `equippable` within `data` requires the user to manually create the JSON files in the resource pack and is only supported in version 1.21.2 and above.
+请注意[🔢 物品数据](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-data)和[⚙️ 物品设置](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-settings)中的 `equippable` 和 `equippable` 并不相同。`settings` 中的 `equippable` 会自动为用户生成相关的 JSON 文件，能兼容许多版本，而 `data` 中的 `equippable` 则需要用户在资源包中手动创建 JSON 文件，并且仅支持 1.21.2 及以上版本。
 
 Methods of creating custom armor using leather combined with shaders will never be supported. Utilizing core shaders often results in poorer compatibility with client shaders. Moreover, this approach is not considered stable or reliable by the developers of Minecraft, and we should strive to avoid the excessive use of core shaders.
+永远不支持使用皮革结合着色器创建自定义盔甲的方法。使用 Minecraft 的核心着色器基本都会导致与客户端着色器的兼容性变差。此外，这种做法对于 Minecraft 的开发者来说并不稳定可靠，我们应该尽量避免过度使用核心着色器。
 
-Copy
-
-```
+```yaml
 equippable:
-  # Required Arguments
-  # The slot to put the item on
+  # 必需参数
+  # 放置物品的槽位
   slot: head # HEAD / CHEST / LEGS / FEET / BODY / MAIN_HAND / OFF_HAND / SADDLE
   
-  # The directory this refers to is assets/<namespace>/equipment/<id>.json
+  # 这个目录指的是 assets/<命名空间>/equipment/<id>.json
   asset-id: topaz
-  # In practice, you only need to select the entries you wish to use
-  # from the options below and configure them accordingly. Please be 
-  # aware that when multiple items share the same asset-id, you must 
-  # ensure that their texture paths are consistent; otherwise, it may
-  # result in errors for one of the items.
+  # 在实际操作中，你只需要从下方的选项中选择你希望使用的条目，并进行相应的配置。
+  # 请注意，当多个物品共用同一个 asset-id 时，你必须确保它们的纹理路径一致；
+  # 否则，可能会导致其中一个物品出现错误。
   humanoid: "minecraft:topaz"
   humanoid-leggings: "minecraft:topaz"
   llama-body: "minecraft:topaz"
@@ -59,69 +50,62 @@ equippable:
   wolf-body: "minecraft:topaz"
   wings: "minecraft:topaz"
   
-  # Optional Arguments
-  # The resource location of the overlay texture to use when equipped. The directory this refers to is assets/<namespace>/textures/<id>.
+  # 可选参数
+  # 装备时覆盖纹理的资源位置。这个目录指的是 assets/<命名空间>/textures/<id>。
   camera-overlay: "namespace:id"
-  # Whether the item can be dispensed by using a dispenser.
+  # 物品是否可以被发射器发射出去并装备上。
   dispensable: true
-  # Whether this item is damaged when the wearing entity is damaged.
+  # 当穿戴者受伤时，物品是否也会受损。
   damage-on-hurt: true
-  # Whether the item can be equipped into the relevant slot by right-clicking.
+  # 物品是否可以通过右键点击装备到相应的槽位。
   swappable: true
   # >= 1.21.5
-  # Whether this item can be equipped onto a target mob by pressing use on it (as long as this item can be equipped on the target at all)
+  # 通过对目标怪物按使用键，物品是否可以装备到目标身上（只要这个物品可以装备到目标身上）
   equip-on-interact: true
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FDrJjArxUMGqZdTcFNlbB%252Fimage.png%3Falt%3Dmedia%26token%3Db507bcfd-b23f-42d5-a610-51e45544b465\&width=768\&dpr=4\&quality=100\&sign=fe58be0c\&sv=2)
 
-### repairable <a href="#repairable" id="repairable"></a>
+# repairable 铁砧上能被什么物品修复 <a href="#repairable" id="repairable"></a>
 
-Decides if the item can be repaired through crafting table/anvil (Default: true)
+设置物品是否可以通过工作台或铁砧修复（默认: true）
 
-Copy
-
-```
+```yaml
 repairable: true
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FsFmbIZ3gKhZRd0i2aJ8N%252Fimage.png%3Falt%3Dmedia%26token%3D105464c8-4910-4b0e-9e68-a3f968468e99\&width=768\&dpr=4\&quality=100\&sign=f8247985\&sv=2)
 
-### anvil-repair-item <a href="#anvil-repair-item" id="anvil-repair-item"></a>
+# anvil-repair-item 铁砧物品修复 <a href="#anvil-repair-item" id="anvil-repair-item"></a>
 
-Determines how much durability a given item provides when repairing
+设置使用铁砧修复时为物品提供多少耐久度
 
-Copy
-
-```
+```yaml
 anvil-repair-item:
   - target: "#topaz_tools"
-    amount: 20  # restores fixed durability
+    amount: 20  # 修复固定的耐久度
   - target:
       - "minecraft:iron_pickaxe"
       - "minecraft:shears"
-    percent: 0.25  # 0.25 = 25%, restores n% total durability
+    percent: 0.25  # 0.25 = 25%, 修复多少百分比的耐久度
 ```
 
-### renameable <a href="#renameable" id="renameable"></a>
+# renameable 可重命名 <a href="#renameable" id="renameable"></a>
 
-Determines if the item can be renamed in anvil. (Default: true)
+设置物品是否可以通过铁砧重命名（默认: true）
 
-Copy
-
-```
+```yaml
 renameable: false
 ```
 
-### projectile <a href="#projectile" id="projectile"></a>
+# projectile 弹射物 <a href="#projectile" id="projectile"></a>
 
 Creates a custom projectile entity based on the item. It supports `trident`, `arrow`, `snowball` and more.
+基于物品创建自定义弹射物实体。支持 `trident`、`arrow`、`snowball` 以及更多类型。
 
-Copy
-
-```
+```yaml
 projectile:
-  item: default:topaz_trident # the item to display
+  item: default:topaz_trident # 要显示的物品
   translation: 0,0,0
   rotation: 1,1,1,1
   display-transform: NONE
@@ -130,88 +114,76 @@ projectile:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FMXNMpGU2nEZuaIZZdXje%252Fimage.png%3Falt%3Dmedia%26token%3Da8d196fb-e093-4c29-a796-83ad28ca3cac\&width=768\&dpr=4\&quality=100\&sign=8efddc31\&sv=2)
 
-The way you model directly affects the `rotation` arguments in the configuration file.
+建模的方式会直接影响到配置文件中的 `rotation` 参数。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252F6VmwwP0bhtIijZEsXG2e%252Fimage.png%3Falt%3Dmedia%26token%3Ddf1e2bd8-d608-4c19-9cf5-dcd2cc534505\&width=300\&dpr=4\&quality=100\&sign=9fbf83c3\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FL7y7eP6xIqwRXrLKlqcb%252Fimage.png%3Falt%3Dmedia%26token%3Ddf7f1d90-dffd-4db4-b3e9-c86195564187\&width=300\&dpr=4\&quality=100\&sign=ea21caea\&sv=2) No matter which modeling method you use, the most important thing is to make the sharp part of the trident in the position shown in the picture above to ensure the best hitting point.
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252F6VmwwP0bhtIijZEsXG2e%252Fimage.png%3Falt%3Dmedia%26token%3Ddf1e2bd8-d608-4c19-9cf5-dcd2cc534505\&width=300\&dpr=4\&quality=100\&sign=9fbf83c3\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FL7y7eP6xIqwRXrLKlqcb%252Fimage.png%3Falt%3Dmedia%26token%3Ddf7f1d90-dffd-4db4-b3e9-c86195564187\&width=300\&dpr=4\&quality=100\&sign=ea21caea\&sv=2)
+无论你使用哪种建模方式，都必须将三叉戟的尖端部分调整为上图所示的位置，确保投射时击中目标的位置是正确的。
 
-### dyeable <a href="#dyeable" id="dyeable"></a>
+# dyeable 可染色 <a href="#dyeable" id="dyeable"></a>
 
-Decides if the item([leather armor](https://minecraft.wiki/w/Leather_armor) or [wolf armor](https://minecraft.wiki/w/Wolf_armor)) can be dyed in crafting tables. (Default: true)
+设置物品（[皮革盔甲](https://zh.minecraft.wiki/w/盔甲#染色)或[狼铠](https://zh.minecraft.wiki/w/狼铠)）是否可以在工作台上染色。（默认: true）
 
-Copy
-
-```
+```yaml
 dyeable: true
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FKPAQnbm7LyeQtQ6UHHyp%252Fimage.png%3Falt%3Dmedia%26token%3Dbbe9e687-6486-451f-8762-32849b4c0e34\&width=768\&dpr=4\&quality=100\&sign=af44b58\&sv=2)
 
-### food <a href="#food" id="food"></a>
+# food 食物 <a href="#food" id="food"></a>
 
-Copy
-
-```
+```yaml
 food:
-  nutrition: 5  # 0~20, integer
-  saturation: 3.5  # 0~10, float
+  nutrition: 5  # 0~20, 整数
+  saturation: 3.5  # 0~10, 浮点数（小数）
 ```
 
 Better to use `food` components on a 1.20.5+ server
+在 1.20.5+ 的服务器上最好使用 `food` 组件
 
-### consume-replacement <a href="#consume-replacement" id="consume-replacement"></a>
+# consume-replacement 消耗替换 <a href="#consume-replacement" id="consume-replacement"></a>
 
-Set the return item after consuming the item. For example, after the player drinks the water bottle, the empty bottle will be returned. (Default: null)
+在消耗物品后设置返回的物品。例如，玩家喝完水瓶后，会返回空的玻璃瓶。（默认: null）
 
-Copy
-
-```
+```yaml
 consume-replacement: minecraft:apple
 ```
 
-### craft-remaining-item <a href="#craft-remaining-item" id="craft-remaining-item"></a>
+# craft-remaining-item 合成时剩余物品 <a href="#craft-remaining-item" id="craft-remaining-item"></a>
 
-Choose whether items should return other items when the crafting recipe is finished. This option only works for custom items with a max stack size of 1
+设置是否在完成合成后让物品返回其他物品。此选项仅适用于最大堆叠大小为 1 的自定义物品。
 
-Copy
-
-```
+```yaml
 craft-remaining-item: bucket
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FG5Gx2xMlH4SspQC1P66y%252Fimage.png%3Falt%3Dmedia%26token%3D5a6e6d26-8730-4f07-ae94-dabb0fc3b520\&width=768\&dpr=4\&quality=100\&sign=707a666e\&sv=2)
 
-### invulnerable <a href="#invulnerable" id="invulnerable"></a>
+# invulnerable 不可摧毁 <a href="#invulnerable" id="invulnerable"></a>
 
-Copy
-
-```
+```yaml
 invulnerable:
   - lava
   - fire_tick
-  - block_explosion  # respawn anchor
-  - entity_explosion  # creeper, tnt
+  - block_explosion  # 重生锚
+  - entity_explosion  # 苦力怕, TNT
   - lightning
-  - contact  # cactus
+  - contact  # 仙人掌
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FHYC5C0eMeqoVtNWk2QbI%252Fimage.png%3Falt%3Dmedia%26token%3D15fdae30-932b-4ab3-9a00-a81102e5dccf\&width=768\&dpr=4\&quality=100\&sign=9de3289e\&sv=2)
 
-### enchantable <a href="#enchantable" id="enchantable"></a>
+# enchantable 在附魔台上的附魔能力 <a href="#enchantable" id="enchantable"></a>
 
-This option lets you block certain items from being used on the enchantment table. Tip: setting it to `true` won’t magically make unenchantable items enchantable. (Default: true)
+这个选项可以禁止某些物品在附魔台上使用。注意：设置为 `true` 并不会使不可附魔的物品变得可以附魔。（默认: true）
 
-Copy
-
-```
+```yaml
 enchantable: false
 ```
 
-### compost-probability <a href="#compost-probability" id="compost-probability"></a>
+# compost-probability 堆肥概率 <a href="#compost-probability" id="compost-probability"></a>
 
-This setting controls how likely it is for composting to succeed (Default: 0.5)
+控制堆肥成功的可能性（默认值: 0.5）
 
-Copy
-
-```
+```yaml
 compost-probability: 0.5
 ```

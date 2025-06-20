@@ -112,7 +112,7 @@ items:
 
 # 合并 <a href="#merges" id="merges"></a>
 
-Merges 会深度融合两个配置部分，包括所有列表——没有任何内容会遗漏掉。基本上，merges 功能几乎与多模板完全相同。
+merges 会深度融合两个配置部分，包括所有列表——没有任何内容会遗漏掉。基本上，merges 功能几乎与多模板完全相同。
 
 ```yaml
 items:

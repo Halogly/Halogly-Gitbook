@@ -32,9 +32,9 @@ generation:
 
 ## 继承 <a href="#parent" id="parent"></a>
 
-> 从指定路径加载其他模型，路径格式需符合[资源位置](https://zh.minecraft.wiki/w/Tutorial:%E5%88%B6%E4%BD%9C%E8%B5%84%E6%BA%90%E5%8C%85/%E6%A8%A1%E5%9E%8B/#%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84)
+> 从指定路径加载其他模型，路径格式需符合[资源位置](https://zh.minecraft.wiki/w/Tutorial:制作资源包/模型/#文件路径)
 
-`parent` 字段不仅可以引用原版 Minecraft 提供的默认模型，还可以指向你的自定义模型。你可以在这个[网站](https://misode.github.io/assets/model/)上查看所有可用的 Minecraft 模型
+`parent` 字段不仅可以引用原版 Minecraft 提供的默认模型，还可以指向你的自定义模型。你可以在这个[网站](https://misode.github.io/assets/model/)上找到所有可用的 Minecraft 模型
 
 ```yaml
 items#test:
@@ -71,8 +71,7 @@ items#test:
 
 # 纹理 <a href="#textures" id="textures"></a>
 
-> Holds the textures of the model, in form of a [resource location](https://minecraft.wiki/w/Tutorial:Models#File_path) or can be another texture variable.
-> 存储模型所需的纹理资源，支持[资源位置](https://zh.minecraft.wiki/w/Tutorial:%E5%88%B6%E4%BD%9C%E8%B5%84%E6%BA%90%E5%8C%85/%E6%A8%A1%E5%9E%8B/#%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84)和其他已定义的纹理变量两种形式。
+> 存储模型所需的纹理资源，支持[资源位置](https://zh.minecraft.wiki/w/Tutorial:制作资源包/模型/#文件路径)和其他已定义的纹理变量两种形式。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F7Av9LqhtMmYcb2pFXS9X%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=99c63916\&sv=2)
 
@@ -119,14 +118,13 @@ items#test:
 * `layer0` 是 `minecraft:item/generated` 中定义的 `textures` 参数之一。
 * 这就是为什么你可以在子模型（`apple`）中覆盖这个纹理。
 
-**You can view all available Minecraft models and their textures on this** [**website**](https://misode.github.io/assets/model/)
 **你可以在这个[**网站**](https://misode.github.io/assets/model/)上找到所有可用的 Minecraft 模型及其纹理**
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FsYTMHVsoTPN2uOsYs9hZ%252Fimage.png%3Falt%3Dmedia%26token%3De4496f8f-6daa-4da2-a407-89a9444807d0\&width=300\&dpr=4\&quality=100\&sign=fbaab065\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252F0s9Mqk0BpqkZj48WC3mQ%252Fimage.png%3Falt%3Dmedia%26token%3D15b290f8-f945-4384-944a-fb27ec0de698\&width=300\&dpr=4\&quality=100\&sign=c50330a0\&sv=2)
 
 # GUI 光照 <a href="#gui-light" id="gui-light"></a>
 
-> 可以是 `"front"` 或者 `"side"`。如果设置为 `"side"`，模型会像方块一样渲染。如果设置为 `"front"`，模型会像平面物品一样显示。默认为 `"side"`。
+> 可以是 `"front"` 或者 `"side"`。如果设置为 `"side"`，模型会像方块一样渲染。如果设置为 `"front"`，模型会像一般平面的物品那般渲染显示。默认为 `"side"`。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FSHZtI9R1FFXQulE7pVmM%252Fimage.png%3Falt%3Dmedia%26token%3D5d351073-450f-48cb-945a-a9e72401bfb3\&width=768\&dpr=4\&quality=100\&sign=befd1e70\&sv=2)左图：front 右图：side
 

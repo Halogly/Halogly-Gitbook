@@ -1,15 +1,12 @@
 ---
-description: https://minecraft.wiki/w/Items_model_definition#composite
+description: https://zh.minecraft.wiki/w/物品模型映射#composite
 ---
 
-# 🧩 复合
+# 🧩 组合
 
-> Render multiple sub-models in the same space.\
-> 在同一空间中渲染多个子模型。
+> 在同一命名空间中渲染多个子模型。
 
-Copy  复制
-
-```
+```yaml
 default:composite_item:
   model:
     type: "minecraft:composite"

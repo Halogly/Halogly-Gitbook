@@ -1,6 +1,5 @@
 # 🪹 Compostable Item
 
-Make non-compostable items compostable
 使不可堆肥物品变得可堆肥
 
 ```yaml

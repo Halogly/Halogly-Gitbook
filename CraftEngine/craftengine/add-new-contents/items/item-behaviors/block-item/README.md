@@ -17,8 +17,6 @@ items:
 
 这是配置方块物品最简单的方法，但前提是你已经配置了一个方块。如果你不确定如何配置方块，请参考[🧱 方块](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks)。
 
-
-If you find it too cumbersome to configure them separately, you can choose to configure them together. Below is an example. The format under `block` follows the standard block configuration format.
 如果觉得单独配置太麻烦，可以选择一起配置。下面是一个示例。`block` 下的格式遵循标准的方块配置格式。
 
 ```yaml

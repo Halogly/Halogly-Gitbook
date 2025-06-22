@@ -1,4 +1,4 @@
-# 🗺️ Mipmap \[必读]
+# Mipmap \[必读]
 
 ## 介绍 <a href="#introduction" id="introduction"></a>
 

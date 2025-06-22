@@ -1,3 +1,3 @@
-# 👔 Supported Levelers
+# Supported Levelers
 
 AuraSkills

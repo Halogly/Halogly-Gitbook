@@ -4,7 +4,7 @@ description: >-
   本页面主要解释如何向您的服务器添加新分类。
 ---
 
-# 📂 分类
+# 分类
 
 The `category` is used to manage the arrangement order and classification rules of items when using the item browser.\
 在使用物品浏览器时， `category` 用于管理物品的排列顺序和分类规则。
@@ -12,7 +12,7 @@ The `category` is used to manage the arrangement order and classification rules 
 A basic configuration is as follows. Once you complete the setup, it will appear in your /ce menu.\
 基本配置如下。设置完成后，它将出现在您的 /ce 菜单中。
 
-Copy  复制
+Copy 复制
 
 ```
 categories:
@@ -32,7 +32,7 @@ categories:
       - default:palm_planks
 ```
 
-#### Option Explanation  选项说明 <a href="#option-explanation" id="option-explanation"></a>
+#### Option Explanation 选项说明 <a href="#option-explanation" id="option-explanation"></a>
 
 * The `name` and `lore` determine the title and description of the category icon.\
   `name` 和 `lore` 确定分类图标的标题和描述。
@@ -45,12 +45,12 @@ categories:
 * In the `list`, you need to fill in items or categories (categories must be prefixed with a '#', for example, `#default:palm_tree` ).\
   在 `list` 中，你需要填写项目或分类（分类必须以 '#' 开头，例如 `#default:palm_tree` ）。
 
-#### Sub Categories  子分类 <a href="#sub-categories" id="sub-categories"></a>
+#### Sub Categories 子分类 <a href="#sub-categories" id="sub-categories"></a>
 
 At times, you may require a category configuration with the following structure, or even with deeper nesting. In such cases, you will need to flexibly utilize `hidden` and the `#` prefix.\
 有时，你可能需要一个具有以下结构的分类配置，甚至需要更深层次的嵌套。在这种情况下，你需要灵活地使用 `hidden` 和 `#` 前缀。
 
-Copy  复制
+Copy 复制
 
 ```
 category_main
@@ -62,7 +62,7 @@ category_main
      └ item_3
 ```
 
-Copy  复制
+Copy 复制
 
 ```
 categories:
@@ -122,18 +122,18 @@ categories:
       - default:fairy_flower
 ```
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FrcDhHCdZZA6vSyoL1mnX%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=8dddcc02\&sv=2)main menu  主菜单
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FrcDhHCdZZA6vSyoL1mnX%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=8dddcc02\&sv=2)main menu 主菜单
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F6je6hSGuuxseDsIEwsTS%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=5ce4abef\&sv=2)sub menu  子菜单
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F6je6hSGuuxseDsIEwsTS%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=5ce4abef\&sv=2)sub menu 子菜单
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FhZqKvQdnJcinwlIa9tae%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=36a479cb\&sv=2)furniture category  家具类别
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FhZqKvQdnJcinwlIa9tae%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=36a479cb\&sv=2)furniture category 家具类别
 
-#### Tip  提示 <a href="#tip" id="tip"></a>
+#### Tip 提示 <a href="#tip" id="tip"></a>
 
 You can also directly configure the category to which an item belongs within the item itself. However, please note that in such cases, we cannot guarantee the order in which it will be displayed within the category.\
 你也可以在项目本身中直接配置项目所属的分类。但是请注意，在这种情况下，我们无法保证它在分类中的显示顺序。
 
-Copy  复制
+Copy 复制
 
 ```
 items:

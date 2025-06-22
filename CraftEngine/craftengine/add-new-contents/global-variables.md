@@ -1,8 +1,8 @@
-# 🔠 全局变量
+# 全局变量
 
-#### Example Usage  示例用法 <a href="#example-usage" id="example-usage"></a>
+#### Example Usage 示例用法 <a href="#example-usage" id="example-usage"></a>
 
-Copy  复制
+Copy 复制
 
 ```
 global-variables:

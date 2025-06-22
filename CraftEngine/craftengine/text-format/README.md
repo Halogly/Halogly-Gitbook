@@ -1,4 +1,4 @@
-# ✏️ 文本格式
+# 文本格式
 
 ### MiniMessage <a href="#minimessage" id="minimessage"></a>
 
@@ -8,12 +8,12 @@ When configuring item names, descriptions, GUIs, etc., for the plugin, please us
 > Any meaningful token can be escaped in the locations where they have influence. In plain text, tag open characters (`<`) can be escaped with a leading backslash (`\`). Within quoted strings, the opening quote character can be escaped (`'` or `"`). In either place, the escape character can be escaped in places where it would otherwise be relevant. Unquoted tag arguments cannot have escapes, for simplicity. In locations where escaping is not supported, the literal escape character will be passed through. In locations where escaping _is_ supported but a literal escape character is desired, the escape character can itself be escaped to produce a `\`.\
 > 在任何有影响力的位置，任何有意义的标记都可以被转义。在纯文本中，标签开启字符（ `<` ）可以用一个开头的反斜杠（ `\` ）转义。在引号字符串中，引号开启字符可以被转义（ `'` 或 `"` ）。在任何位置，转义字符可以在它原本相关的地方被转义。未加引号的标签参数不能有转义，为了简化。在不能转义的位置，字面值的转义字符将被直接传递。在可以转义但希望传递字面值转义字符的位置，转义字符本身可以被转义来产生一个 `\` 。
 
-### Extra Tags  额外标签 <a href="#extra-tags" id="extra-tags"></a>
+### Extra Tags 额外标签 <a href="#extra-tags" id="extra-tags"></a>
 
 These are additional tags provided by the plugin.\
 这是插件提供的附加标签。
 
-`[_argument_]` means Optional   `[_argument_]` 表示可选
+`[_argument_]` means Optional `[_argument_]` 表示可选
 
 You can surround your arguments with `'` & `"` for instance `<papi:'exp_multiplier':'1'>`\
 你可以用 `'` & `"` 包围你的参数，例如 `<papi:'exp_multiplier':'1'>`
@@ -24,7 +24,7 @@ You can also use **nested** tags for instance `<expr:'0.##':'<papi:exp_multiplie
 You'll notice that some tags start with "**viewer\_**". This is because, in certain scenarios, a text might be constructed by multiple contextual entities. For example, consider the following configuration:\
 你会注意到有些标签以"viewer\_"开头。这是因为在某些情况下，一段文本可能由多个上下文实体构建。例如，考虑以下配置：
 
-Copy  复制
+Copy 复制
 
 ```
 message: -| 
@@ -40,7 +40,7 @@ If **Player A** interacts with the custom block and triggers a message broadcast
 `shift` allows you to directly use the plugin's offset characters.\
 `shift` 允许你直接使用插件的偏移字符。
 
-Copy  复制
+Copy 复制
 
 ```
 item-name: "<!i><shift:-100><#FF8C00>Topaz Rod"
@@ -57,7 +57,7 @@ item-name: "<!i><shift:-100><#FF8C00>Topaz Rod"
 `papi` allows to use placeholders provided by `PlaceholderAPI`.\
 `papi` 允许使用 `PlaceholderAPI` 提供的占位符。
 
-Copy  复制
+Copy 复制
 
 ```
 item-name: "<!i><#FF8C00><papi:player_name>'s Topaz Rod"
@@ -68,7 +68,7 @@ item-name: "<!i><#FF8C00><papi:player_name>'s Topaz Rod"
 You can also specify a default value to make it available in more places **without causing errors** for example:\
 您还可以指定默认值，以便在更多地方使用而不会导致错误，例如：
 
-Copy  复制
+Copy 复制
 
 ```
 functions:
@@ -87,13 +87,13 @@ rel\_papi 指的是关系型占位符
 `image` allows to use images registered in the plugin\
 `image` 允许使用插件中注册的图片
 
-Copy  复制
+Copy 复制
 
 ```
 item-name: "<!i><white><image:default:icons><#FF8C00> Topaz Rod"
 ```
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Flhx8oEvcEEBsnCw4qMPB%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=f5936846\&sv=2)Copy  复制
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Flhx8oEvcEEBsnCw4qMPB%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=f5936846\&sv=2)Copy 复制
 
 ```
 item-name: "<!i><white><image:default:icons:0:1><#FF8C00> Topaz Rod"
@@ -106,7 +106,7 @@ item-name: "<!i><white><image:default:icons:0:1><#FF8C00> Topaz Rod"
 Searching for translations applicable to the current language.\
 正在搜索适用于当前语言的翻译。
 
-Copy  复制
+Copy 复制
 
 ```
 internal:cooking_info:
@@ -125,13 +125,13 @@ internal:cooking_info:
 Perform some math operations\
 执行一些数学运算
 
-Copy  复制
+Copy 复制
 
 ```
 item-name: "<!i><#FF8C00><expr:0.##:'70 / 8'>"
 ```
 
-Copy  复制
+Copy 复制
 
 ```
 item-name: "<!i><#FF8C00><expr:0.##:'<papi:player_x> / 8'>"
@@ -139,7 +139,7 @@ item-name: "<!i><#FF8C00><expr:0.##:'<papi:player_x> / 8'>"
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FJVYm8tyyUtjNLBMVx02V%252Fimage.png%3Falt%3Dmedia%26token%3Da824c047-0f28-4a0c-a30d-0f9787c2b7fe\&width=768\&dpr=4\&quality=100\&sign=9537df0e\&sv=2)
 
-**Useful links  有用链接**
+**Useful links 有用链接**
 
 [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html)
 
@@ -160,16 +160,16 @@ The is a named parameter. Its value can come from two possible sources:\
 1. **Context-specific arguments** – These are parameters explicitly passed in the current context.\
    上下文特定参数——这些是在当前上下文中明确传递的参数。
 
-Copy  复制
+Copy 复制
 
 ```
 internal.cooking_info.0: "Time: <arg:cooking_time>ticks"
 internal.cooking_info.1: "Experience: <arg:cooking_experience>"
 ```
 
-1. **Common arguments  常见参数**
+1. **Common arguments 常见参数**
 
-Copy  复制
+Copy 复制
 
 ```
 <arg:random>  # generates a random number between 0 and 1
@@ -179,12 +179,12 @@ Copy  复制
 1. **Context subjects** – If the context subject (e.g., a player) provides parameters. Check this page for more:\
    上下文主题——如果上下文主题（例如，玩家）提供参数。请查看此页面获取更多信息：
 
-[🔗 Chain Arguments  🔗 链式参数](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/text-format/chain-arguments)
+[🔗 Chain Arguments 🔗 链式参数](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/text-format/chain-arguments)
 
 In certain cases, multiple **context subjects** may coexist. By accessing parameters from different context subjects, you can precisely control the scope and behavior of functions.\
 在某些情况下，多个上下文主题可能共存。通过从不同的上下文主题访问参数，您可以精确控制函数的作用范围和行为。
 
-Copy  复制
+Copy 复制
 
 ```
 # spawns the particle at the location of the block
@@ -212,10 +212,10 @@ Copy  复制
 global variable defined by users\
 用户定义的全局变量
 
-Copy  复制
+Copy 复制
 
 ```
 item-name: "<global:rare_tag> Rare spear"
 ```
 
-[🔠 Global Variables  🔠 全局变量](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/global-variables)
+[🔠 Global Variables 🔠 全局变量](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/global-variables)

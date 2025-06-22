@@ -1,2 +1,2 @@
-# 🕹️ Furniture Behaviors
+# 家具行为
 

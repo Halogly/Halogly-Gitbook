@@ -2,7 +2,7 @@
 description: This page mainly explains how to add new items to your server.
 ---
 
-# 🗡️ Items
+# 物品
 
 ### Sections to Configure <a href="#sections-to-configure" id="sections-to-configure"></a>
 

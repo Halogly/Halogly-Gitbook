@@ -1,8 +1,8 @@
-# 🐚 命令
+# 命令
 
 ### Item Commands <a href="#item-commands" id="item-commands"></a>
 
-### Debug Commands  调试命令 <a href="#debug-commands" id="debug-commands"></a>
+### Debug Commands 调试命令 <a href="#debug-commands" id="debug-commands"></a>
 
 #### appearance-state-usage <a href="#appearance-state-usage" id="appearance-state-usage"></a>
 
@@ -13,11 +13,11 @@ The command is used to retrieve the usage status of excess appearances for a spe
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FZsqvpYSQpt2o4uhDUE3C%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=8e6e37eb\&sv=2)
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FkMmfb8UeeAhOKASNSMx5%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=44906d4e\&sv=2)appearance state in use  已使用的状态外观
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FkMmfb8UeeAhOKASNSMx5%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=44906d4e\&sv=2)appearance state in use 已使用的状态外观
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FblSWDyawRrCQDbXhfvGB%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=6bb17a34\&sv=2)free state  自由状态
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FblSWDyawRrCQDbXhfvGB%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=6bb17a34\&sv=2)free state 自由状态
 
-#### real-state-usage  实际状态使用 <a href="#real-state-usage" id="real-state-usage"></a>
+#### real-state-usage 实际状态使用 <a href="#real-state-usage" id="real-state-usage"></a>
 
 `/ce debug real-state-usage [block_type]`
 
@@ -26,20 +26,20 @@ This command is similar to the one mentioned above, but the key difference lies 
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FDXynVOE87LdmEvt821of%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=73f90a12\&sv=2)
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FKD4bwQJMH8vYjvQnr8M2%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=6fb0443f\&sv=2)real state in use  正在使用的实际状态
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FKD4bwQJMH8vYjvQnr8M2%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=6fb0443f\&sv=2)real state in use 正在使用的实际状态
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FtI4QxOAKRLBDLgZgQ4cQ%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=ed567b82\&sv=2)free state  自由状态
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FtI4QxOAKRLBDLgZgQ4cQ%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=ed567b82\&sv=2)free state 自由状态
 
 In the image below, the upper section displays the available appearance states for oak leaves, while the lower section shows the available real states for oak leaves. You can use the command to experience the difference between them.\
 在下面的图片中，上半部分显示了橡树叶的可用外观状态，而下半部分显示了橡树叶的可用真实状态。 您可以使用命令来体验它们之间的差异。
 
-Copy  复制
+Copy 复制
 
 ```
 /ce debug appearance-state-usage minecraft:oak_leaves
 ```
 
-Copy  复制
+Copy 复制
 
 ```
 /ce debug real-state-usage minecraft:oak_leaves
@@ -63,7 +63,7 @@ This command allows you to inspect the item data (such as NBT or components) of 
 This command is used to retrieve the server-side real block name corresponding to a custom block, and is commonly utilized in tools like WorldEdit and data packs.\
 此命令用于获取自定义方块对应的服务器端真实方块名称，常用于 WorldEdit 等工具和数据包。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FXQUPusg2dgKs7uOSvab5%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=5095746a\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FW7IlQqRjFAGLxMvYl5Fu%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=a1d201fb\&sv=2)
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FXQUPusg2dgKs7uOSvab5%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=5095746a\&sv=2) ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FW7IlQqRjFAGLxMvYl5Fu%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=a1d201fb\&sv=2)
 
 #### get-block-state-registry-id <a href="#get-block-state-registry-id" id="get-block-state-registry-id"></a>
 

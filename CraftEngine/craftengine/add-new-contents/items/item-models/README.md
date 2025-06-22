@@ -2,13 +2,15 @@
 description: 本页面主要讲解如何为物品配置模型。
 ---
 
-# 🟰 Item Models
+# 🟰 物品模型
+
+## 🟰 Item Models
 
 自 1.21.4 版本起，Minecraft 开始支持更复杂的物品模型。因此你可以为物品创建更多动态变体。本教程适用于 1.21.4 及以上版本。对于旧版本，插件会降级相应的模型文件（注意：这并非表明与旧版本完全兼容，因为许多条件和模型类型在旧版本中是不存在的）。
 
 如果你发现 CraftEngine 在最新版的 Minecraft 中缺少了某些功能，你可以在 GitHub 上提交 issue，让开发者注意到这个问题。
 
-# 介绍 <a href="#introduction" id="introduction"></a>
+## 介绍 <a href="#introduction" id="introduction"></a>
 
 以最简单的 `minecraft:model` [📐 模型](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/model)类型为例。
 
@@ -43,14 +45,9 @@ items:
 
 从上述配置中，我们可以看到在模型部分，你需要填写模型的类型及其对应的参数。以下是所有可用模型类型的列表。一些模型（如范围分配、选择、组合和条件）支持嵌套模型使用。你可以点击下面的链接跳转到相应的模型类型。只有阅读完所有的内容后，我们才能继续讨论更复杂的示例。
 
-[📐 模型](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/model)
-[🧩 组合](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/composite)
-[⚖️ 条件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/condition)
-[📡 范围调配](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/range-dispatch)
-[✅ 选择](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/select)
-[👻 特殊](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/special)
+[📐 模型](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/model)[🧩 组合](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/composite)[⚖️ 条件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/condition)[📡 范围调配](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/range-dispatch)[✅ 选择](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/select)[👻 特殊](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-models/special)
 
-# 示例 <a href="#examples" id="examples"></a>
+## 示例 <a href="#examples" id="examples"></a>
 
 在以下示例中，通过组合 `condition`、`model` 和 `range_dispatch` 创建了一个自动生成 2D 的弩的模板。
 
@@ -115,9 +112,9 @@ templates:
             "layer0": "${pulling_0_texture}"
 ```
 
-### 旧版模型 <a href="#legacy-model" id="legacy-model"></a>
+#### 旧版模型 <a href="#legacy-model" id="legacy-model"></a>
 
-**“旧版模型”**特指 **1.21.3 及更早版本**中使用的物品模型格式。你可以使用 **legacy-model** 部分来指定旧版物品模型格式。然而，在大多数情况下，你不需要这样做，因为插件会在一些情况下自动将 **1.21.4 物品模型**转换为旧版格式。只有当旧版模型格式存在问题时，你才应该使用此配置部分。
+\*\*“旧版模型”\*\*特指 **1.21.3 及更早版本**中使用的物品模型格式。你可以使用 **legacy-model** 部分来指定旧版物品模型格式。然而，在大多数情况下，你不需要这样做，因为插件会在一些情况下自动将 **1.21.4 物品模型**转换为旧版格式。只有当旧版模型格式存在问题时，你才应该使用此配置部分。
 
 ```yaml
 items#topaz_gears:

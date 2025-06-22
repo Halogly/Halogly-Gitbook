@@ -1,4 +1,4 @@
-# ⚛️ Axiom
+# Axiom
 
 **首先，确保服务器上已经安装了 `axiom-paper`**。
 

@@ -2,7 +2,7 @@
 description: 本页面尚未完成
 ---
 
-# ⌨️ Skript
+# Skript
 
 对于高级 Skript 用户，请使用反射来实现更高级的功能。如果在使用 Skript 时遇到问题，请及时向我们反馈。如果你想请求新的 Skript 功能并且熟悉 Java，可以考虑通过 pull request 贡献你的代码！
 

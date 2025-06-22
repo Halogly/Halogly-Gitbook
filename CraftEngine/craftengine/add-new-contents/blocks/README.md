@@ -4,7 +4,9 @@ description: 本页面主要讲解如何向服务器添加新方块。
 
 # 🧱 方块
 
-# 配置部分 <a href="#sections-to-configure" id="sections-to-configure"></a>
+## 🧱 方块
+
+## 配置部分 <a href="#sections-to-configure" id="sections-to-configure"></a>
 
 一个完整的方块配置包含以下部分：
 
@@ -28,11 +30,11 @@ description: 本页面主要讲解如何向服务器添加新方块。
 
 [🪇 事件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/events)
 
-# 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
+## 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
 
 [🧱 方块物品](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-behaviors/block-item)
 
-# 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
+## 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
 
 这是使用模板系统后的简化版本，包括需要配置的部分。
 

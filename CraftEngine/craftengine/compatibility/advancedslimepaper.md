@@ -1,4 +1,4 @@
-# 🟢 AdvancedSlimePaper
+# AdvancedSlimePaper
 
 **CraftEngine 支持原生 SlimeWorld 格式集成**
 

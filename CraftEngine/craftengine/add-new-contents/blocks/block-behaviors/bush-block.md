@@ -1,18 +1,16 @@
-# 🪻 Bush Block
+# 🪻 灌木方块
 
 ![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FRFE0okQV9AmYrWNZNon9%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=2a071689\&sv=2)
 
-[🪻 Bush Block](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-behaviors/bush-block) is a type of block behavior that must grow on specific supporting blocks. If the block beneath it is destroyed, or if it is found to be in an invalid position, it will either break or drop as an item.
+[🪻 灌木方块](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-behaviors/bush-block)是一种必须在特定支撑方块上生长的方块。如果它下方的方块被破坏，或者它处于不合适的位置，它就会被破坏，或者掉落为物品。
 
-Copy
-
-```
+```yaml
 blocks:
   default:fairy_flower:
     behavior:
       type: bush_block
       stackable: false
-      blacklist: false # use blacklist mode
+      blacklist: false # 使用黑名单
       delay: 0
       bottom-blocks:
         - custom:xxx

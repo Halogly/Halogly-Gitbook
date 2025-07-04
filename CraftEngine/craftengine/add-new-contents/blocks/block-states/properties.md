@@ -1,29 +1,25 @@
-# 🏷️ Properties
+# 🏷️ 属性
 
-Please note that, regardless of the type of property, you must configure a default value within a reasonable range for each one.
+请注意，无论属性类型如何，你都必须在合理范围内为每个属性配置一个默认值。
 
-### Custom Property <a href="#custom-property" id="custom-property"></a>
+## 自定义属性 <a href="#custom-property" id="custom-property"></a>
 
-#### boolean <a href="#boolean" id="boolean"></a>
+### boolean <a href="#boolean" id="boolean"></a>
 
-A property of type `boolean` can only have two possible values: `true` or `false`.
+`boolean` 属性只有两个值：`true` 或 `false`。
 
-Copy
-
-```
+```yaml
 properties:
   happy:
     type: boolean
     default: false
 ```
 
-#### int <a href="#int" id="int"></a>
+### int <a href="#int" id="int"></a>
 
-A property of type `int` can take any integer value within the specified range.
+`int` 属性可以使用指定范围内的任何整数值。
 
-Copy
-
-```
+```yaml
 properties:
   mode:
     type: int
@@ -31,13 +27,11 @@ properties:
     range: 1~3
 ```
 
-#### string <a href="#string" id="string"></a>
+### string <a href="#string" id="string"></a>
 
-A property of type `string` can only take values from a predefined set of options.
+`string` 属性只能从一组预定义的选项中获取值。
 
-Copy
-
-```
+```yaml
 properties:
   color:
     type: string
@@ -48,98 +42,84 @@ properties:
       - blue
 ```
 
-### Hard-coded Property <a href="#hard-coded-property" id="hard-coded-property"></a>
+## 硬编码属性 <a href="#hard-coded-property" id="hard-coded-property"></a>
 
-Please note that the property name must be the same as the examples to take effect
+请注意，属性名称必须与示例相同才能生效
 
-#### facing <a href="#facing" id="facing"></a>
+### facing <a href="#facing" id="facing"></a>
 
-The facing values ​​are `east, south, west, north, up, down`. When a block has this hardcoded property, its placement orientation will automatically adapt.
+朝向的值可为 `east, south, west, north, up, down`。当方块具有此硬编码属性时，它会自适应放置的方向。
 
-Copy
-
-```
+```yaml
 properties:
   facing:
-    # horizontal_direction = 4 faces
-    # direction = 6 faces
+    # horizontal_direction = 4面朝向
+    # direction = 6面朝向
     type: direction
     default: north
 ```
 
-#### facing\_clockwise <a href="#facing_clockwise" id="facing_clockwise"></a>
+### facing\_clockwise <a href="#facing_clockwise" id="facing_clockwise"></a>
 
-Unlike the above, it will be rotated 90 degrees when placed
+与上述不同，放置时会旋转90度。
 
-Copy
-
-```
+```yaml
 properties:
   facing_clockwise:
     type: horizontal_direction
     default: north
 ```
 
-#### waterlogged <a href="#waterlogged" id="waterlogged"></a>
+### waterlogged <a href="#waterlogged" id="waterlogged"></a>
 
-waterlogged determines whether this block can contain water.
+方块是否可以含水。
 
-Please note: When using this state, you must ensure that the corresponding visual block also contains water, otherwise the client cannot render the water.
+请注意：使用此状态时，必须确保相应的视觉方块也包含水，否则客户端无法渲染水。
 
-Copy
-
-```
+```yaml
 properties:
   waterlogged:
     type: boolean
     default: false
 ```
 
-#### axis <a href="#axis" id="axis"></a>
+### axis <a href="#axis" id="axis"></a>
 
-Axis determines whether the blocks are placed along the axis, such as pillar and log. The axis can only be `x, y, z`
+指定方块是否沿某坐标轴放置，例如一些柱形方块和原木。轴只能是 `x, y, z`。
 
-Copy
-
-```
+```yaml
 properties:
   axis:
     type: axis
     default: y
 ```
 
-#### single\_block\_half / double\_block\_half <a href="#single_block_half-double_block_half" id="single_block_half-double_block_half"></a>
+### single\_block\_half / double\_block\_half <a href="#single_block_half-double_block_half" id="single_block_half-double_block_half"></a>
 
-Copy
-
-```
+```yaml
 properties:
   half:
-    # single_block_half  (for slabs, trapdoors) [top, bottom]
-    # double_block_half  (for doors, double height plants) [upper, lower]
+    # single_block_half （用于台阶，活扳门）[top, bottom]
+    # double_block_half （用于门，两格高的植物）[upper, lower]
     type: single_block_half
     default: bottom
 ```
 
-#### hinge <a href="#hinge" id="hinge"></a>
+### hinge <a href="#hinge" id="hinge"></a>
 
-The hinge can only be `left, right`
+铰链的值只能为 `left, right`。
 
-Copy
-
-```
+```yaml
 properties:
   hinge:
     type: hinge
 ```
 
-#### slab\_type <a href="#slab_type" id="slab_type"></a>
+### slab\_type <a href="#slab_type" id="slab_type"></a>
 
-The slab\_type can only be `top, bottom, double`
+台阶类型只能是 `top, bottom, double`。
 
-Copy
-
-```
+```yaml
 properties:
   type:
     type: slab_type

@@ -4,21 +4,19 @@ description: 本页面主要讲解如何向服务器添加新方块。
 
 # 🔣 方块状态
 
-### Introduction <a href="#introduction" id="introduction"></a>
+# 介绍 <a href="#introduction" id="introduction"></a>
 
-In Minecraft's block system, each block has one or more block states. For example, wood has a facing direction, and leaves have different distances. These states determine how the block behaves and appears in the game.
+在 Minecraft 中，每个方块会有一个或多个方块状态。例如，木头有朝向，或是树叶在离原木不同距离下有不同的方块状态。这些状态决定了方块在游戏中的行为和外观。
 
 ![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Fu2u3K5ZjVw9Qf7gLcp3k%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=a04ecb9b\&sv=2)
 
-### Examples <a href="#examples" id="examples"></a>
+# 示例 <a href="#examples" id="examples"></a>
 
-Here are three examples to explain how to create a block with a single state and a block with multiple states in Minecraft:
+这里有三个示例，展示如何在 Minecraft 中创建具有单一状态和具有多个状态的方块：
 
-#### **Example 1: Creating a Block with a Single State** <a href="#example-1-creating-a-block-with-a-single-state" id="example-1-creating-a-block-with-a-single-state"></a>
+## **示例1：创建单一状态的方块** <a href="#example-1-creating-a-block-with-a-single-state" id="example-1-creating-a-block-with-a-single-state"></a>
 
-Copy
-
-```
+```yaml
 blocks:
   default:chinese_lantern:
     state:
@@ -33,45 +31,43 @@ blocks:
             "side": "minecraft:block/custom/chinese_lantern"
 ```
 
-The **internal ID** (id) represents a unique identifier for blocks. The maximum number of internal IDs is determined by the sum of two factors:
+**内部ID**（id）是方块的唯一标识符。内部ID的最大数值由两个因素决定：
 
-1. **Available Block Appearance States**: These are defined in the `mappings.yml` file. For a single block type, the more block states you "release," the higher the number of available appearance states.
-2. **Additionally Registered Real States**: These are added via the `additional-real-blocks.yml` file. This configuration allows you to manually register extra real serverside states for specific blocks, further increasing the total pool of internal IDs.
+1. **可用的方块外观状态**：需在 `mappings.yml` 文件中定义。对于单个方块类型，“定义”的方块状态越多，可用的外观状态数量就越多。
+2. **额外注册的真实状态**：需在 `additional-real-blocks.yml` 文件中添加。此配置允许你手动为特定方块注册额外的真实服务端状态，从而进一步增加内部ID的总数。
 
-**Why Register Additional Real Blocks?** Some blocks in the game (e.g., vanilla Minecraft leaves) have more **block states** than actual **appearance variations**. For example:
+**为什么注册额外的真实方块？**
+一些方块（例如原版的树叶）具有比实际外观还要更多的方块状态。例如：
 
-* **Vanilla leaves** have **28 block states** (technical properties like distance, persistant, etc.), but only **2 distinct visual appearances** (e.g., oak leaves with/without water).
-* The unused block states (e.g., 26 out of 28) can be repurposed to create **new custom blocks** (e.g., palm leaves and etc.).
+* **原版树叶**有**28个方块状态**（如距离、连接等属性），但只有2种不同的视觉外观（例如带水/不带水的橡树树叶）。
+* 未使用的方块状态（例如28个中的26个）可以重新利用，用来创建**新的自定义块**（例如棕榈树叶等）。
 
-**The Challenge**
+**挑战**
 
-Creating a **new leaf type** with unique functionality might require **28 server-side states** even if it only uses **2 visual appearances**. However, only **26 serverside real states** are available from vanilla leaves, creating a **shortage of 2 states**.
+创建一个具有独特功能的**新树叶类型**可能需要**28个服务端状态**，即使它只使用了**2种外观**。然而，原版树叶中只有**26个服务端真实状态**可用，因此会**缺少2个状态**。
 
-**`state`** refers to the **vanilla block state appearance** used by a custom block state. For example, **`noteblock:15`** means the **16th released Note Block state** in `mappings.yml` (counting starts at 0).
+**`state`** 指自定义方块状态使用的**原版方块状态外观**。
+例如，**`noteblock:15`** 表示 `mappings.yml` 中定义的第16个音符方块状态（计数从0开始）。
 
-You can configure state like this if you want to precisely control the state in use
+如果你想要精确控制方块状态，可以这样配置：
 
-Copy
-
-```
+```yaml
 state: minecraft:note_block[instrument=hat,note=0,powered=false]
 ```
 
-**Model Option**
+**模型选项**
 
-The **`model`** option specifies the file path to the custom model used by this block.
+**`model`** 指定方块使用的自定义模型的文件路径。
 
-**Generation Option**
+**生成选项**
 
-The **`generation`** option is **optional**. If you're unsure what this setting does, refer to the documentation linked below: [🏭️ Model Generation](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/model-generation)
+**`generation`** 是**可选的**。如果你不确定这个选项的作用，请参阅：[🏭️ 模型生成](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/model-generation)
 
-#### **Example 2: Creating a Block with One Custom Property** <a href="#example-2-creating-a-block-with-one-custom-property" id="example-2-creating-a-block-with-one-custom-property"></a>
+## **示例2：创建只有一个自定义属性的方块** <a href="#example-2-creating-a-block-with-one-custom-property" id="example-2-creating-a-block-with-one-custom-property"></a>
 
-**For blocks with multiple states, use `states` instead of `state`.**
+**对于具有多个状态的方块，请使用 `states` 而不是 `state`。**
 
-Copy
-
-```
+```yaml
 blocks:
   default:palm_log:
     states:
@@ -122,66 +118,59 @@ blocks:
           id: 2
 ```
 
-**This configuration file may seem lengthy and complex, but we can simplify everything using the template system.** _(If you haven’t read the template system tutorial yet, make sure to study it after learning about `states`!)_
+**配置文件看起来可能会比较冗长复杂，但我们可以用模板来简化配置。**
+_(如果你还没阅读过模板教程，请在学习完 `states` 后务必前往学习！)_
 
-Let’s break down `states` into three key sections for clarity:
+我们把 `states` 分为三个关键部分，这样可以更清晰地理解：
 
-**1. Define Block Properties**
+**1. 定义方块属性**
 
-Defines the **block properties** (e.g., `facing`, `level`, `lit`) that determine how the block behaves or interacts. For detailed info read [🏷️ Properties](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-states/properties)
+定义决定方块行为或交互方式的**方块属性**（例如 `facing`，`level`，`lit`）。详情可参阅[🏷️ 属性](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-states/properties)
 
-Copy
-
-```
+```yaml
 properties:
-  axis:             # Property name (e.g., axis, color)
-    type: axis      # Data type (e.g., axis, boolean, int, string)
-    default: y      # Default state (e.g., y for vertical orientation)
+  axis:             # 属性名称（例如 axis，color）
+    type: axis      # 数据类型（例如 axis，boolean，int，string）
+    default: y      # 默认状态（例如 y 表示垂直方向）
 ```
 
-**2. Configure Appearances**
+**2. 配置外观**
 
-Appearances define the used visual states.
+外观定义使用的视觉状态。
 
-Copy
-
-```
+```yaml
 appearances:
-  axisY:            # Unique appearance name (e.g., axisY, red)
-    state: "note_block:0"  # Vanilla state (e.g., note_block:0)
+  axisY:            # 唯一外观名称（例如 axisY，red）
+    state: "note_block:0"  # 原版状态（例如 note_block:0）
     model:
-      path: "minecraft:block/custom/stripped_palm_log"  # Path to model file
-      generation:   # (Optional) Procedural model generation rules
-        parent: "minecraft:block/cube_column"  # Base model template
-        textures:    # Override textures for the parent model
+      path: "minecraft:block/custom/stripped_palm_log"  # 模型文件的路径
+      generation:   # （可选）程序化模型生成规则
+        parent: "minecraft:block/cube_column"  # 基础模型模板
+        textures:    # 覆盖父模型的纹理
           "end": "minecraft:block/custom/palm_log_top"
           "side": "minecraft:block/custom/palm_log"
 ```
 
 **3. Map Variants**
 
-Variants link property combinations to specific appearances and internal IDs.
+变体将属性组合链接到特定的外观和内部ID。
 
-Copy
-
-```
+```yaml
 variants:
-  axis=x:           # Property condition (e.g., axis=x, color=red)
-    appearance: axisX  # Appearance to use for this variant
-    id: 0           # Unique internal ID (must be unique per variant)
-    settings:       # Optional settings override
+  axis=x:           # 属性条件（例如 axis=x，color=red）
+    appearance: axisX  # 用于此变体的外观
+    id: 0           # 唯一内部ID（每个变体必须唯一）
+    settings:       # 可选设置覆盖
       ...
 ```
 
-If you don't know how to configure settings, read [⚙️ Block Settings](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-settings)
+如果你不知道如何配置设置，请参阅[⚙️ 方块设置](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-settings)
 
-#### **Example 3: Creating a Block with Multiple Properties** <a href="#example-3-creating-a-block-with-multiple-properties" id="example-3-creating-a-block-with-multiple-properties"></a>
+## **示例3：创建具有多个属性的方块** <a href="#example-3-creating-a-block-with-multiple-properties" id="example-3-creating-a-block-with-multiple-properties"></a>
 
-Don’t worry if this seems overwhelming at first! In Minecraft, **only a handful of vanilla blocks have a high number of states**, which is why most custom blocks are built using these "state-rich" vanilla blocks as a foundation. Let’s break it down step by step.
+如果觉得有点难懂，没事！在 Minecraft 中，**只有少数原版方块才会有很多的方块状态**，这就是为什么大多数自定义方块都是基于这些“状态丰富”的原版方块创建的。让我们一步步来。
 
-Copy
-
-```
+```yaml
 default:palm_leaves:
   states:
     properties:
@@ -354,84 +343,76 @@ default:palm_leaves:
           fluid-state: water
 ```
 
-**Step 1: Define Properties**
+**第一步：定义属性**
 
-We start by declaring three properties for the block, which determine its possible variants:
+我们首先为方块声明三个属性，这些属性定义它的可能变体：
 
-Copy
-
-```
+```yaml
 properties:
   waterlogged:
     type: boolean
-    default: false  # Whether the block contains water
+    default: false  # 方块是否含水
   persistent:
     type: boolean
-    default: true   # Whether the block persists (e.g., leaves decay if false)
+    default: true   # 方块是否需要连接（例如，如果为 false，则树叶会枯萎）
   distance:
     type: int
-    default: 7      # Distance from the nearest log (1-7)
+    default: 7      # 与最近的原木的距离（1-7）
     min: 1
     max: 7
 ```
 
-**Total Variants**
+**总变体数**
 
-The combination of these properties creates **2 × 2 × 7 = 28 variants**:
+这些属性的组合创建了**2 × 2 × 7 = 28个变体**：
 
-* **`waterlogged`**: 2 states (`true`/`false`).
-* **`persistent`**: 2 states (`true`/`false`).
-* **`distance`**: 7 states (values `1` to `7`).
+* **`waterlogged`**：2个状态（`true`/`false`）。
+* **`persistent`**：2个状态 (`true`/`false`）。
+* **`distance`**：7个状态（值 `1` 到 `7`）。
 
-**Step 2: Define Visual States**
+**第二步：定义视觉状态**
 
-Even though this block uses **28 server-side states** (combinations of `waterlogged`, `persistent`, and `distance`), we only need **two visual appearances** to represent it. Here’s how we achieve this:
+尽管方块使用了**28种服务端状态**（`waterlogged`、`persistent` 和 `distance` 的组合），但我们只需要**两种外观**来显示它。以下是实现的方法：
 
-Copy
-
-```
+```yaml
 appearances:
   default:
-    # (non-waterlogged) leaves
+    # （非含水）树叶
     state: "oak_leaves[distance=1,persistent=false,waterlogged=false]"
     model:
       path: "minecraft:block/custom/palm_leaves"
       generation:
-        parent: "minecraft:block/leaves"  # Inherit vanilla leaves model
+        parent: "minecraft:block/leaves"  # 继承原版树叶模型
         textures:
-          "all": "minecraft:block/custom/palm_leaves"  # Custom texture
+          "all": "minecraft:block/custom/palm_leaves"  # 自定义纹理
   waterlogged:
-    # waterlogged leaves
+    # 含水树叶
     state: "oak_leaves[distance=1,persistent=false,waterlogged=true]"
     model:
-      path: "minecraft:block/custom/palm_leaves"  # Same model as default
+      path: "minecraft:block/custom/palm_leaves"  # 与默认模型相同
 ```
 
-**Step 3: Assign Internal IDs and Override Behaviors**
+**第三步：分配内部ID和覆盖行为**
 
-Map all possible block state combinations to **internal IDs** and appearances. Some variants require overriding vanilla behaviors (e.g., waterlogged blocks being explosion-proof, `distance=7` blocks triggering `randomTick`).
+将所有可能的方块状态组合映射到**内部ID**和外观。某些变体需要覆盖原版行为（例如，含水方块完全免疫爆炸，`distance=7` 格方块外会触发 `randomTick`）。
 
-**Example Configuration**
+**示例配置**
 
-Copy
-
-```
+```yaml
 variants:
   distance=1,persistent=false,waterlogged=false:
-    appearance: "default"  # Uses the "default" visual state
-    id: 0                  # Unique internal ID
+    appearance: "default"  # 树叶"默认"的视觉状态
+    id: 0                  # 唯一内部ID
   distance=2,persistent=false,waterlogged=false:
-    appearance: "default"  # Reuse the "default" visual state
+    appearance: "default"  # 重新使用"默认"的视觉状态
     id: 1
 ```
 
-**Advanced Overrides**
+**高级覆盖**
 
-To customize block behavior for specific states, add logic like this:
+要为特定状态自定义方块行为，请添加如下逻辑：
 
-Copy
-
-```
+```yaml
 variants:
   distance=7,persistent=false,waterlogged=false:
     appearance: "default"
@@ -446,12 +427,10 @@ variants:
       burnable: false
 ```
 
-### Block Models <a href="#block-models" id="block-models"></a>
+# 方块模型 <a href="#block-models" id="block-models"></a>
 
-Copy
-
-```
-# Part of block state config
+```yaml
+# 方块状态配置的一部分
 state:
   id: 0
   state: tripwire:0
@@ -484,12 +463,12 @@ state:
           "0": "minecraft:block/custom/fairy_flower_5"
 ```
 
-The model of the block supports multiple models with random weights. When using it, you simply need to change "model" to "models" and provide a list containing all the models.
+方块模型支持多种模型，并且具有随机权重。使用时只需要将“model”改为“models”，并提供包含所有模型的列表即可。
 
-![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FwZsDZu6S6d2iyfANAoLl%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=c20975b\&sv=2)Copy
+![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FwZsDZu6S6d2iyfANAoLl%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=c20975b\&sv=2)
 
-```
-# Part of block state template
+```yaml
+# 方块状态模板的一部分
 appearances:
   axisY:
     state: "${base_block}:${vanilla_id}"
@@ -523,6 +502,6 @@ appearances:
           "side": "${texture_side_path}"
 ```
 
-Additionally, you can use `x` and `y` to rotate the model by a certain degree along the x-axis or y-axis. In this example, the plugin actually uses only two models, with the variants along the x and z axes derived from rotation.
+此外，你还可以使用 `x` 和 `y` 沿着x轴或y轴把模型旋转到一定角度。在这个示例中，插件实际上只使用了两个模型，而x轴和z轴的变体是通过旋转得来的。
 
 ![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F0cprZp0jgclG0YVFJHgf%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=94ad4e60\&sv=2)

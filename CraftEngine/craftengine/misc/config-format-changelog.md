@@ -45,11 +45,11 @@ type: stonecutting
 
 # 0.0.48 <a href="#id-0.0.48" id="id-0.0.48"></a>
 
-在 config.yml 中将 `offset-characters` 移动到了 `image.offset-characters`
+在config.yml中将 `offset-characters` 移动到了 `image.offset-characters`
 
 # 0.0.49 <a href="#id-0.0.49" id="id-0.0.49"></a>
 
-修改了 config.yml 中无效家具的处理方式
+修改了config.yml中无效家具的处理方式
 
 ```yaml
 furniture:
@@ -71,7 +71,7 @@ furniture:
       "default:wooden_chair": "default:bench"
 ```
 
-重构了 config.yml 中主机的处理方式。请阅读此页面了解新的格式：
+重构了config.yml中主机的处理方式。请阅读此页面了解新的格式：
 
 [🛜 主机](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/resource-pack/host)
 

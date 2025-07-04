@@ -1,3 +1,9 @@
-# Supported Levelers
+# 👔 Supported Levelers
 
-AuraSkills
+- AuraSkills
+- AureliumSkills
+- EcoJobs
+- EcoSkills
+- JobsReborn
+- mcMMO
+- MMOCore

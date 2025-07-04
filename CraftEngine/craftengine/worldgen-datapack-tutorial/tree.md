@@ -2,7 +2,7 @@
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FdnabesUIDYkJCJAmbjA5%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=37008870\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FRbdTh3SUCgVxaUD53ul8%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=1327f8e4\&sv=2)
 
-# 配置 <a href="#configured-feature" id="configured-feature"></a>
+# 配置功能 <a href="#configured-feature" id="configured-feature"></a>
 
 ```yaml
 {
@@ -56,7 +56,7 @@
 }
 ```
 
-# 放置 <a href="#placed-feature" id="placed-feature"></a>
+# 放置功能 <a href="#placed-feature" id="placed-feature"></a>
 
 ```yaml
 {
@@ -97,4 +97,5 @@
 ```
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F4l5Kl4kRCahKS8C50KBe%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=a43808b7\&sv=2)
+
 [4KBpalm\_tree.ziparchive](https://content.gitbook.com/content/OgvQ1fEJPROp7131PPlK/blobs/DOyv1N9EYaDAz6OxKQrJ/palm_tree.zip)

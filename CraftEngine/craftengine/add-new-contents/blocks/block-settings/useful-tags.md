@@ -1,61 +1,61 @@
 ---
-description: Some useful block tags
+description: 一些实用的方块标签
 ---
 
-# 🏷️ Useful Tags
+# 🏷️ 实用标签
 
-### Mining <a href="#mining" id="mining"></a>
+# 挖掘 <a href="#mining" id="mining"></a>
 
-#### minecraft:mineable/axe <a href="#minecraft-mineable-axe" id="minecraft-mineable-axe"></a>
+## minecraft:mineable/axe <a href="#minecraft-mineable-axe" id="minecraft-mineable-axe"></a>
 
-Allows axes to mine faster
+斧能够更快地挖掘
 
-#### minecraft:mineable/hoe <a href="#minecraft-mineable-hoe" id="minecraft-mineable-hoe"></a>
+## minecraft:mineable/hoe <a href="#minecraft-mineable-hoe" id="minecraft-mineable-hoe"></a>
 
-Allows hoes to mine faster
+锄能够更快地挖掘
 
-#### minecraft:mineable/pickaxe <a href="#minecraft-mineable-pickaxe" id="minecraft-mineable-pickaxe"></a>
+## minecraft:mineable/pickaxe <a href="#minecraft-mineable-pickaxe" id="minecraft-mineable-pickaxe"></a>
 
-Allows pickaxes to mine faster
+镐能够更快地挖掘
 
-#### minecraft:mineable/shovel <a href="#minecraft-mineable-shovel" id="minecraft-mineable-shovel"></a>
+## minecraft:mineable/shovel <a href="#minecraft-mineable-shovel" id="minecraft-mineable-shovel"></a>
 
-Allows shovels to mine faster
+锹能够更快地挖掘
 
-#### minecraft:sword\_efficient <a href="#minecraft-sword_efficient" id="minecraft-sword_efficient"></a>
+## minecraft:sword\_efficient <a href="#minecraft-sword_efficient" id="minecraft-sword_efficient"></a>
 
-Allows swords to mine faster
+剑能够更快地挖掘
 
-### Special Mechanism <a href="#special-mechanism" id="special-mechanism"></a>
+# 特殊机制 <a href="#special-mechanism" id="special-mechanism"></a>
 
-#### minecraft:climbable <a href="#minecraft-climbable" id="minecraft-climbable"></a>
+## minecraft:climbable <a href="#minecraft-climbable" id="minecraft-climbable"></a>
 
-Whether to allow players to climb (vines)
+是否允许玩家攀爬（藤蔓）
 
-#### minecraft:beacon\_base\_blocks <a href="#minecraft-beacon_base_blocks" id="minecraft-beacon_base_blocks"></a>
+## minecraft:beacon\_base\_blocks <a href="#minecraft-beacon_base_blocks" id="minecraft-beacon_base_blocks"></a>
 
-Whether it can be used as a base for a beacon
+是否可作为激活信标的金字塔地基
 
-#### minecraft:fall\_damage\_resetting <a href="#minecraft-fall_damage_resetting" id="minecraft-fall_damage_resetting"></a>
+## minecraft:fall\_damage\_resetting <a href="#minecraft-fall_damage_resetting" id="minecraft-fall_damage_resetting"></a>
 
-Whether to reset fall damage
+是否重置摔落伤害
 
-#### minecraft:soul\_fire\_base\_blocks <a href="#minecraft-soul_fire_base_blocks" id="minecraft-soul_fire_base_blocks"></a>
+## minecraft:soul\_fire\_base\_blocks <a href="#minecraft-soul_fire_base_blocks" id="minecraft-soul_fire_base_blocks"></a>
 
-Whether the fire above the block is soul fire
+方块上的火焰是否为灵魂火
 
-#### minecraft:infiniburn\_overworld <a href="#minecraft-infiniburn_overworld" id="minecraft-infiniburn_overworld"></a>
+## minecraft:infiniburn\_overworld <a href="#minecraft-infiniburn_overworld" id="minecraft-infiniburn_overworld"></a>
 
-#### minecraft:infiniburn\_nether <a href="#minecraft-infiniburn_nether" id="minecraft-infiniburn_nether"></a>
+## minecraft:infiniburn\_nether <a href="#minecraft-infiniburn_nether" id="minecraft-infiniburn_nether"></a>
 
-#### minecraft:infiniburn\_end <a href="#minecraft-infiniburn_end" id="minecraft-infiniburn_end"></a>
+## minecraft:infiniburn\_end <a href="#minecraft-infiniburn_end" id="minecraft-infiniburn_end"></a>
 
-Can the flame burn permanently in the corresponding dimension?
+方块上的火焰是否可以在相应的维度中永久燃烧
 
-#### minecraft:enchantment\_power\_provider <a href="#minecraft-enchantment_power_provider" id="minecraft-enchantment_power_provider"></a>
+## minecraft:enchantment\_power\_provider <a href="#minecraft-enchantment_power_provider" id="minecraft-enchantment_power_provider"></a>
 
-Whether this block can provide enchantment level
+方块是否可以提供附魔等级（例如书架）
 
-#### minecraft:replaceable\_by\_trees <a href="#minecraft-replaceable_by_trees" id="minecraft-replaceable_by_trees"></a>
+## minecraft:replaceable\_by\_trees <a href="#minecraft-replaceable_by_trees" id="minecraft-replaceable_by_trees"></a>
 
-Whether trees can replace this block when they grow
+树木长大后是否可以替换这个方块

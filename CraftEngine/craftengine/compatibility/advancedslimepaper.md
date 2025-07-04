@@ -1,5 +1,5 @@
-# AdvancedSlimePaper
+# 🟢 AdvancedSlimePaper
 
-**CraftEngine 支持原生 SlimeWorld 格式集成**
+**CraftEngine支持原生SlimeWorld格式集成**
 
-CraftEngine 会自动以 SlimeWorld 格式保存其区块数据 - 无需配置！
+CraftEngine会自动以SlimeWorld格式保存其区块数据 - 无需配置！

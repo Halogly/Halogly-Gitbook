@@ -68,4 +68,4 @@
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FMhILJaAfEm7EDavPOI8P%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=71cf4a89\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FwMJjO7A0rsjY8rG0rxEm%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=bc47730c\&sv=2)
 
-[5KBtopaz\_ore.ziparchive  存档](https://content.gitbook.com/content/OgvQ1fEJPROp7131PPlK/blobs/AUuQxbedEBV6DugvykFm/topaz_ore.zip)
+[5KBtopaz\_ore.ziparchive](https://content.gitbook.com/content/OgvQ1fEJPROp7131PPlK/blobs/AUuQxbedEBV6DugvykFm/topaz_ore.zip)

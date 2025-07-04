@@ -1,15 +1,9 @@
----
-description: 本页面主要讲解如何向服务器添加新方块。
----
-
 # 🕹️ 方块行为
 
-CraftEngine implements a comprehensive physical property system, allowing you to freely combine multiple block behaviors! Here are two simple examples: one demonstrating a single block behavior and another showing a combination of multiple block behaviors.
+CraftEngine 实现了一个全面的物理属性系统，可以自由组合多种方块行为！这里有两个简单的例子：
 
-Copy
-
-```
-# single behavior
+```yaml
+# 单个行为
 blocks:
   default:fairy_flower:
     behavior:
@@ -19,10 +13,8 @@ blocks:
         - minecraft:farmland
 ```
 
-Copy
-
-```
-# combined behaviors
+```yaml
+# 组合行为
 blocks:
   default:gunpowder_block:
     behaviors:
@@ -31,4 +23,4 @@ blocks:
       - type: falling_block
 ```
 
-Please note: combining some block behaviors may cause unexpected conflicts. If you run into problems, please contact support and we will try to resolve any conflicts.
+请注意：组合某些方块行为可能会导致意外的冲突。如果你遇到问题，请联系支持，我们会尽力解决任何冲突。

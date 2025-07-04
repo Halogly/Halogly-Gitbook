@@ -1,12 +1,10 @@
-# 全局变量
+# 🔠 全局变量
 
-#### Example Usage 示例用法 <a href="#example-usage" id="example-usage"></a>
+## 示例用法 <a href="#example-usage" id="example-usage"></a>
 
-Copy 复制
-
-```
+```yaml
 global-variables:
-  test: "<!i><#FF8C00><arg:0>'s <arg:1>"
+  test: "<!i><#FF8C00><arg:0>的<arg:1>"
 
 items#topaz_gears:
   default:topaz_rod:

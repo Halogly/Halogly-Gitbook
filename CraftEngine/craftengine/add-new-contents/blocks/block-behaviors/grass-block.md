@@ -1,10 +1,8 @@
-# 🌿 Grass Block
+# 🌿 草方块
 
-[🌿 Grass Block](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-behaviors/grass-block) allows you to perform bonemeal on them to grow grass and flowers. Don't forget to add tag `minecraft:dirt` to your blocks otherwise grass won't survive on them. Check [tags](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-settings#tags) if you don't know how to add tags to your block.
+[🌿 草方块](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-behaviors/grass-block)是一种可以对其使用骨粉来生长草和花朵的方块。别忘了给方块添加 `minecraft:dirt` 标签，否则草无法在它们上面存活。如果你不知道如何给你的方块添加标签，请参阅[标签](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-settings#tags)。
 
-Copy
-
-```
+```yaml
 blocks:
   default:grass_block:
     behavior:

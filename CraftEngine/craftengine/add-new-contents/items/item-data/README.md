@@ -2,13 +2,15 @@
 description: 为物品设置原版 NBT 标签或组件，以利用某些原版 Minecraft 功能。
 ---
 
-# 🔢 Item Data
+# 🔢 物品数据
 
-# 什么是物品数据？ <a href="#what-is-item-data" id="what-is-item-data"></a>
+## 🔢 Item Data
+
+## 什么是物品数据？ <a href="#what-is-item-data" id="what-is-item-data"></a>
 
 物品数据是指旧版本中物品的 NBT（二进制命名标签），或 1.20.5 及以上版本中的物品组件。通过这些数据，我们可以自定义物品的各个方面，如名称、描述、属性和其他功能。
 
-# 外部数据 <a href="#external-data" id="external-data"></a>
+## 外部数据 <a href="#external-data" id="external-data"></a>
 
 如果你希望 CraftEngine 物品保留外部插件物品的数据，请按照此配置：
 
@@ -23,7 +25,7 @@ items:
 
 [🐌 External Item Providers](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/compatibility/external-item-providers)
 
-# 硬编码数据 <a href="#hard-coded-data" id="hard-coded-data"></a>
+## 硬编码数据 <a href="#hard-coded-data" id="hard-coded-data"></a>
 
 在此上下文中，硬编码数据意味着配置格式由插件提供和维护，这确保了跨版本的兼容性。这些格式由插件定义，因此可能与游戏本身使用的标准 NBT（命名二进制标签）或组件格式有所不同。这种方法的优点是插件处理所有维护工作，包括版本兼容性，因此用户无需担心游戏版本之间的变化或更新。
 
@@ -34,9 +36,9 @@ items:
       item-name: "<!i><#FF8C00>黄玉棒"
 ```
 
-## item-name 物品名称 <a href="#item-name" id="item-name"></a>
+### item-name 物品名称 <a href="#item-name" id="item-name"></a>
 
-Determines the default name of this item, unlike the `custom-name`, this name can't be erased using an anvil, won't be italicized, and does not show in some labels, such as banner markers and item frames.
+Determines the default name of this item, unlike the `custom-name`, this name can't be erased using an anvil, won't be italicized, and does not show in some labels, such as banner markers and item frames.\
 设置物品的默认名称，与 `custom-name` 不同，此名称无法使用铁砧消除，不会斜体显示，也不会在某些标签中显示，例如织布机和物品展示框。
 
 ```yaml
@@ -47,7 +49,7 @@ items:
       # 这里使用 <!i> 是因为 1.20.4 及以下版本没有 item_name 组件
 ```
 
-## custom-name 自定义名称 <a href="#custom-name" id="custom-name"></a>
+### custom-name 自定义名称 <a href="#custom-name" id="custom-name"></a>
 
 设置物品的自定义名称，就像在铁砧中修改的名称那样。
 
@@ -58,7 +60,7 @@ items:
       custom-name: "<!i><#FF8C00>黄玉棒"
 ```
 
-## lore 描述信息 <a href="#lore" id="lore"></a>
+### lore 描述信息 <a href="#lore" id="lore"></a>
 
 设置物品提示框中的描述信息。
 
@@ -70,7 +72,7 @@ items:
         - "亮晶晶的棒子！"
 ```
 
-## unbreakable 无法破坏 <a href="#unbreakable" id="unbreakable"></a>
+### unbreakable 无法破坏 <a href="#unbreakable" id="unbreakable"></a>
 
 设置物品是否不可破坏
 
@@ -81,7 +83,7 @@ items:
       unbreakable: true
 ```
 
-## enchantment 魔咒 <a href="#enchantment" id="enchantment"></a>
+### enchantment 魔咒 <a href="#enchantment" id="enchantment"></a>
 
 设置物品的附魔属性
 
@@ -94,7 +96,7 @@ items:
         custom:enchant: 3
 ```
 
-## dyed-color 所染颜色 <a href="#dyed-color" id="dyed-color"></a>
+### dyed-color 所染颜色 <a href="#dyed-color" id="dyed-color"></a>
 
 设置物品的颜色
 
@@ -105,7 +107,7 @@ items:
       dyed-color: 255,255,255
 ```
 
-## custom-model-data 自定义模型数据 <a href="#custom-model-data" id="custom-model-data"></a>
+### custom-model-data 自定义模型数据 <a href="#custom-model-data" id="custom-model-data"></a>
 
 ```yaml
 items:
@@ -114,7 +116,7 @@ items:
       custom-model-data: 100
 ```
 
-## food 食物（1.20.5+）<a href="#food-1.20.5" id="food-1.20.5"></a>
+### food 食物（1.20.5+） <a href="#food-1.20.5" id="food-1.20.5"></a>
 
 ```yaml
 items:
@@ -127,7 +129,7 @@ items:
         can-always-eat: false
 ```
 
-## jukebox-playable 插入唱片机所播放的音乐 (1.21+) <a href="#jukebox-playable-1.21" id="jukebox-playable-1.21"></a>
+### jukebox-playable 插入唱片机所播放的音乐 (1.21+) <a href="#jukebox-playable-1.21" id="jukebox-playable-1.21"></a>
 
 ```yaml
 items:
@@ -137,7 +139,7 @@ items:
       jukebox-playable: default:credits_music
 ```
 
-## item-model 物品模型 (1.21.2+) <a href="#item-model-1.21.2" id="item-model-1.21.2"></a>
+### item-model 物品模型 (1.21.2+) <a href="#item-model-1.21.2" id="item-model-1.21.2"></a>
 
 ```yaml
 items:
@@ -146,7 +148,7 @@ items:
       item-model: default:music_stick
 ```
 
-## tooltip-style 物品提示框背景和边框样式 (1.21.2+) <a href="#tooltip-style-1.21.2" id="tooltip-style-1.21.2"></a>
+### tooltip-style 物品提示框背景和边框样式 (1.21.2+) <a href="#tooltip-style-1.21.2" id="tooltip-style-1.21.2"></a>
 
 设置物品的提示框背景和边框样式
 
@@ -161,12 +163,12 @@ items:
 
 要创建提示框样式，你必须将纹理放置在以下目录中。
 
-[https://zh.minecraft.wiki/w/数据组件?variant=zh-cn#tooltip_style](https://zh.minecraft.wiki/w/数据组件?variant=zh-cn#tooltip_style)
+[https://zh.minecraft.wiki/w/数据组件?variant=zh-cn#tooltip\_style](https://zh.minecraft.wiki/w/%E6%95%B0%E6%8D%AE%E7%BB%84%E4%BB%B6?variant=zh-cn#tooltip_style)
 
-## trim 盔甲纹饰 <a href="#trim" id="trim"></a>
+### trim 盔甲纹饰 <a href="#trim" id="trim"></a>
 
-apply a decorative alteration to a [tool](https://minecraft.wiki/w/Tool) or [armor](https://minecraft.wiki/w/Armor)
-更改[工具](https://zh.minecraft.wiki/w/工具)或[盔甲](https://zh.minecraft.wiki/w/盔甲)的装饰
+apply a decorative alteration to a [tool](https://minecraft.wiki/w/Tool) or [armor](https://minecraft.wiki/w/Armor)\
+更改[工具](https://zh.minecraft.wiki/w/%E5%B7%A5%E5%85%B7)或[盔甲](https://zh.minecraft.wiki/w/%E7%9B%94%E7%94%B2)的装饰
 
 ```yaml
 trim:
@@ -174,7 +176,7 @@ trim:
   material: iron # https://minecraft.wiki/w/Smithing#Material
 ```
 
-## equippable 可穿戴性（1.21.2+）<a href="#equippable-1.21.2" id="equippable-1.21.2"></a>
+### equippable 可穿戴性（1.21.2+） <a href="#equippable-1.21.2" id="equippable-1.21.2"></a>
 
 如果存在，此物品可以装备在指定槽位。
 
@@ -199,15 +201,15 @@ equippable:
   equip-on-interact: true
 ```
 
-# 可自定义数据 <a href="#customizable-data" id="customizable-data"></a>
+## 可自定义数据 <a href="#customizable-data" id="customizable-data"></a>
 
 可自定义数据不由插件维护，其格式会随着 Minecraft 的更新而变化，尤其是近期数据组件频繁的更新。若想避免因版本更新导致配置大幅改动，可以考虑使用模板来建立标准化的配置文件格式。当发布新版本时，只需更新模板就能够适应任何更新。如果你不熟悉如何使用模板，请务必阅读[📄 模板 \[必读\]](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/templates-must-read)。这种方法有助于简化更新流程，减少配置与最新游戏版本保持兼容性的工作量。
 
-## NBT（1.20-1.20.4）<a href="#nbt-1.20-1.20.4" id="nbt-1.20-1.20.4"></a>
+### NBT（1.20-1.20.4） <a href="#nbt-1.20-1.20.4" id="nbt-1.20-1.20.4"></a>
 
 由于 NBT（二进制命名标签）已经过时，因此在此不会详细讨论。
 
-[https://zh.minecraft.wiki/w/物品格式](https://zh.minecraft.wiki/w/物品格式)
+[https://zh.minecraft.wiki/w/物品格式](https://zh.minecraft.wiki/w/%E7%89%A9%E5%93%81%E6%A0%BC%E5%BC%8F)
 
 ```yaml
 items:
@@ -217,9 +219,9 @@ items:
         CustomModelData: 1000
 ```
 
-## 组件（1.20.5+）<a href="#components-1.20.5" id="components-1.20.5"></a>
+### 组件（1.20.5+） <a href="#components-1.20.5" id="components-1.20.5"></a>
 
-自定义组件的格式严格遵循 [Minecraft Wiki](https://zh.minecraft.wiki/w/数据组件) 指南。下面，我会通过几个示例来指导你如何配置自定义组件。
+自定义组件的格式严格遵循 [Minecraft Wiki](https://zh.minecraft.wiki/w/%E6%95%B0%E6%8D%AE%E7%BB%84%E4%BB%B6) 指南。下面，我会通过几个示例来指导你如何配置自定义组件。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FNrlWy1Cxy4vn2GK1ODdL%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=21ad2949\&sv=2)
 
@@ -280,7 +282,7 @@ items:
 minecraft:custom_data: "(json) {\"test\":1}"
 ```
 
-## 移除组件（1.20.5+）<a href="#remove-components-1.20.5" id="remove-components-1.20.5"></a>
+### 移除组件（1.20.5+） <a href="#remove-components-1.20.5" id="remove-components-1.20.5"></a>
 
 从物品中移除组件
 

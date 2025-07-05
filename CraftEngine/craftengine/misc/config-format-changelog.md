@@ -1,6 +1,8 @@
 # 📓 配置格式变更日志
 
-# 0.0.18 <a href="#id-0.0.18" id="id-0.0.18"></a>
+## 📓 配置格式变更日志
+
+## 0.0.18 <a href="#id-0.0.18" id="id-0.0.18"></a>
 
 将 `tags` 移动到了 `settings`
 
@@ -27,7 +29,7 @@ default:palm_planks:
       - "minecraft:wooden_tool_materials"
 ```
 
-# 0.0.35 <a href="#id-0.0.35" id="id-0.0.35"></a>
+## 0.0.35 <a href="#id-0.0.35" id="id-0.0.35"></a>
 
 重命名了切石机配方类型
 
@@ -43,11 +45,11 @@ type: stone_cutting
 type: stonecutting
 ```
 
-# 0.0.48 <a href="#id-0.0.48" id="id-0.0.48"></a>
+## 0.0.48 <a href="#id-0.0.48" id="id-0.0.48"></a>
 
 在config.yml中将 `offset-characters` 移动到了 `image.offset-characters`
 
-# 0.0.49 <a href="#id-0.0.49" id="id-0.0.49"></a>
+## 0.0.49 <a href="#id-0.0.49" id="id-0.0.49"></a>
 
 修改了config.yml中无效家具的处理方式
 
@@ -75,6 +77,6 @@ furniture:
 
 [🛜 主机](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/resource-pack/host)
 
-# 0.0.57 <a href="#id-0.0.57" id="id-0.0.57"></a>
+## 0.0.57 <a href="#id-0.0.57" id="id-0.0.57"></a>
 
 将模板参数格式从 `{parameter}` 改为了 `${parameter:-DEFAULT_VALUE}`

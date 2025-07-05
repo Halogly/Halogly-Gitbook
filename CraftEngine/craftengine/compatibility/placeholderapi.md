@@ -1,24 +1,26 @@
 # 🅿️ PlaceholderAPI
 
-# %image\_% <a href="#image" id="image"></a>
+## 🅿️ PlaceholderAPI
+
+## %image\_% <a href="#image" id="image"></a>
 
 `image` 占位符会根据指定ID返回对应图像的原始Unicode字符及其关联的字体。
 
 “行”和“列”都是可选的，但如果使用了其中一个，它们就必须成对使用。
 
-# %image\_mm\_命名空间:id:\[行]:\[列]% <a href="#image_mm_namespace-id-row-column" id="image_mm_namespace-id-row-column"></a>
+## %image\_mm\_命名空间:id:\[行]:\[列]% <a href="#image_mm_namespace-id-row-column" id="image_mm_namespace-id-row-column"></a>
 
 返回 `minimessage` 格式的图片。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FSoNyzs9VyYKmXS6gbzQD%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=c47b4dea\&sv=2)
 
-# %image\_md\_命名空间:id:\[行]:\[列]% <a href="#image_md_namespace-id-row-column" id="image_md_namespace-id-row-column"></a>
+## %image\_md\_命名空间:id:\[行]:\[列]% <a href="#image_md_namespace-id-row-column" id="image_md_namespace-id-row-column"></a>
 
 返回 `minedown` 格式的图片。
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FSWKg5BjsPNE3WVBfnMB6%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=54cb343a\&sv=2)
 
-# %image\_raw\_命名空间:id:\[行]:\[列]% <a href="#image_raw_namespace-id-row-column" id="image_raw_namespace-id-row-column"></a>
+## %image\_raw\_命名空间:id:\[行]:\[列]% <a href="#image_raw_namespace-id-row-column" id="image_raw_namespace-id-row-column"></a>
 
 返回原始图片字符。
 
@@ -40,24 +42,22 @@
 
 CraftEngine可以在**数据包层面**修改不支持字体的插件发送的文本组件。了解更多：[与其他插件的兼容性](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/images#compatibility-with-other-plugins)
 
-# %shift\_% <a href="#shift" id="shift"></a>
+## %shift\_% <a href="#shift" id="shift"></a>
 
 `shift` 占位符用于偏移字符，通常用于对齐菜单标题和类似的操作。
 
-# %shift\_mm\_value% <a href="#shift_mm_value" id="shift_mm_value"></a>
+## %shift\_mm\_value% <a href="#shift_mm_value" id="shift_mm_value"></a>
 
 返回 `minimessage` 格式的偏移字符。
 
-# %shift\_md\_value% <a href="#shift_md_value" id="shift_md_value"></a>
+## %shift\_md\_value% <a href="#shift_md_value" id="shift_md_value"></a>
 
 返回 `minedown` 格式的偏移字符。
 
-# %shift\_raw\_value% <a href="#shift_raw_value" id="shift_raw_value"></a>
+## %shift\_raw\_value% <a href="#shift_raw_value" id="shift_raw_value"></a>
 
 返回原始偏移字符。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FpErqfau4KpSshwI7fAeD%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=3518b00e\&sv=2)
-偏移校正后
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FpErqfau4KpSshwI7fAeD%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=3518b00e\&sv=2) 偏移校正后
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FwYlukrOaIpR8uLpkXi6E%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=61d5fcc7\&sv=2)
-偏移校正前
+![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FwYlukrOaIpR8uLpkXi6E%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=61d5fcc7\&sv=2) 偏移校正前

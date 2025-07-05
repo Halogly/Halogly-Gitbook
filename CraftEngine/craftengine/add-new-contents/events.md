@@ -1,11 +1,11 @@
-# 🪇 Events
+# 🪇 事件
 
-# 介绍 <a href="#introduction" id="introduction"></a>
+介绍
 
-`events` 部分决定在特定事件期间哪个物品/家具/方块将执行预定义行为。在 `events` 部分中，你需要指定一个事件触发器，例如 `"right_click"` 是右键点击操作。在事件触发器下方，必须传递一个包含相应类型的操作列表。例如，`command` 执行指定的命令。
+`events`部分决定在特定事件期间哪个物品/家具/方块将执行预定义行为。在`events`部分中，你需要指定一个事件触发器，例如`"right_click"`是右键点击操作。在事件触发器下方，必须传递一个包含相应类型的操作列表。例如，`command`执行指定的命令。
 
 ```yaml
-# 格式 1
+# 格式1
 events:
   right_click:
     - type: command
@@ -16,7 +16,7 @@ events:
     - type: command
       command: say 2
       conditions: []
-# 格式 2
+# 格式2
 events:
   - on: right_click
     functions:
@@ -30,18 +30,24 @@ events:
         conditions: []
 ```
 
-[⚖️ 条件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/conditions)
+<details>
 
-# 🧨 事件触发器 <a href="#event-triggers" id="event-triggers"></a>
+<summary><a href="items/item-models/condition.md#tiao-jian">⚖️ 条件</a></summary>
 
-## 物品 <a href="#items" id="items"></a>
+
+
+</details>
+
+## 🧨 事件触发器 <a href="#event-triggers" id="event-triggers"></a>
+
+### 物品 <a href="#items" id="items"></a>
 
 * break
 * right\_click
 * left\_click
 * consume
 
-## 方块 <a href="#blocks" id="blocks"></a>
+### 方块 <a href="#blocks" id="blocks"></a>
 
 * break
 * place
@@ -49,17 +55,17 @@ events:
 * left\_click
 * step
 
-## 家具 <a href="#furniture" id="furniture"></a>
+### 家具 <a href="#furniture" id="furniture"></a>
 
 * break
 * place
 * right\_click
 
-请注意，相应的事件应该放置在适当的配置区域。例如，如果你希望在交互某件家具时执行命令，正确的方法是将 `events` 放在 `furniture` 区域下，而不是放在你的物品区域下。
+{% hint style="danger" %}
+请注意，相应的事件应该放置在适当的配置区域。例如，如果你希望在交互某件家具时执行命令，正确的方法是将`events`放在`furniture`区域下，而不是放在你的物品区域下。
 
-```yaml
-items:
-  default:bench:
+<pre class="language-yaml"><code class="lang-yaml"><strong>items:
+</strong>  default:bench:
     events: # ❌️
       right_click:
        - type: command
@@ -69,11 +75,12 @@ items:
         events: # ✅️
           right_click:
            - type: command
-```
+</code></pre>
+{% endhint %}
 
-# 🔧 函数 <a href="#functions" id="functions"></a>
+## 🔧 函数 <a href="#functions" id="functions"></a>
 
-## 取消事件 cancel\_event <a href="#cancel_event" id="cancel_event"></a>
+### cancel\_event <a href="#cancel_event" id="cancel_event"></a>
 
 取消原先的事件。
 
@@ -81,7 +88,7 @@ items:
 type: cancel_event
 ```
 
-## 运行 run <a href="#run" id="run"></a>
+### run <a href="#run" id="run"></a>
 
 按顺序运行一系列函数。这对于具有相同条件的函数来说非常有用。
 
@@ -93,31 +100,31 @@ functions: # 必需; 映射列表
   - type: message
 ```
 
-## 命令 command <a href="#command" id="command"></a>
+### command <a href="#command" id="command"></a>
 
 以玩家或控制台的身份执行命令。
 
 ```yaml
 type: command
-command: "say hello <arg:player.name>" # 必需; 字符串列表/字符串
+command: "say 你好<arg:player.name>" # 必需; 字符串列表/字符串
 target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
 as-player: false # 可选; [默认: false]
 ```
 
-## 消息 message <a href="#message" id="message"></a>
+### message <a href="#message" id="message"></a>
 
-发送消息/系统动作栏消息
+发送消息或系统动作栏消息。
 
 ```yaml
 type: message
-message: "你好 <papi:player_name>" # 必需; 字符串列表/字符串
+message: "你好<papi:player_name>" # 必需; 字符串列表/字符串
 target: "self" # 可选; 枚举[all,self]/玩家选择器
 overlay: false # 可选; [默认: false]; false = 聊天栏 / true = 动作栏
 ```
 
-## 动作栏 actionBar <a href="#actionbar" id="actionbar"></a>
+### actionbar <a href="#actionbar" id="actionbar"></a>
 
-发送动作栏消息
+发送动作栏消息。
 
 ```yaml
 type: actionbar
@@ -125,9 +132,9 @@ actionbar: "这是一条动作栏文本"  # 必需; 字符串
 target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
 ```
 
-## 标题 Title <a href="#title" id="title"></a>
+### title
 
-发送标题
+发送标题。
 
 ```yaml
 type: title
@@ -138,9 +145,9 @@ stay: 10 # 可选; 数字; [默认: 20]
 fade-out: 10 # 可选; 数字; [默认: 5]
 ```
 
-## 打开界面 open\_window <a href="#open_window" id="open_window"></a>
+### open\_window <a href="#open_window" id="open_window"></a>
 
-打开GUI界面
+打开GUI界面。
 
 ```yaml
 type: open_window #
@@ -149,9 +156,9 @@ title: "超级无敌大铁砧"  # 可选; 字符串
 target: "self" # 可选; 枚举[all,self]/玩家选择器; [默认: self]
 ```
 
-## 放置方块 place\_block <a href="#place_block" id="place_block"></a>
+### place\_block <a href="#place_block" id="place_block"></a>
 
-放置一个方块
+放置一个方块。
 
 ```yaml
 type: place_block
@@ -161,9 +168,9 @@ y: <arg:block.block_y>
 z: <arg:block.block_z>
 ```
 
-## 掉落物品 drop\_loot <a href="#drop_loot" id="drop_loot"></a>
+### drop\_loot <a href="#drop_loot" id="drop_loot"></a>
 
-根据指定的掉落物列表掉落物品
+根据指定的战利品表掉落物品。
 
 ```yaml
 type: drop_loot
@@ -174,17 +181,17 @@ loot:
   pools: ...
 ```
 
-## 更新交互刻 update\_interaction\_tick <a href="#update_interaction_tick" id="update_interaction_tick"></a>
+### update\_interaction\_tick <a href="#update_interaction_tick" id="update_interaction_tick"></a>
 
-在最后一次交互结束时更新刻
+在最后一次交互结束时更新刻。
 
 ```yaml
 type: update_interaction_tick
 ```
 
-## 设置数量 set\_count <a href="#set_count" id="set_count"></a>
+### set\_count <a href="#set_count" id="set_count"></a>
 
-设置此事件中当前物品的数量
+设置此事件中当前物品的数量。
 
 ```yaml
 type: set_count
@@ -193,9 +200,9 @@ count: -1
 target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-## 设置饥饿值 set\_food <a href="#set_food" id="set_food"></a>
+### set\_food <a href="#set_food" id="set_food"></a>
 
-设置玩家的饥饿值（0\~20）
+设置玩家的饥饿值（0\~20）。
 
 ```yaml
 type: set_food
@@ -204,9 +211,9 @@ food: 4
 target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-## 设置饱和度 set\_saturation <a href="#set_saturation" id="set_saturation"></a>
+### set\_saturation <a href="#set_saturation" id="set_saturation"></a>
 
-设置玩家的饱和度（0\~10）
+设置玩家的饱和度（0\~10）。
 
 ```yaml
 type: set_saturation
@@ -215,18 +222,18 @@ saturation: 2.5
 target: "self" # 可选; 枚举[all,self]/玩家选择器
 ```
 
-## 挥动手臂 swing\_hand <a href="#swing_hand" id="swing_hand"></a>
+### swing\_hand <a href="#swing_hand" id="swing_hand"></a>
 
-挥动与此事件相关的手或配置中指定的手
+挥动与此事件相关的手或配置中指定的手臂。
 
 ```yaml
 type: swing_hand
 hand: main_hand # 可选参数
 ```
 
-## 粒子 particle <a href="#particle" id="particle"></a>
+### particle <a href="#particle" id="particle"></a>
 
-生成粒子
+生成粒子。
 
 ```yaml
 type: particle
@@ -241,7 +248,7 @@ offset-z: 0.3
 speed: 0
 
 # 以下参数仅在粒子属于某种类型时有效。
-# 参数详情参阅:
+# 参数详情：
 # https://zh.minecraft.wiki/w/Java版粒子/#类型
 
 # item
@@ -278,9 +285,9 @@ target-z: 0
 duration: 10
 ```
 
-## 药水效果 potion\_effect <a href="#potion_effect" id="potion_effect"></a>
+### potion\_effect <a href="#potion_effect" id="potion_effect"></a>
 
-添加药水效果
+添加药水效果。
 
 ```yaml
 type: potion_effect
@@ -291,21 +298,27 @@ ambient: false # 来自信标
 particles: true
 ```
 
-## 移除药水效果 remove\_potion\_effect <a href="#remove_potion_effect" id="remove_potion_effect"></a>
+### remove\_potion\_effect <a href="#remove_potion_effect" id="remove_potion_effect"></a>
 
-移除药水效果
+移除药水效果。
 
 ```yaml
 type: remove_potion_effect
-potion-effect: minecraft:blindness # 'all' 为 true 时可选
+potion-effect: minecraft:blindness # 'all' 为true时可选
 all: false  # 默认: false
 ```
 
-## leveler\_exp <a href="#leveler_exp" id="leveler_exp"></a>
+### leveler\_exp <a href="#leveler_exp" id="leveler_exp"></a>
 
-增加技能/工作经验值
+增加技能或工作经验值。
 
-[👔 Supported Levelers](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/compatibility/supported-levelers)Copy
+<details>
+
+<summary><a href="https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/compatibility/supported-levelers">👔 Supported Levelers</a></summary>
+
+
+
+</details>
 
 ```yaml
 type: leveler_exp
@@ -314,9 +327,9 @@ leveler: fishing  # 工作/技能的 ID
 count: 10  # 要给予的经验值
 ```
 
-## 设置冷却时间 set\_cooldown <a href="#set_cooldown" id="set_cooldown"></a>
+### set\_cooldown <a href="#set_cooldown" id="set_cooldown"></a>
 
-设置玩家的冷却时间
+设置玩家的冷却时间。
 
 ```yaml
 type: set_cooldown
@@ -325,9 +338,9 @@ id: my_cooldown_id
 add: false  # 默认: false（是否累积冷却时间）
 ```
 
-## 移除冷却时间 remove\_cooldown <a href="#remove_cooldown" id="remove_cooldown"></a>
+### remove\_cooldown <a href="#remove_cooldown" id="remove_cooldown"></a>
 
-移除玩家的冷却时间
+移除玩家的冷却时间。
 
 ```yaml
 type: remove_cooldown
@@ -335,9 +348,9 @@ id: my_cooldown_id  # 'all' 为 true 时可选
 all: false  # 默认: false
 ```
 
-## 播放声音 play\_sound <a href="#play_sound" id="play_sound"></a>
+### play\_sound <a href="#play_sound" id="play_sound"></a>
 
-播放声音
+播放声音。
 
 ```yaml
 type: play_sound
@@ -350,4 +363,6 @@ volume: 1
 source: master
 ```
 
+{% hint style="warning" %}
 更多功能即将推出...
+{% endhint %}

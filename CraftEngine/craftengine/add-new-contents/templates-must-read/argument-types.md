@@ -1,6 +1,6 @@
 # 🟢 参数类型
 
-# 直接赋值 <a href="#direct-assignment" id="direct-assignment"></a>
+## 直接赋值 <a href="#direct-assignment" id="direct-assignment"></a>
 
 最简单的参数类型是直接赋值，即在参数名后面直接填写值。
 
@@ -21,8 +21,9 @@ arguments:
     - 123
     - 456
 ```
+
 {% hint style="danger" %}
-当直接赋值一个映射时，映射的参数不能包含 type ，否则会发生错误！在这种情况下，你应该按照下面的描述使用 Map 类型。
+当直接赋值一个映射时，映射的参数不能包含`type`，否则会发生错误！在这些情况，你应该按照下面的描述使用map类型。\
 ❌️
 
 ```yaml
@@ -45,13 +46,14 @@ arguments:
       c: d
 ```
 {% endhint %}
+
 {% hint style="info" %}
-所有非直接赋值参数类型都需要指定参数类型 `type`。以下是一些可用的参数类型和示例
+所有非直接赋值参数类型都需要指定参数类型`type`。下文展示了一些可用的参数类型和示例。
 {% endhint %}
 
-# 自增整数 <a href="#self-increase-int" id="self-increase-int"></a>
+## 自增整数 <a href="#self-increase-int" id="self-increase-int"></a>
 
-`self_increase_int` 是一个自增的数字 ID，每次使用参数时增加一次 1。
+`self_increase_int`是一个自增的数字ID，每次使用参数时增加一次1。
 
 > 配置
 
@@ -91,7 +93,7 @@ variants:
     id: 2
 ```
 
-# 表达式 <a href="#expression" id="expression"></a>
+## 表达式 <a href="#expression" id="expression"></a>
 
 ```yaml
 arguments:
@@ -101,7 +103,7 @@ arguments:
     value-type: double # int/double/float/short/long/boolean
 ```
 
-# 映射 <a href="#map" id="map"></a>
+## 映射 <a href="#map" id="map"></a>
 
 用指定的映射替换占位符。
 
@@ -112,8 +114,9 @@ arguments:
     map:
       minecraft:sharpness: 1
 ```
+
 {% hint style="warning" %}
-在这种情况下，映射不能正确应用
+在这种情况下，映射不能正确应用：
 
 ❌️
 
@@ -130,7 +133,7 @@ template:
 ```
 {% endhint %}
 
-# 列表 <a href="#list" id="list"></a>
+## 列表 <a href="#list" id="list"></a>
 
 用指定的列表替换占位符。
 
@@ -139,10 +142,11 @@ arguments:
   lore:
     type: list
     list:
-      - "你好，Minecraft!"
+      - "你好，Minecraft！"
 ```
+
 {% hint style="warning" %}
-在这种情况下，列表不能正确应用
+在这种情况下，列表不能正确应用：
 
 ❌️
 

@@ -1,12 +1,14 @@
 # ✏️ 文本格式
 
-# MiniMessage <a href="#minimessage" id="minimessage"></a>
+## ✏️ 文本格式
+
+## MiniMessage <a href="#minimessage" id="minimessage"></a>
 
 在配置插件的物品名称、描述信息、GUI等时，请使用[MiniMessage格式](https://docs.advntr.dev/minimessage/format.html)。
 
 > 任何有意义的标记符都可以被转义。在纯文本中，可使用反斜杠（`\`）转义标签起始字符（`<`）。在带引号的字符串内，可对引号起始字符（`'` 或 `"`）转义。如果转义字符本身需要转义，也可以进行转义。未加引号的标签参数不能转义，用于简化设计。在不能转义的地方，转义字符会直接按原样传递。在可以转义但需要输出原义反斜杠的地方，可以通过转义转义字符本身来得到 `\`。
 
-# 额外标签 <a href="#extra-tags" id="extra-tags"></a>
+## 额外标签 <a href="#extra-tags" id="extra-tags"></a>
 
 这是插件提供的额外标签。
 
@@ -26,7 +28,7 @@ message: -|
 
 如果**玩家张三**与自定义方块交互并触发消息广播，那么收到这条消息的**玩家李四**会看到：`"你好啊，李四。你有注意到张三与一个自定义方块交互了吗？"`
 
-## \<shift:\_偏移像素数\_> <a href="#less-than-shift-_pixels_greater-than" id="less-than-shift-_pixels_greater-than"></a>
+### \<shift:\_偏移像素数\_> <a href="#less-than-shift-_pixels_greater-than" id="less-than-shift-_pixels_greater-than"></a>
 
 `shift` 允许使用偏移字符。
 
@@ -36,11 +38,11 @@ item-name: "<!i><shift:-100><#FF8C00>黄玉棒"
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F3z6SBihmPpB19j9eenC2%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=a6c66a0e\&sv=2)
 
-## \<papi:\_占位符\_:\[\_默认值\_]> <a href="#less-than-papi-_placeholder_-_default_value_-greater-than" id="less-than-papi-_placeholder_-_default_value_-greater-than"></a>
+### \<papi:\_占位符\_:\[\_默认值\_]> <a href="#less-than-papi-_placeholder_-_default_value_-greater-than" id="less-than-papi-_placeholder_-_default_value_-greater-than"></a>
 
-## \<viewer\_papi:\_占位符\_:\[\_默认值\_]> <a href="#less-than-viewer_papi-_placeholder_-_default_value_-greater-than" id="less-than-viewer_papi-_placeholder_-_default_value_-greater-than"></a>
+### \<viewer\_papi:\_占位符\_:\[\_默认值\_]> <a href="#less-than-viewer_papi-_placeholder_-_default_value_-greater-than" id="less-than-viewer_papi-_placeholder_-_default_value_-greater-than"></a>
 
-## \<rel\_papi:\_占位符\_:\[\_默认值\_]> <a href="#less-than-rel_papi-_placeholder_-_default_value_-greater-than" id="less-than-rel_papi-_placeholder_-_default_value_-greater-than"></a>
+### \<rel\_papi:\_占位符\_:\[\_默认值\_]> <a href="#less-than-rel_papi-_placeholder_-_default_value_-greater-than" id="less-than-rel_papi-_placeholder_-_default_value_-greater-than"></a>
 
 `papi` 允许使用 `PlaceholderAPI` 的占位符。
 
@@ -63,7 +65,7 @@ functions:
 
 **rel\_papi** 是关系型占位符。
 
-## \<image:\_命名空间\_:\_id\_:\[\_行\_]:\[\_列\_]> <a href="#less-than-image-_namespace_-_id_-_row_-_column_-greater-than" id="less-than-image-_namespace_-_id_-_row_-_column_-greater-than"></a>
+### \<image:\_命名空间\_:\_id\_:\[\_行\_]:\[\_列\_]> <a href="#less-than-image-_namespace_-_id_-_row_-_column_-greater-than" id="less-than-image-_namespace_-_id_-_row_-_column_-greater-than"></a>
 
 `image` 允许使用插件中注册的图片。
 
@@ -79,7 +81,7 @@ item-name: "<!i><white><image:default:icons:0:1><#FF8C00> 黄玉棒"
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FV2djYKHTMnBxFpZwuTWX%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=66a17118\&sv=2)
 
-## \<i18n:\_id\_> <a href="#less-than-i18n-_id_greater-than" id="less-than-i18n-_id_greater-than"></a>
+### \<i18n:\_id\_> <a href="#less-than-i18n-_id_greater-than" id="less-than-i18n-_id_greater-than"></a>
 
 搜索适用于当前语言的翻译。
 
@@ -95,7 +97,7 @@ internal:cooking_info:
       - "<!i><gray><i18n:internal.cooking_info.1>"
 ```
 
-## \<expr:\_格式\_:\_表达式\_> <a href="#less-than-expr-_format_-_expression_greater-than" id="less-than-expr-_format_-_expression_greater-than"></a>
+### \<expr:\_格式\_:\_表达式\_> <a href="#less-than-expr-_format_-_expression_greater-than" id="less-than-expr-_format_-_expression_greater-than"></a>
 
 执行一些数学运算。
 
@@ -109,18 +111,17 @@ item-name: "<!i><#FF8C00><expr:0.##:'<papi:player_x> / 8'>"
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FJVYm8tyyUtjNLBMVx02V%252Fimage.png%3Falt%3Dmedia%26token%3Da824c047-0f28-4a0c-a30d-0f9787c2b7fe\&width=768\&dpr=4\&quality=100\&sign=9537df0e\&sv=2)
 
-> **实用链接**
-> [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html)
-> 
+> **实用链接** [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html)
+>
 > [https://ezylang.github.io/EvalEx/references/references.html](https://ezylang.github.io/EvalEx/references/references.html)
 
-## \<arg:\_索引\_> <a href="#less-than-arg-_index_greater-than" id="less-than-arg-_index_greater-than"></a>
+### \<arg:\_索引\_> <a href="#less-than-arg-_index_greater-than" id="less-than-arg-_index_greater-than"></a>
 
 仅用于 `translations` 下的文件，表示索引参数。
 
-## \<arg:\_id\_> <a href="#less-than-arg-_id_greater-than" id="less-than-arg-_id_greater-than"></a>
+### \<arg:\_id\_> <a href="#less-than-arg-_id_greater-than" id="less-than-arg-_id_greater-than"></a>
 
-## \<viewer\_arg:\_id\_> <a href="#less-than-viewer_arg-_id_greater-than" id="less-than-viewer_arg-_id_greater-than"></a>
+### \<viewer\_arg:\_id\_> <a href="#less-than-viewer_arg-_id_greater-than" id="less-than-viewer_arg-_id_greater-than"></a>
 
 这是一个命名参数。它的值可以来自两个地方：
 
@@ -165,7 +166,7 @@ internal.cooking_info.1: "经验值：<arg:cooking_experience>"
     - "<arg:player.name>刚刚与<arg:block.owner>方块交互了以下！"
 ```
 
-## \<global:\_id\_:\[参数...]> <a href="#less-than-global-_id_-args...-greater-than" id="less-than-global-_id_-args...-greater-than"></a>
+### \<global:\_id\_:\[参数...]> <a href="#less-than-global-_id_-args...-greater-than" id="less-than-global-_id_-args...-greater-than"></a>
 
 用户定义的全局变量。
 

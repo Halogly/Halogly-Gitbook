@@ -4,18 +4,18 @@ description: 本页面主要讲解如何将图片添加到服务器。
 
 # 🖼️ 图片
 
-如果你不知道位图图片的原理，请先阅读 (Minecraft Wiki)[https://zh.minecraft.wiki/w/自定义字体#bitmap]。
+## 🖼️ 图片
 
-# 介绍 <a href="#introduction" id="introduction"></a>
+如果你不知道位图图片的原理，请先阅读 (Minecraft Wiki)\[https://zh.minecraft.wiki/w/自定义字体#bitmap]。
+
+## 介绍 <a href="#introduction" id="introduction"></a>
 
 从本质上讲，Minecraft 的“图片显示”就是用图片替换字符。通过自身的字体系统将特定的 Unicode 字符渲染为图片。
 
 **字体生态系统要点**
 
-1. **多字体集**
-   Minecraft 原生支持多种字体（例如 `minecraft:default`，`minecraft:uniform`），可以扩展或修改。
-2. **自定义字体创建**
-   你可以通过定义以下内容创建个性化字体：
+1. **多字体集** Minecraft 原生支持多种字体（例如 `minecraft:default`，`minecraft:uniform`），可以扩展或修改。
+2. **自定义字体创建** 你可以通过定义以下内容创建个性化字体：
 
 ```yaml
 assets/[命名空间]/font/[字体名称].json
@@ -43,7 +43,7 @@ MineDown 格式：`[我是文本](font=命名空间:字体名称)`
 
 当然不会，除非你使用 `minecraft:default`（Minecraft 的默认字体）。请避免使用 `minecraft:default`，因为它的行为不受支持。
 
-# 单字符位图 <a href="#single-character-bitmap" id="single-character-bitmap"></a>
+## 单字符位图 <a href="#single-character-bitmap" id="single-character-bitmap"></a>
 
 ```yaml
 images:
@@ -57,7 +57,7 @@ images:
 
 `height` 值必须始终大于或等于 `ascent` 值。这是 Minecraft 的强制要求，你必须遵守此规则。
 
-# 多字符位图 <a href="#multiple-characters-bitmap" id="multiple-characters-bitmap"></a>
+## 多字符位图 <a href="#multiple-characters-bitmap" id="multiple-characters-bitmap"></a>
 
 ```yaml
 images:
@@ -75,7 +75,7 @@ images:
 
 如果你对如何在 CraftEngine 插件中使用这些图片感兴趣，请查阅[✏️ 文本格式](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/text-format)。
 
-# 预览游戏中的图片 <a href="#preview-the-image-in-game" id="preview-the-image-in-game"></a>
+## 预览游戏中的图片 <a href="#preview-the-image-in-game" id="preview-the-image-in-game"></a>
 
 你可以使用一个非常简单的命令来预览图片的效果。你只需要将 `\ub000` 替换为与你图片对应的字符即可。
 
@@ -85,7 +85,7 @@ images:
 /tellraw @p {"text":"\ub000","font":"minecraft:icons"}
 ```
 
-# 与其他插件的兼容性 <a href="#compatibility-with-other-plugins" id="compatibility-with-other-plugins"></a>
+## 与其他插件的兼容性 <a href="#compatibility-with-other-plugins" id="compatibility-with-other-plugins"></a>
 
 在其它插件中使用图片有两种办法：
 

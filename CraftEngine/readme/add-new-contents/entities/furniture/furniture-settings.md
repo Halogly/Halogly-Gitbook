@@ -1,6 +1,8 @@
-# ⚙️ Furniture Settings
+# ⚙️ 家具设置
 
-# 物品 <a href="#item" id="item"></a>
+## ⚙️ Furniture Settings
+
+## 物品 <a href="#item" id="item"></a>
 
 设置家具对应的物品。通常用于在创造模式下使用中键（1.21.4+）获取家具物品。
 
@@ -8,7 +10,7 @@
 item: default:test_furniture
 ```
 
-# 声音 <a href="#sounds" id="sounds"></a>
+## 声音 <a href="#sounds" id="sounds"></a>
 
 设置家具在不同情况下的声音
 
@@ -20,6 +22,7 @@ sounds:
   break: minecraft:block.bamboo_wood.break
   place: minecraft:block.bamboo_wood.place
 ```
+
 {% hint style="info" %}
 你可以这样配置，来精确控制音量和音调
 
@@ -33,7 +36,7 @@ sounds:
 ```
 {% endhint %}
 
-# 减少数据内容 <a href="#minimized" id="minimized"></a>
+## 减少数据内容 <a href="#minimized" id="minimized"></a>
 
 设置家具是否向没有管理员权限的玩家发送最小化的网络数据包。
 

@@ -4,7 +4,9 @@ description: 本页面主要讲解如何向服务器添加新声音。
 
 # 🔊 声音
 
-# 声音 <a href="#sound" id="sound"></a>
+## 🔊 声音
+
+## 声音 <a href="#sound" id="sound"></a>
 
 ```yaml
 sounds:
@@ -34,7 +36,7 @@ sounds:
 
 当使用 `/playsound` 命令播放声音时，实际上应该称为执行声音事件，实际的声音位于 `sounds` 列表中。你可以查看 Minecraft Wiki 了解每个参数对应的效果。插件在这里没有提供详细描述，因为 Minecraft Wiki 每个部分已经讲得非常清楚，并且 CraftEngine 使用与 Wiki 中描述相同的配置选项名称。
 
-# 唱片机歌曲（1.21+）<a href="#jukebox-song-1.21" id="jukebox-song-1.21"></a>
+## 唱片机歌曲（1.21+） <a href="#jukebox-song-1.21" id="jukebox-song-1.21"></a>
 
 由于 Minecraft 的注册表一旦注册就不可变，因此你需要重启服务器才能应用任何新修改。但是，你可以通过修改配置ID实时注册一首新歌。
 

@@ -4,17 +4,19 @@ description: 本页面主要讲解如何向服务器添加新方块。
 
 # 🔣 方块状态
 
-# 介绍 <a href="#introduction" id="introduction"></a>
+## 🔣 方块状态
+
+## 介绍 <a href="#introduction" id="introduction"></a>
 
 在 Minecraft 中，每个方块会有一个或多个方块状态。例如，木头有朝向，或是树叶在离原木不同距离下有不同的方块状态。这些状态决定了方块在游戏中的行为和外观。
 
 ![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2Fu2u3K5ZjVw9Qf7gLcp3k%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=a04ecb9b\&sv=2)
 
-# 示例 <a href="#examples" id="examples"></a>
+## 示例 <a href="#examples" id="examples"></a>
 
 这里有三个示例，展示如何在 Minecraft 中创建具有单一状态和具有多个状态的方块：
 
-## **示例1：创建单一状态的方块** <a href="#example-1-creating-a-block-with-a-single-state" id="example-1-creating-a-block-with-a-single-state"></a>
+### **示例1：创建单一状态的方块** <a href="#example-1-creating-a-block-with-a-single-state" id="example-1-creating-a-block-with-a-single-state"></a>
 
 ```yaml
 blocks:
@@ -36,8 +38,7 @@ blocks:
 1. **可用的方块外观状态**：需在 `mappings.yml` 文件中定义。对于单个方块类型，“定义”的方块状态越多，可用的外观状态数量就越多。
 2. **额外注册的真实状态**：需在 `additional-real-blocks.yml` 文件中添加。此配置允许你手动为特定方块注册额外的真实服务端状态，从而进一步增加内部ID的总数。
 
-**为什么注册额外的真实方块？**
-一些方块（例如原版的树叶）具有比实际外观还要更多的方块状态。例如：
+**为什么注册额外的真实方块？** 一些方块（例如原版的树叶）具有比实际外观还要更多的方块状态。例如：
 
 * **原版树叶**有**28个方块状态**（如距离、连接等属性），但只有2种不同的视觉外观（例如带水/不带水的橡树树叶）。
 * 未使用的方块状态（例如28个中的26个）可以重新利用，用来创建**新的自定义块**（例如棕榈树叶等）。
@@ -46,8 +47,7 @@ blocks:
 
 创建一个具有独特功能的**新树叶类型**可能需要**28个服务端状态**，即使它只使用了**2种外观**。然而，原版树叶中只有**26个服务端真实状态**可用，因此会**缺少2个状态**。
 
-**`state`** 指自定义方块状态使用的**原版方块状态外观**。
-例如，**`noteblock:15`** 表示 `mappings.yml` 中定义的第16个音符方块状态（计数从0开始）。
+**`state`** 指自定义方块状态使用的**原版方块状态外观**。 例如，**`noteblock:15`** 表示 `mappings.yml` 中定义的第16个音符方块状态（计数从0开始）。
 
 如果你想要精确控制方块状态，可以这样配置：
 
@@ -63,7 +63,7 @@ state: minecraft:note_block[instrument=hat,note=0,powered=false]
 
 **`generation`** 是**可选的**。如果你不确定这个选项的作用，请参阅：[🏭️ 模型生成](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/model-generation)
 
-## **示例2：创建只有一个自定义属性的方块** <a href="#example-2-creating-a-block-with-one-custom-property" id="example-2-creating-a-block-with-one-custom-property"></a>
+### **示例2：创建只有一个自定义属性的方块** <a href="#example-2-creating-a-block-with-one-custom-property" id="example-2-creating-a-block-with-one-custom-property"></a>
 
 **对于具有多个状态的方块，请使用 `states` 而不是 `state`。**
 
@@ -118,8 +118,7 @@ blocks:
           id: 2
 ```
 
-**配置文件看起来可能会比较冗长复杂，但我们可以用模板来简化配置。**
-_(如果你还没阅读过模板教程，请在学习完 `states` 后务必前往学习！)_
+**配置文件看起来可能会比较冗长复杂，但我们可以用模板来简化配置。** _(如果你还没阅读过模板教程，请在学习完 `states` 后务必前往学习！)_
 
 我们把 `states` 分为三个关键部分，这样可以更清晰地理解：
 
@@ -166,7 +165,7 @@ variants:
 
 如果你不知道如何配置设置，请参阅[⚙️ 方块设置](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/blocks/block-settings)
 
-## **示例3：创建具有多个属性的方块** <a href="#example-3-creating-a-block-with-multiple-properties" id="example-3-creating-a-block-with-multiple-properties"></a>
+### **示例3：创建具有多个属性的方块** <a href="#example-3-creating-a-block-with-multiple-properties" id="example-3-creating-a-block-with-multiple-properties"></a>
 
 如果觉得有点难懂，没事！在 Minecraft 中，**只有少数原版方块才会有很多的方块状态**，这就是为什么大多数自定义方块都是基于这些“状态丰富”的原版方块创建的。让我们一步步来。
 
@@ -427,7 +426,7 @@ variants:
       burnable: false
 ```
 
-# 方块模型 <a href="#block-models" id="block-models"></a>
+## 方块模型 <a href="#block-models" id="block-models"></a>
 
 ```yaml
 # 方块状态配置的一部分

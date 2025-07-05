@@ -2,19 +2,21 @@
 description: 本页面主要讲解如何使用模型生成。
 ---
 
-# 🏭️ Model Generation
+# 🏭️ 模型生成
 
-# 介绍 <a href="#introduction" id="introduction"></a>
+## 介绍 <a href="#introduction" id="introduction"></a>
 
-[🏭️ 模型生成](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/model-generation)用于创建 YAML 格式的模型。
+[🏭️ 模型生成](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/model-generation)用于创建YAML格式的模型。
 
-当配置了多个相似的模型（例如，只有纹理不同的 16 种羊毛颜色的沙发）时，通常需要创建对应数量的独立模型。但如果使用模型生成，你就可以轻松地通过 YAML 格式管理这些模型的继承关系。
+当配置了多个相似的模型（例如，只有纹理不同的16种羊毛颜色的沙发）时，通常需要创建对应数量的独立模型。但如果使用模型生成，你就可以轻松地通过 YAML 格式管理这些模型的继承关系。
 
-`path` 选项中指定的路径（位于 `generation` 相同的配置部分）必须指向一个不存在的模型路径！否则它会与现有模型产生冲突。
+{% hint style="danger" %}
+`path`选项中指定的路径（位于`generation`相同的配置部分）必须指向一个不存在的模型路径！否则它会与现有模型产生冲突。
 
-模型生成始终是**可选配置**。如果你已经为该模块/项目创建了一个 JSON 模型文件，你**不需要**使用 `generation`——而是直接使用 `path` 指定的模型路径。
+模型生成始终是**可选配置**。如果你已经为该模块/项目创建了一个JSON模型文件，你**不需要**使用`generation`——而是直接使用`path`指定的模型路径。
+{% endhint %}
 
-# 配置位置 <a href="#where-to-configure" id="where-to-configure"></a>
+## 配置位置 <a href="#where-to-configure" id="where-to-configure"></a>
 
 如果你仔细观察，就会发现插件在很多地方都会使用以下配置格式。
 
@@ -26,15 +28,15 @@ generation:
     "xxx": "xxx:xxx"
 ```
 
-本插件实际上在所有可指定模型路径（`path`）的位置均支持模型生成功能。当你在任何配置中看到 `path` 时，即表示可以在同一配置部分中使用 `generation`。
+本插件实际上在所有可指定模型路径（`path`）的位置均支持模型生成功能。当你在任何配置中看到`path`时，即表示可以在同一配置部分中使用`generation`。
 
-# 参数 <a href="#arguments" id="arguments"></a>
+## 参数 <a href="#arguments" id="arguments"></a>
 
-## 继承 <a href="#parent" id="parent"></a>
+### 继承 <a href="#parent" id="parent"></a>
 
-> 从指定路径加载其他模型，路径格式需符合[资源位置](https://zh.minecraft.wiki/w/Tutorial:制作资源包/模型/#文件路径)
+> 从指定路径加载其他模型，路径格式需符合[资源位置](https://zh.minecraft.wiki/w/Tutorial:%E5%88%B6%E4%BD%9C%E8%B5%84%E6%BA%90%E5%8C%85/%E6%A8%A1%E5%9E%8B/#%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84)
 
-`parent` 字段不仅可以引用原版 Minecraft 提供的默认模型，还可以指向你的自定义模型。你可以在这个[网站](https://misode.github.io/assets/model/)上找到所有可用的 Minecraft 模型
+`parent`字段不仅可以引用原版Minecraft提供的默认模型，还可以指向你的自定义模型。你可以在这个[网站](https://misode.github.io/assets/model/)上找到所有可用的Minecraft模型。
 
 ```yaml
 items#test:
@@ -65,17 +67,17 @@ items#test:
             scale: 4,4,4
 ```
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252Fto4U9vBexccrrEoONGwg%252Fimage.png%3Falt%3Dmedia%26token%3Deabaf9a9-a8d6-45a9-bf90-b15ed1b917ad\&width=768\&dpr=4\&quality=100\&sign=18696418\&sv=2)大苹果
+<figure><img src="https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252Fto4U9vBexccrrEoONGwg%252Fimage.png%3Falt%3Dmedia%26token%3Deabaf9a9-a8d6-45a9-bf90-b15ed1b917ad&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=18696418&#x26;sv=2" alt=""><figcaption><p>大苹果</p></figcaption></figure>
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FdFCvFSb48gXkn8JCLPCF%252Fimage.png%3Falt%3Dmedia%26token%3D34b110c6-34e5-40d3-9772-fec90a2d0903\&width=768\&dpr=4\&quality=100\&sign=7bc1abe6\&sv=2)大大苹果
+<figure><img src="https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FdFCvFSb48gXkn8JCLPCF%252Fimage.png%3Falt%3Dmedia%26token%3D34b110c6-34e5-40d3-9772-fec90a2d0903&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=7bc1abe6&#x26;sv=2" alt=""><figcaption><p>大大苹果</p></figcaption></figure>
 
-# 纹理 <a href="#textures" id="textures"></a>
+## 纹理 <a href="#textures" id="textures"></a>
 
-> 存储模型所需的纹理资源，支持[资源位置](https://zh.minecraft.wiki/w/Tutorial:制作资源包/模型/#文件路径)和其他已定义的纹理变量两种形式。
+> 存储模型所需的纹理资源，支持[资源位置](https://zh.minecraft.wiki/w/Tutorial:%E5%88%B6%E4%BD%9C%E8%B5%84%E6%BA%90%E5%8C%85/%E6%A8%A1%E5%9E%8B/#%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84)和其他已定义的纹理变量两种形式。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F7Av9LqhtMmYcb2pFXS9X%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=99c63916\&sv=2)
+<div data-full-width="true"><img src="https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2F7Av9LqhtMmYcb2pFXS9X%2Fimage.png&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=99c63916&#x26;sv=2" alt=""></div>
 
-如果打算基于此模型生成一个方块， `parent` 和 `textures` 的参数应按如下指定：
+如果打算基于此模型生成一个方块，`parent`和`textures`的参数应按如下指定：
 
 ```yaml
 generation:
@@ -101,7 +103,7 @@ items#test:
       generation:
         parent: "minecraft:item/apple"
         textures:
-          # 用斧头替换苹果的纹理
+          # 用斧替换苹果的纹理
           layer0: minecraft:item/custom/topaz_axe
         display:
           gui:
@@ -110,35 +112,38 @@ items#test:
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FUwVKVhbAtn1FNPStu82a%252Fimage.png%3Falt%3Dmedia%26token%3D89a11095-54ab-4f07-82fe-b36c61c30bf0\&width=768\&dpr=4\&quality=100\&sign=a3d69454\&sv=2)
 
-`textures` 部分下的键值对由父模型决定。
+{% hint style="warning" %}
+`textures`部分下的键值对由父模型决定。
 
 例如：
 
-* `minecraft:item/apple` 继承 `minecraft:item/generated`。
-* `layer0` 是 `minecraft:item/generated` 中定义的 `textures` 参数之一。
+* `minecraft:item/apple`继承`minecraft:item/generated`。
+* `layer0`是`minecraft:item/generated`中定义的`textures`参数之一。
 * 这就是为什么你可以在子模型（`apple`）中覆盖这个纹理。
 
-**你可以在这个[**网站**](https://misode.github.io/assets/model/)上找到所有可用的 Minecraft 模型及其纹理**
+**你可以在这个**[**网站**](https://misode.github.io/assets/model/)**上找到所有可用的 Minecraft 模型及其纹理。**
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FsYTMHVsoTPN2uOsYs9hZ%252Fimage.png%3Falt%3Dmedia%26token%3De4496f8f-6daa-4da2-a407-89a9444807d0\&width=300\&dpr=4\&quality=100\&sign=fbaab065\&sv=2)![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252F0s9Mqk0BpqkZj48WC3mQ%252Fimage.png%3Falt%3Dmedia%26token%3D15b290f8-f945-4384-944a-fb27ec0de698\&width=300\&dpr=4\&quality=100\&sign=c50330a0\&sv=2)
+![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FsYTMHVsoTPN2uOsYs9hZ%252Fimage.png%3Falt%3Dmedia%26token%3De4496f8f-6daa-4da2-a407-89a9444807d0\&width=300\&dpr=4\&quality=100\&sign=fbaab065\&sv=2)\
+![](https://mo-mi.gitbook.io/xiaomomi-plugins/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252F0s9Mqk0BpqkZj48WC3mQ%252Fimage.png%3Falt%3Dmedia%26token%3D15b290f8-f945-4384-944a-fb27ec0de698\&width=300\&dpr=4\&quality=100\&sign=c50330a0\&sv=2)
+{% endhint %}
 
-# GUI 光照 <a href="#gui-light" id="gui-light"></a>
+## GUI光照 <a href="#gui-light" id="gui-light"></a>
 
-> 可以是 `"front"` 或者 `"side"`。如果设置为 `"side"`，模型会像方块一样渲染。如果设置为 `"front"`，模型会像一般平面的物品那般渲染显示。默认为 `"side"`。
+> 可以是`"front"`或者`"side"`。如果设置为`"side"`，模型会像方块一样渲染。如果设置为`"front"`，模型会像一般平面的物品那般渲染显示。默认为`"side"`。
 
-![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FSHZtI9R1FFXQulE7pVmM%252Fimage.png%3Falt%3Dmedia%26token%3D5d351073-450f-48cb-945a-a9e72401bfb3\&width=768\&dpr=4\&quality=100\&sign=befd1e70\&sv=2)左图：front 右图：side
+<figure><img src="https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2F1836335287-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FOgvQ1fEJPROp7131PPlK%252Fuploads%252FSHZtI9R1FFXQulE7pVmM%252Fimage.png%3Falt%3Dmedia%26token%3D5d351073-450f-48cb-945a-a9e72401bfb3&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=befd1e70&#x26;sv=2" alt=""><figcaption><p>左图：front  右图：side</p></figcaption></figure>
 
-# 显示 <a href="#display" id="display"></a>
+## 显示 <a href="#display" id="display"></a>
 
-> Holds the different places where item models are displayed.
+> 存储物品模型在不同位置的显示设置。
 >
-> * rotation: 根据坐标系 `[x, y, z]` 指定模型的旋转。
-> * translation: 根据坐标系 `[x, y, z]` 指定模型的位置。若值大于 80，则显示为 80。若值小于 -80，则显示为 -80。
-> * scale: 根据坐标系 `[x, y, z]` 指定模型的缩放比例。若值大于 4，则显示为 4。
+> * rotation：根据坐标系`[x, y, z]`指定模型的旋转。
+> * translation：根据坐标系`[x, y, z]`指定模型的位置。若值大于80，则显示为80。若值小于-80，则显示为-80。
+> * scale：根据坐标系`[x, y, z]`指定模型的缩放比例。若值大于4，则显示为4。
 
-可用值：`thirdperson_righthand`、`thirdperson_lefthand`、`firstperson_righthand`、`firstperson_lefthand`、`gui`、`head`、`ground` 或 `fixed`。
+可用值：`thirdperson_righthand`、`thirdperson_lefthand`、`firstperson_righthand`、`firstperson_lefthand`、`gui`、`head`、`ground`或`fixed`。
 
-继续**大大苹果**的例子。你可能会注意到，当它用右手拿着时，它的旋转是不太正确的。这是因为我们覆盖了其父模型的 `display.firstperson_righthand` 设置。现在，让我们来修复它！
+继续**大大苹果**的例子。你可能会注意到，当它用右手拿着时，它的旋转角度是不正确的。这是因为我们覆盖了其父模型的`display.firstperson_righthand`设置。现在，让我们来修复它！
 
 ```yaml
 generation:

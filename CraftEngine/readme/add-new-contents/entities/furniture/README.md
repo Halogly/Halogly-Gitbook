@@ -2,13 +2,15 @@
 description: 本页面主要讲解如何在服务器中添加新家具。
 ---
 
-# 🪑 Furniture
+# 🪑 家具
+
+## 🪑 Furniture
 
 请注意，重新加载插件不会影响已放置的家具！你需要重启服务器或重新加载区块才能将新配置应用到现有的家具。插件利用缓存来提高家具的性能。在没有深思熟虑的情况下强制重新加载服务器上已加载的家具可能会对服务器的稳定性产生重大影响。
 
 未来，插件可能会考虑加入关于强制重载的危险提示，当然，目前没有。
 
-# 配置 <a href="#sections-to-configure" id="sections-to-configure"></a>
+## 配置 <a href="#sections-to-configure" id="sections-to-configure"></a>
 
 一个完整的家具配置包含以下部分：
 
@@ -32,11 +34,11 @@ description: 本页面主要讲解如何在服务器中添加新家具。
 
 [🪇 事件](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/events)
 
-# 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
+## 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
 
 [🪑 家具物品](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-behaviors/furniture-item)
 
-# 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
+## 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
 
 ```yaml
 furniture:

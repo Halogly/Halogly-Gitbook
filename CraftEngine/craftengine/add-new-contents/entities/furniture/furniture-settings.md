@@ -1,16 +1,16 @@
 # ⚙️ 家具设置
 
-## 物品 <a href="#item" id="item"></a>
+## item <a href="#item" id="item"></a>
 
-设置家具对应的物品。通常用于在创造模式下使用中键（1.21.4+）获取家具物品。
+设置家具对应的物品。通常用于在创造模式下使用鼠标中键（1.21.4+）获取家具物品。
 
 ```yaml
 item: default:test_furniture
 ```
 
-## 声音 <a href="#sounds" id="sounds"></a>
+## sounds <a href="#sounds" id="sounds"></a>
 
-设置家具在不同情况下的声音
+设置家具在不同情况下的声音。
 
 * 当玩家破坏家具时
 * 当玩家放置家具时
@@ -22,7 +22,7 @@ sounds:
 ```
 
 {% hint style="info" %}
-你可以这样配置，来精确控制音量和音调
+你可以这样配置，来精确控制音量和音调：
 
 ```yaml
 sounds:
@@ -34,7 +34,7 @@ sounds:
 ```
 {% endhint %}
 
-## 减少数据内容 <a href="#minimized" id="minimized"></a>
+## minimized
 
 设置家具是否向没有管理员权限的玩家发送最小化的网络数据包。
 

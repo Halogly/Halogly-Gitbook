@@ -24,21 +24,21 @@ description: 本页面主要讲解如何向服务器添加新家具。
 
 </details>
 
-* settings
+* 设置
 
 <details>
 
-<summary><a href="./#jia-ju-she-zhi">⚙️ 家具设置</a></summary>
+<summary><a href="furniture-settings.md">⚙️ 家具设置</a></summary>
 
-
+ 
 
 </details>
 
-* placement
+* 放置
 
 <details>
 
-<summary><a href="https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/furniture/furniture-placement">📍 家具放置</a></summary>
+<summary><a href="furniture-placement.md">📍 家具放置</a></summary>
 
 
 
@@ -48,7 +48,7 @@ description: 本页面主要讲解如何向服务器添加新家具。
 
 <details>
 
-<summary><a href="https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/loot-table">💎 战利品表</a></summary>
+<summary><a href="../../loot-table.md">💎 战利品表</a></summary>
 
 
 
@@ -58,7 +58,7 @@ description: 本页面主要讲解如何向服务器添加新家具。
 
 <details>
 
-<summary><a href="https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/events">🪇 事件</a></summary>
+<summary><a href="../../events.md">🪇 事件</a></summary>
 
 
 
@@ -68,7 +68,7 @@ description: 本页面主要讲解如何向服务器添加新家具。
 
 <details>
 
-<summary><a href="https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/items/item-behaviors/furniture-item">🪑 家具物品</a></summary>
+<summary><a href="../../items/item-behaviors/furniture-item.md">🪑 家具物品</a></summary>
 
 
 

@@ -4,11 +4,9 @@ description: 与物品数据不同，本页面的设置内容属于插件处理�
 
 # ⚙️ 物品设置
 
-## ⚙️ Item Settings
+## fuel-time <a href="#fuel-time" id="fuel-time"></a>
 
-## fuel-time 烧炼时间 <a href="#fuel-time" id="fuel-time"></a>
-
-设置要燃烧多少刻的时间
+设置要燃烧多少刻的时间。
 
 ```yaml
 fuel-time: 100
@@ -16,9 +14,9 @@ fuel-time: 100
 
 ![](https://mo-mi.gitbook.io/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FOgvQ1fEJPROp7131PPlK%2Fblobs%2FETo97tqrp6GsxMMc4zOX%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=624f167b\&sv=2)
 
-## tags 标签 <a href="#tags" id="tags"></a>
+## tags <a href="#tags" id="tags"></a>
 
-参阅[📖 合成配方](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/recipes)
+参考[📖 合成配方](https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/add-new-contents/recipes)。
 
 ```yaml
 tags:

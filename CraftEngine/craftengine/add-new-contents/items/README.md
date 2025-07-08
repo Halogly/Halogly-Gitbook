@@ -71,39 +71,39 @@ items:
 
 * **数据或客户端数据**（可选）
 
-<details>
-
-<summary><a href="./item-data/README.md">🔢 物品数据</a></summary>
+{% content-ref url="item-data/README.md" %}
+[README.md](item-data/README.md)
+{% endcontent-ref %}
 
 * **行为**（可选）
 
-<details>
-
-<summary><a href="./item-behaviors/README.md">🕹️ 物品行为</a></summary>
+{% content-ref url="item-behaviors/README.md" %}
+[README.md](item-behaviors/README.md)
+{% endcontent-ref %}
 
 * **设置**（可选）
 
-<details>
-
-<summary><a href="./item-settings.md">⚙️ 物品设置</a></summary>
+{% content-ref url="item-settings.md" %}
+[item-settings.md](item-settings.md)
+{% endcontent-ref %}
 
 * **模型或旧版模型**（可选）
 
-<details>
-
-<summary><a href="./item-models/README.md">🟰 物品模型</a></summary>
+{% content-ref url="item-models/README.md" %}
+[README.md](item-models/README.md)
+{% endcontent-ref %}
 
 * **事件**（可选）
 
-<details>
-
-<summary><a href="../events.md">🪇 事件</a></summary>
+{% content-ref url="../events.md" %}
+[events.md](../events.md)
+{% endcontent-ref %}
 
 * **分类**（可选）
 
-<details>
-
-<summary><a href="../category.md">📂 分类</a></summary>
+{% content-ref url="../category.md" %}
+[category.md](../category.md)
+{% endcontent-ref %}
 
 ## 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
 

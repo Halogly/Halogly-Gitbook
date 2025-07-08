@@ -46,13 +46,9 @@ description: 本页面主要讲解如何向服务器添加新家具。
 
 ## 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
 
-<details>
-
-<summary><a href="../../items/item-behaviors/furniture-item.md">🪑 家具物品</a></summary>
-
-
-
-</details>
+{% content-ref url="../../items/item-behaviors/furniture-item.md" %}
+[furniture-item.md](../../items/item-behaviors/furniture-item.md)
+{% endcontent-ref %}
 
 ## 完整配置概览 <a href="#full-config-overview" id="full-config-overview"></a>
 

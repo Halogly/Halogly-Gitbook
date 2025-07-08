@@ -34,23 +34,15 @@ description: 本页面主要讲解如何向服务器添加新家具。
 
 * 战利品
 
-<details>
-
-<summary><a href="../../loot-table.md">💎 战利品表</a></summary>
-
-
-
-</details>
+{% content-ref url="../../loot-table.md" %}
+[loot-table.md](../../loot-table.md)
+{% endcontent-ref %}
 
 * 事件
 
-<details>
-
-<summary><a href="../../events.md">🪇 事件</a></summary>
-
-
-
-</details>
+{% content-ref url="../../events.md" %}
+[events.md](../../events.md)
+{% endcontent-ref %}
 
 ## 如何绑定物品 <a href="#how-to-bind-items" id="how-to-bind-items"></a>
 

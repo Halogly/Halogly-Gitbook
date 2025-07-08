@@ -20,14 +20,6 @@ description: 本页面主要讲解如何向服务器添加新家具。
 [furniture-behaviors.md](furniture-behaviors.md)
 {% endcontent-ref %}
 
-<details>
-
-<summary><a href="furniture-behaviors.md">🕹️ 家具行为</a></summary>
-
-
-
-</details>
-
 * 设置
 
 {% content-ref url="furniture-settings.md" %}

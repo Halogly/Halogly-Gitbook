@@ -123,7 +123,7 @@ categories:
 ```yaml
 items:
   default:topaz_sword:
-    # category: default:topaz 
+    # category: default:topaz
     category:
       - default:topaz # 使用类别列表
     material: golden_sword
